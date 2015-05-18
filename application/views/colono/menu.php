@@ -27,7 +27,7 @@
 						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
 							<fieldset class="menu" id="gestion">
 								<center>
-									<form aid="form_gestion" action="<?php echo site_url('colono/gestion'); ?>" method="POST">
+									<form id="form_gestion" action="<?php echo site_url('colono/gestion'); ?>" method="POST">
 										<img class="img-menu" src="media/iconos/icongestion.png">
 										<h3>GESTIÓN</h3>
 										<p class="text-menu">
