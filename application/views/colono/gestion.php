@@ -29,7 +29,32 @@
                                                 </label>
                                                 </div>
                                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                                  <h1>SOON</h1>
+                                                  <table id="example" class="table table-hover">
+                                                      <thead>
+                                                          <tr>
+                                                              <th>Folio</th>
+                                                              <th>Asunto</th>
+                                                              <th>Fecha de Elaboración</th>
+                                                              <th>Fecha de Atención</th>
+                                                              <th>Categoría</th>
+                                                          </tr>
+                                                      </thead>
+<!--
+                                                      <tbody>
+                                                          <?php foreach($integrantes as $row){ ?>
+                                                          <tr>
+                                                              <td><?php echo $row->Nombre." ".$row->ApellidoPaterno." ".$row->ApellidoMaterno; ?></td>
+                                                              <td><?php echo $row->FechaNacimiento; ?></td>
+                                                              <td><?php echo $row->Sexo; ?></td>
+                                                              <td><?php echo $row->Estatura; ?></td>
+                                                              <td><?php echo $row->Peso; ?></td>
+                                                              <td><?php echo $row->Email; ?></td>
+                                                              <td><?php echo $row->Tel_celular; ?></td>
+                                                          </tr>
+                                                          <?php } ?>
+                                                      </tbody>
+-->
+                                                  </table>
                                                 </div>
                                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 												<label>

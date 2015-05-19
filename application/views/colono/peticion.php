@@ -25,76 +25,57 @@
 					</div>
 				</div>
 -->
+              <form class="form-vertical" id="frmpet" name="frmpet" action="" method="POST" enctype="multipart/form-data">
 				<div class="row">
 					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
 						<fieldset class="panel">
-							<legend>Miembro</legend>
+							<legend>Petición</legend>
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									<label for="nombre_colono">
-										<spam class="glyphicon glyphicon-asterisk requerido"></spam>Nombre
+									<label for="asunto">
+										<spam class="glyphicon glyphicon-asterisk requerido"></spam>Asunto
 									</label>
-									<input type="text" id="nombre_colono"/>
+									<input type="text" id="asunto"/>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									<label for="apellido_p_colono">
-										<spam class="glyphicon glyphicon-asterisk requerido"></spam>Apellido Paterno
+									<label for="categoria">
+										<spam class="glyphicon glyphicon-asterisk requerido"></spam>Categoría
 									</label>
-									<input type="text" id="apellido_p_colono"/>
+									<input type="text" id="categoria"/>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									<label for="apellido_m_colono">
-										<spam class="glyphicon glyphicon-asterisk requerido"></spam>Apellido Materno
+									<label for="descripcion">
+										<spam class="glyphicon glyphicon-asterisk requerido"></spam>Descripción
 									</label>
-									<input type="text" id="apellido_m_colono"/>
+                                    <textarea id="descripcion" class="form-control"></textarea>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									<label for="edad_colono">Fecha de Nacimiento</label>
-									<input type="text" id="edad_colono">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									<label for="sexo_colono">Sexo</label>
-									<select id="sexo_colono">
-										<option value="">Selecciona Sexo</option>
-										<option value="F">Femenino</option>
-										<option value="M">Masculino</option>
-									</select>
-								</div>
-								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									<label for="puesto">Rol Familiar</label>
-									<select id="puesto">
-										<option value="">Selecciona Rol Familiar</option>
-										<option value="1">Abuelo</option>
-										<option value="2">Papá</option>
-										<option value="3">Mamá</option>
-										<option value="4">Hijo</option>
-									</select>
+									<h1>Mapa</h1>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									<label for="email_colono">E-mail</label>
-									<input type="text" id="email_colono"/>
-								</div>
-								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									<label for="celular_colono">Telefono Celular</label>
-									<input type="text" id="celular_colono"/>
+									<label for="imagen">Imagen</label>
+									<input type="file" id="imagen"/>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-xs-4 col-xs-offset-8 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8">
 									<label>
-										<input type="button" value="Agregar" class="btn-lg btn-azul derecha" id="copia_datos"/>
+										<input type="submit" class="btn-lg btn-azul derecha" id="copia_datos"/>
+                                        <label>
+                                            <a href="<?php echo site_url('colono/gestion'); ?>" class="btn btn-lg btn-block btn-azul">
+                                            Cancelar</a>
+                                        </label>
 									</label>
 								</div>
 							</div>
 						</fieldset>
 					</div>
 				</div>
+              </form>
 			</div>
 		</section>
 		<div class="modal dialogo fade" id="alert">
