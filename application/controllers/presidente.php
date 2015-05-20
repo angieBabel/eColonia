@@ -167,6 +167,12 @@ class Presidente extends CI_Controller {
 		}
 	}
 
+	public function oficio(){
+			$this->load->view('presidente/header');
+			$this->load->view('presidente/oficio');
+			$this->load->view('presidente/footer');
+	}
+
 	public function inserta_calles(){
 		if($this->session->userdata('tipo')==2){
 			if($this->input->post()){
