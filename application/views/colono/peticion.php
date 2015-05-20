@@ -65,10 +65,6 @@
 								<div class="col-xs-4 col-xs-offset-8 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8">
 									<label>
 										<input type="submit" class="btn-lg btn-azul derecha" id="copia_datos"/>
-                                        <label>
-                                            <a href="<?php echo site_url('colono/gestion'); ?>" class="btn btn-lg btn-block btn-azul">
-                                            Cancelar</a>
-                                        </label>
 									</label>
 								</div>
 							</div>

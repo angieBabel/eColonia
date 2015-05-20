@@ -90,6 +90,16 @@ class Administrador extends CI_Controller {
 			redirect('ecolonia');
 		}
 	}
+  
+    public function gestion(){
+		if($this->session->userdata('tipo')==1){
+			$data['contenido'] = "administrador/gestion";
+			$this->load->view('administrador/template',$data);
+		} else{
+			$this->session->sess_destroy();
+			redirect('ecolonia');
+		}
+	}
 
 	public function registrar_colonia(){
 		if($this->session->userdata('tipo')==1){
