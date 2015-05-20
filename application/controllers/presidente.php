@@ -40,6 +40,17 @@ class Presidente extends CI_Controller {
 			redirect('ecolonia');
 		}
 	}
+  
+    public function gestion(){
+		if($this->session->userdata('tipo')==2){
+			$this->load->view('presidente/header');
+			$this->load->view('presidente/gestion');
+			$this->load->view('presidente/footer');
+		} else{
+			$this->session->sess_destroy();
+			redirect('ecolonia');
+		}
+	}
 
 	public function formulario_registrar_colono(){
 		if($this->session->userdata('tipo')==2){
