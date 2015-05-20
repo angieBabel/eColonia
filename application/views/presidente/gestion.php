@@ -1,10 +1,10 @@
         <nav>
 			<div class="container">
 				<ul class="navbar izquierda">
- 					<li><a href="<?php echo site_url('colono'); ?>">Menú</a></li>
+ 					<li><a href="<?php echo site_url('presidente'); ?>">Menú</a></li>
  				</ul>
  				<ul class="navbar derecha">
-					<a href="<?php echo site_url('colono/logout'); ?>" class="btn btn-rojo">
+					<a href="<?php echo site_url('presidente/logout'); ?>" class="btn btn-rojo">
 						Cerrar Sesión
 					</a>
  				</ul>
@@ -24,12 +24,12 @@
 											<label>
                                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 												<label>
-                                                    <a href="<?php echo site_url('colono/peticion'); ?>" class="btn btn-lg btn-block btn-azul">
-                                                    Realizar petición</a>
+                                                    <a href="<?php echo site_url('presidente/oficio'); ?>" class="btn btn-lg btn-block btn-azul">
+                                                    Realizar oficio</a>
                                                 </label>
                                                 </div>
                                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                                  <table id="example" class="table table-hover">
+                                                  <table id="tpeticiones" class="table table-hover">
                                                       <thead>
                                                           <tr>
                                                               <th>Folio</th>
@@ -37,6 +37,7 @@
                                                               <th>Fecha de Elaboración</th>
                                                               <th>Fecha de Atención</th>
                                                               <th>Categoría</th>
+                                                              <th>Colono</th>
                                                           </tr>
                                                       </thead>
 <!--
@@ -58,8 +59,42 @@
                                                 </div>
                                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 												<label>
-                                                    <a href="<?php echo site_url('colono/tabla_peticion'); ?>" class="btn btn-lg btn-block btn-azul">
+                                                    <a href="<?php echo site_url('presidente/tabla_peticion'); ?>" class="btn btn-lg btn-block btn-azul">
                                                     Peticiones realizadas</a>
+                                                </label>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                  <table id="toficios" class="table table-hover">
+                                                      <thead>
+                                                          <tr>
+                                                              <th>Folio</th>
+                                                              <th>Asunto</th>
+                                                              <th>Fecha de Envío</th>
+                                                              <th>Fecha de Respuesta</th>
+                                                              <th>Estado</th>
+                                                          </tr>
+                                                      </thead>
+<!--
+                                                      <tbody>
+                                                          <?php foreach($integrantes as $row){ ?>
+                                                          <tr>
+                                                              <td><?php echo $row->Nombre." ".$row->ApellidoPaterno." ".$row->ApellidoMaterno; ?></td>
+                                                              <td><?php echo $row->FechaNacimiento; ?></td>
+                                                              <td><?php echo $row->Sexo; ?></td>
+                                                              <td><?php echo $row->Estatura; ?></td>
+                                                              <td><?php echo $row->Peso; ?></td>
+                                                              <td><?php echo $row->Email; ?></td>
+                                                              <td><?php echo $row->Tel_celular; ?></td>
+                                                          </tr>
+                                                          <?php } ?>
+                                                      </tbody>
+-->
+                                                  </table>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+												<label>
+                                                    <a href="<?php echo site_url('presidente/tabla_oficio'); ?>" class="btn btn-lg btn-block btn-azul">
+                                                    Oficios realizados</a>
                                                 </label>
                                                 </div>
 											</label>

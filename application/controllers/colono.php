@@ -66,6 +66,20 @@ class Colono extends CI_Controller {
 			redirect('ecolonia');
 		}
 	}
+  
+    public function tabla_peticion(){
+		if($this->session->userdata('tipo')==5){
+			$casa = $this->session->userdata('casa');
+//			$integrantes = $this->colono_model->get_miembros($casa);
+//			$data = array('integrantes'=>$integrantes);
+			$this->load->view('colono/header');
+			$this->load->view('colono/tabla_peticion');//,$data);
+			$this->load->view('colono/footer');
+		} else{
+			$this->session->sess_destroy();
+			redirect('ecolonia');
+		}
+	}
 
 	public function registrar_miembros(){
 		if($this->session->userdata('tipo')==5){
