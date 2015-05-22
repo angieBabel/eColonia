@@ -17,11 +17,12 @@
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<article>
 								<div class="row">
-									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+<!--									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>-->
 									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 										<fieldset>
 											<legend>Menú</legend>
 											<label>
+                                                <div class="row">
                                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 												<label>
                                                     <a href="<?php echo site_url('colono/peticion'); ?>" class="btn btn-lg btn-block btn-azul">
@@ -39,29 +40,28 @@
                                                               <th>Categoría</th>
                                                           </tr>
                                                       </thead>
-<!--
                                                       <tbody>
-                                                          <?php foreach($integrantes as $row){ ?>
+                                                          <?php foreach($peticiones as $row){ ?>
                                                           <tr>
-                                                              <td><?php echo $row->Nombre." ".$row->ApellidoPaterno." ".$row->ApellidoMaterno; ?></td>
-                                                              <td><?php echo $row->FechaNacimiento; ?></td>
-                                                              <td><?php echo $row->Sexo; ?></td>
-                                                              <td><?php echo $row->Estatura; ?></td>
-                                                              <td><?php echo $row->Peso; ?></td>
-                                                              <td><?php echo $row->Email; ?></td>
-                                                              <td><?php echo $row->Tel_celular; ?></td>
+                                                              <td><?php echo $row->Folio; ?></td>
+                                                              <td><?php echo $row->Asunto; ?></td>
+                                                              <td><?php echo $row->Elab; ?></td>
+                                                              <td><?php echo $row->Aten; ?></td>
+                                                              <td><?php echo $row->Categoria; ?></td>
                                                           </tr>
                                                           <?php } ?>
                                                       </tbody>
--->
                                                   </table>
                                                 </div>
+                                                </div>
+                                                <div class="row">
                                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 												<label>
                                                     <a href="<?php echo site_url('colono/tabla_peticion'); ?>" class="btn btn-lg btn-block btn-azul">
                                                     Peticiones realizadas</a>
                                                 </label>
                                                 </div>
+                                              </div>
 											</label>
 										</fieldset>
 									</div>

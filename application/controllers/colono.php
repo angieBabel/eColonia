@@ -33,8 +33,11 @@ class Colono extends CI_Controller {
   
     public function gestion(){
 		if($this->session->userdata('tipo')==5){
-			$this->load->view('colono/header');
-			$this->load->view('colono/gestion');
+			$id = $this->session->userdata('id');
+            $peticiones = $this->colono_model->get_peticiones($id);
+            $data = array('peticiones'=>$peticiones);
+            $this->load->view('colono/header');
+			$this->load->view('colono/gestion',$data);
 			$this->load->view('colono/footer');
 		} else{
 			$this->session->sess_destroy();
@@ -69,11 +72,11 @@ class Colono extends CI_Controller {
   
     public function tabla_peticion(){
 		if($this->session->userdata('tipo')==5){
-			$casa = $this->session->userdata('casa');
-//			$integrantes = $this->colono_model->get_miembros($casa);
-//			$data = array('integrantes'=>$integrantes);
+			$id = $this->session->userdata('id');
+            $peticiones = $this->colono_model->get_peticiones($id);
+            $data = array('peticiones'=>$peticiones);
 			$this->load->view('colono/header');
-			$this->load->view('colono/tabla_peticion');//,$data);
+			$this->load->view('colono/tabla_peticion',$data);
 			$this->load->view('colono/footer');
 		} else{
 			$this->session->sess_destroy();

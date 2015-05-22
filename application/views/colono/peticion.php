@@ -13,7 +13,6 @@
 		</nav>
 		<section>
 			<div class="container">
-<!--
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<div id="usuario_contrasena">
@@ -24,7 +23,6 @@
 						</div>
 					</div>
 				</div>
--->
               <form class="form-vertical" id="frmpet" name="frmpet" action="" method="POST" enctype="multipart/form-data">
 				<div class="row">
 					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
@@ -52,7 +50,10 @@
                                     <textarea id="descripcion" class="form-control"></textarea>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									<h1>Mapa</h1>
+									<label for="direccion">
+										<spam class="glyphicon glyphicon-asterisk requerido"></spam>Dirección
+									</label>
+                                    <textarea id="direccion" class="form-control"></textarea>
 								</div>
 							</div>
 							<div class="row">
@@ -90,4 +91,4 @@
 		<script type="text/javascript" src="js/datepicker.js"></script>
 		<script type="text/javascript" src="js/datepicker.es.js"></script>
 		<script type="text/javascript" src="js/formatter.js"></script>
-		<script type="text/javascript" src="js/registrar_miembros.js"></script>
+<!--		<script type="text/javascript" src="js/registrar_peticion.js"></script>-->

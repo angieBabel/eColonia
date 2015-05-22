@@ -44,5 +44,5 @@ class Colonia_model extends CI_Model{
 						->from('colonia')
 						->get()
 						->result();
-	}	
+	}
 }

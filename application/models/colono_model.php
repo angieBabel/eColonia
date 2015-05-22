@@ -33,4 +33,14 @@ class Colono_model extends CI_Model{
 						->get()
 						->result();
 	}
+  
+    public function get_peticiones($id_colono){
+		return $this->db->select('peticion.Folio as Folio, peticion.Asunto as Asunto, peticion.FechaElab as Elab, 
+                                peticion.FechaAten as Aten, categoria.Nombre as Categoria')
+						->from('peticion')
+                        ->join('categoria','peticion.IdCategoria = categoria.iD')
+						->where('IdColono',$id_colono)
+                        ->get()
+						->result();
+	}
 }

@@ -6,7 +6,7 @@ class Especial_model extends CI_Model{
 	}
 
 	public function usuario_colono_casa($usuario, $contrasena, $tipo){
-		return $this->db->select('casa.Colonia as colonia')
+		return $this->db->select('casa.Colonia as colonia, colono_has_usuario.colono_Id as id')
 						->from('usuario')
 						->join('colono_has_usuario','usuario.Id = colono_has_usuario.usuario_id')
 						->join('colono','colono_has_usuario.colono_Id = colono.Id')

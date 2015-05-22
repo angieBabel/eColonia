@@ -33,6 +33,7 @@ class Ecolonia extends CI_Controller {
 				$this->session->set_userdata('nombre',$usuario);
 				$this->session->set_userdata('tipo',$tipo);
 				$this->session->set_userdata('colonia',$datos->colonia);
+                $this->session->set_userdata('id',$datos->id);
 				if($tipo == 1){
 					redirect('administrador');
 				} elseif($tipo == 2){
