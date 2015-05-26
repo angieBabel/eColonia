@@ -19,6 +19,16 @@ class Colono_model extends CI_Model{
 				 ->insert('colono');
 		return $this->db->insert_id();
 	}
+  
+    public function inserta_peticion($Asunto,$Contenido,$Ubicacion,$FechaElab,$Colono,$Categoria){
+		$this->db->set('Asunto',$Asunto)
+				 ->set('Texto',$Contenido)
+				 ->set('Ubicacion',$Ubicacion)
+				 ->set('FechaElab',$FechaElab)
+				 ->set('IdColono',$Colono)
+				 ->set('IdCategoria',$Categoria)
+				 ->insert('peticion');
+	}
 
 	public function obtiene_id($Email,$Tel_celular) {
 		return $this->db->like('Email',$Email)
@@ -30,6 +40,12 @@ class Colono_model extends CI_Model{
 	public function get_miembros($casa){
 		return $this->db->where('Casa',$casa)
 						->from('colono')
+						->get()
+						->result();
+	}
+  
+    public function get_categorias(){
+		return $this->db->from('categoria')
 						->get()
 						->result();
 	}

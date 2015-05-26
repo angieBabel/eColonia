@@ -61,8 +61,10 @@ class Colono extends CI_Controller {
   
     public function peticion(){
 		if($this->session->userdata('tipo')==5){
-			$this->load->view('colono/header');
-			$this->load->view('colono/peticion');
+			$categorias = $this->colono_model->get_categorias();
+			$data = array('categorias'=>$categorias);
+            $this->load->view('colono/header');
+			$this->load->view('colono/peticion',$data);
 			$this->load->view('colono/footer');
 		} else{
 			$this->session->sess_destroy();
@@ -147,6 +149,28 @@ class Colono extends CI_Controller {
 			redirect('ecolonia');
 		}
 	}
+  
+    public function registrar_peticion(){
+        if($this->session->userdata('tipo')==5){
+			if($this->input->post()){
+                $asunto = $this->input->post('asunto');
+                $cat = $this->input->post('categoria');
+                $descr = $this->input->post('descripcion');
+                $dir = $this->input->post('direccion');
+                $fecha = date("Y-m-d");
+                $colono = $this->session->userdata('id');
+
+                $this->colono_model->inserta_peticion($asunto,$descr,$dir,$fecha,$colono,$cat);
+//                echo "HUEEEEE";
+			} else{
+				echo json_encode(false);
+                redirect('colono/gestion');
+			}
+		} else{
+			$this->session->sess_destroy();
+			redirect('ecolonia');
+		}
+    }
 
 	public function logout(){
 		if($this->session->userdata('tipo')==5){

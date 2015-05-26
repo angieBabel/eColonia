@@ -16,63 +16,80 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<div id="usuario_contrasena">
-							<div id="mensaje" class="alert alert-info fade in">
+							<div id="alert" class="alert alert-info fade in">
 								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<div id="text_usuario_contrasena"></div>
+								<h3 id="titulo_alert"></h3>
+                                <div id="text_alert"></div>
 							</div>
 						</div>
 					</div>
 				</div>
-              <form class="form-vertical" id="frmpet" name="frmpet" action="" method="POST" enctype="multipart/form-data">
 				<div class="row">
 					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
 						<fieldset class="panel">
 							<legend>Petición</legend>
+                            <form class="form-vertical" id="frmpet" name="frmpet" action="index.php/colono/registrar_peticion" method="POST" enctype="multipart/form-data">
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                  <div class="form-group">
 									<label for="asunto">
 										<spam class="glyphicon glyphicon-asterisk requerido"></spam>Asunto
 									</label>
-									<input type="text" id="asunto"/>
+									<input type="text" id="asunto" name="asunto"/>
+                                  </div>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                  <div class="form-group">
 									<label for="categoria">
 										<spam class="glyphicon glyphicon-asterisk requerido"></spam>Categoría
 									</label>
-									<input type="text" id="categoria"/>
+									<select id="categoria" name="categoria">
+                                        <option value="">Selecciona Categoría</option>
+                                        <?php foreach($categorias as $row){ ?>
+                                        <option value="<?php echo $row->Id; ?>"><?php echo $row->Nombre; ?></option>
+                                        <?php } ?>
+									</select>
+                                  </div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                  <div class="form-group">
 									<label for="descripcion">
 										<spam class="glyphicon glyphicon-asterisk requerido"></spam>Descripción
 									</label>
-                                    <textarea id="descripcion" class="form-control"></textarea>
+                                    <textarea id="descripcion" name="descripcion" class="form-control"></textarea>
+                                  </div>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                  <div class="form-group">
 									<label for="direccion">
 										<spam class="glyphicon glyphicon-asterisk requerido"></spam>Dirección
 									</label>
-                                    <textarea id="direccion" class="form-control"></textarea>
+                                    <textarea id="direccion" name="direccion" class="form-control"></textarea>
+                                  </div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                  <div class="form-group">
 									<label for="imagen">Imagen</label>
 									<input type="file" id="imagen"/>
+                                  </div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-xs-4 col-xs-offset-8 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8">
 									<label>
-										<input type="submit" class="btn-lg btn-azul derecha" id="copia_datos"/>
+										<button type="button" class="btn-lg btn-azul derecha" id="enviar_datos">Registrar</button>
+<!--                                        <input type="button" class="btn-lg btn-azul derecha" id="enviar_datos"/>-->
 									</label>
 								</div>
 							</div>
+                            </form>
 						</fieldset>
 					</div>
 				</div>
-              </form>
 			</div>
 		</section>
 		<div class="modal dialogo fade" id="alert">
@@ -91,4 +108,4 @@
 		<script type="text/javascript" src="js/datepicker.js"></script>
 		<script type="text/javascript" src="js/datepicker.es.js"></script>
 		<script type="text/javascript" src="js/formatter.js"></script>
-<!--		<script type="text/javascript" src="js/registrar_peticion.js"></script>-->
+		<script type="text/javascript" src="js/registrar_peticion.js"></script>
