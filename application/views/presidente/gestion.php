@@ -17,18 +17,33 @@
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<article>
 								<div class="row">
-									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
 									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 										<fieldset>
 											<legend>Menú</legend>
 											<label>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-												<label>
-                                                    <a href="<?php echo site_url('presidente/oficio'); ?>" class="btn btn-lg btn-block btn-azul">
-                                                    Realizar oficio</a>
-                                                </label>
+                                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                                                  <div class="row">
+                                                    <label>
+                                                        <a href="<?php echo site_url('presidente/oficio'); ?>" class="btn btn-lg btn-block btn-azul">
+                                                        Realizar oficio</a>
+                                                    </label>
+                                                  </div>
+                                                  <div class="row">
+                                                    <label>
+                                                        <a href="<?php echo site_url('presidente/tabla_peticion'); ?>"
+                                                        class="btn btn-lg btn-block btn-azul">Peticiones realizadas</a>
+                                                    </label>
+                                                  </div>
+                                                  <div class="row">
+                                                    <label>
+                                                        <a href="<?php echo site_url('presidente/tabla_oficio'); ?>" 
+                                                        class="btn btn-lg btn-block btn-azul">Oficios realizados</a>
+                                                    </label>
+                                                  </div>
                                                 </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 
+                                                col-xs-offset-1 col-sm--offset-1 col-md--offset-1 col-lg--offset-1">
+                                                  <div class="row">
                                                   <table id="tpeticiones" class="table table-hover">
                                                       <thead>
                                                           <tr>
@@ -56,14 +71,8 @@
                                                       </tbody>
 -->
                                                   </table>
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-												<label>
-                                                    <a href="<?php echo site_url('presidente/tabla_peticion'); ?>" class="btn btn-lg btn-block btn-azul">
-                                                    Peticiones realizadas</a>
-                                                </label>
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                  </div>
+                                                <div class="row">
                                                   <table id="toficios" class="table table-hover">
                                                       <thead>
                                                           <tr>
@@ -91,12 +100,7 @@
 -->
                                                   </table>
                                                 </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-												<label>
-                                                    <a href="<?php echo site_url('presidente/tabla_oficio'); ?>" class="btn btn-lg btn-block btn-azul">
-                                                    Oficios realizados</a>
-                                                </label>
-                                                </div>
+                                              </div>
 											</label>
 										</fieldset>
 									</div>

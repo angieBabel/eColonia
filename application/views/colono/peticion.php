@@ -82,8 +82,6 @@
 								<div class="col-xs-4 col-xs-offset-8 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8">
 									<label>
 										<button type="button" class="btn-lg btn-azul derecha" id="enviar_datos">Registrar</button>
-<!--                                        <input type="button" class="btn-lg btn-azul derecha" id="enviar_datos"/>-->
-									</label>
 								</div>
 							</div>
                             </form>

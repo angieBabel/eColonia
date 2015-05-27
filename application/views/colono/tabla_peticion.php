@@ -26,6 +26,7 @@
 													<th>Folio</th>
 													<th>Asunto</th>
 													<th>Fecha de Elaboración</th>
+                                                    <th>Atendido</th>
 													<th>Fecha de Atención</th>
 													<th>Categoría</th>
 									            </tr>
@@ -36,6 +37,11 @@
                                                     <td><?php echo $row->Folio; ?></td>
                                                     <td><?php echo $row->Asunto; ?></td>
                                                     <td><?php echo $row->Elab; ?></td>
+                                                    <?php if ($row->Aten != NULL) {?>
+                                                    <td><span class="glyphicon glyphicon-ok"></span></td>
+                                                    <?php } else { ?>
+                                                    <td><span class="glyphicon glyphicon-remove"></span></td>
+                                                    <?php } ?>
                                                     <td><?php echo $row->Aten; ?></td>
                                                     <td><?php echo $row->Categoria; ?></td>
                                                 </tr>
