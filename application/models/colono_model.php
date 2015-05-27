@@ -59,4 +59,21 @@ class Colono_model extends CI_Model{
                         ->get()
 						->result();
 	}
+	
+	public function get_all_peticiones($id_colono){
+		return $this->db->select ('peticion.Folio as Folio, peticion.Asunto as Asunto, peticion.FechaElab as Elaboracion,
+			   						peticion.FechaAten as Atencion, categoria.Nombre as Categoria, colono.Nombre as Colono')
+						->from('peticion')
+						->join ('categoria','categoria.ID = peticion.IdCategoria')
+						->join ('colono','peticion.IdColono = colono.Id')
+						->join ('casa','colono.casa = casa.Id')
+						->join ('colonia','colonia.Id = casa.colonia')
+						->join ('comitedebarrio','comitedebarrio.Id = colonia.Id')
+						->join ('comitedebarrio_has_colono','comitedebarrio_has_colono.comitedebarrio_Id = comitedebarrio.Id')
+						//->where('colonia.Id','comitedebarrio.colonia')
+						->where('comitedebarrio_has_colono.colono_Id',$id_colono)
+						->where('comitedebarrio_has_colono.Puesto','Presidente')
+						->get()
+						->result();
+	}
 }

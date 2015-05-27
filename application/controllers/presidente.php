@@ -41,10 +41,14 @@ class Presidente extends CI_Controller {
 		}
 	}
   
-    public function gestion(){
+   public function gestion(){
 		if($this->session->userdata('tipo')==2){
+			$id = $this->session->userdata('id');
+            $peticiones = $this->colono_model->get_all_peticiones($id);
+            $data = array('peticiones'=>$peticiones);
 			$this->load->view('presidente/header');
-			$this->load->view('presidente/gestion');
+			print_r($data);
+			$this->load->view('presidente/gestion',$data);
 			$this->load->view('presidente/footer');
 		} else{
 			$this->session->sess_destroy();
@@ -192,21 +196,20 @@ class Presidente extends CI_Controller {
 		}
 	}
   
-    public function tabla_peticion(){
+   public function tabla_peticion(){
 		if($this->session->userdata('tipo')==2){
-			$comite = $this->session->userdata('comite');
-//			$representantes = $this->especial_model->get_representantes_calle($comite);
-//			$data = array(
-//				'representante' => $representantes
-//			);
+			$id = $this->session->userdata('id');
+			$peticiones = $this->colono_model->get_all_peticiones($id);
+            $data = array('peticiones'=>$peticiones);
 			$this->load->view('presidente/header');
-			$this->load->view('presidente/tabla_peticion');//,$data);
+			$this->load->view('presidente/tabla_peticion',$data);
 			$this->load->view('presidente/footer');
 		}else{
 			$this->session->sess_destroy();
 			redirect('ecolonia');
 		}
 	}
+  
   
     public function tabla_oficio(){
 		if($this->session->userdata('tipo')==2){

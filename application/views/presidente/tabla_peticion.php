@@ -31,20 +31,18 @@
 													<th>Colono</th>
 									            </tr>
 									        </thead>
-<!--
 									        <tbody>
-									        	<?php foreach($representante as $row) { ?> 
-												<tr>
-													<th><?php echo $row->nombre_colono." ".$row->ApellidoPaterno." ".$row->ApellidoMaterno;?></th>
-													<th><?php echo $row->Nombre_calle." ".$row->numero_casa?></th>
-													<th><?php echo $row->Nombre_comite?></th>
-													<th><?php echo $row->Nombre_calle_representa?></th>
-													<th><?php echo $row->Nombre_calle_representa?></th>
-													<th><?php echo $row->Nombre_calle_representa?></th>
-												</tr>
-									        	<?php } ?>
-									        </tbody>
--->
+                                                <?php foreach($peticiones as $row){ ?>
+                                                <tr>
+                                                    <td><?php echo $row->Folio; ?></td>
+                                                    <td><?php echo $row->Asunto; ?></td>
+                                                    <td><?php echo $row->Elaboracion; ?></td>
+                                                    <td><?php echo $row->Atencion; ?></td>
+                                                    <td><?php echo $row->Categoria; ?></td>
+                                                    <td><?php echo $row->Colono; ?></td>
+                                                </tr>
+                                                <?php } ?>
+                                            </tbody>
 									    </table>
 									</div>
 								</div>
