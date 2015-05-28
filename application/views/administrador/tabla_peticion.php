@@ -1,11 +1,11 @@
 		<nav>
 			<div class="container">
 				<ul class="navbar izquierda">
- 					<li><a href="<?php echo site_url('presidente'); ?>">Menú</a></li>
- 					<li><a href="<?php echo site_url('presidente/gestion'); ?>">Gestión</a></li>
+ 					<li><a href="<?php echo site_url('administrador'); ?>">Menú</a></li>
+ 					<li><a href="<?php echo site_url('administrador/gestion'); ?>">Gestión</a></li>
  				</ul>
  				<ul class="navbar derecha">
-					<a href="<?php echo site_url('presidente/logout'); ?>" class="btn btn-rojo">
+					<a href="<?php echo site_url('administrador/logout'); ?>" class="btn btn-rojo">
 						Cerrar Sesión
 					</a>
  				</ul>
@@ -30,8 +30,10 @@
 													<th>Fecha de Atención</th>
 													<th>Categoría</th>
 													<th>Colono</th>
+													<th>Colonia</th>
 									            </tr>
 									        </thead>
+<!--
 									        <tbody>
                                                 <?php foreach($peticiones as $row){ ?>
                                                 <tr>
@@ -49,6 +51,7 @@
                                                 </tr>
                                                 <?php } ?>
                                             </tbody>
+-->
 									    </table>
 									</div>
 								</div>

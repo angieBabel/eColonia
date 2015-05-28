@@ -47,7 +47,6 @@ class Presidente extends CI_Controller {
             $peticiones = $this->colono_model->get_all_peticiones($id);
             $data = array('peticiones'=>$peticiones);
 			$this->load->view('presidente/header');
-			print_r($data);
 			$this->load->view('presidente/gestion',$data);
 			$this->load->view('presidente/footer');
 		} else{

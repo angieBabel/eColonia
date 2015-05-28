@@ -50,6 +50,28 @@ class Administrador extends CI_Controller {
 			redirect('ecolonia');
 		}
 	}
+    
+    public function tabla_peticion(){
+		if($this->session->userdata('tipo')==1){
+			$data['contenido'] = "administrador/tabla_peticion";
+			//$data['estado'] = $this->estados;
+			$this->load->view('administrador/template',$data);
+		} else{
+			$this->session->sess_destroy();
+			redirect('ecolonia');
+		}
+	}
+  
+    public function tabla_oficio(){
+		if($this->session->userdata('tipo')==1){
+			$data['contenido'] = "administrador/tabla_oficio";
+			//$data['estado'] = $this->estados;
+			$this->load->view('administrador/template',$data);
+		} else{
+			$this->session->sess_destroy();
+			redirect('ecolonia');
+		}
+	}
 
 	public function registrar_comite(){
 		if($this->session->userdata('tipo')==1){

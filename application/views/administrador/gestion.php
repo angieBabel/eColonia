@@ -23,14 +23,16 @@
 											<label>
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 												<label>
-                                                    <a href="<?php echo site_url('administrador/tabla_peticion'); ?>" class="btn btn-lg btn-block btn-azul">
-                                                    Peticiones</a>
+                                                    <a href="<?php echo site_url('administrador/tabla_peticion'); ?>" 
+                                                    class="btn btn-lg btn-block btn-azul">Tabla de Peticiones</a>
                                                 </label>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 												<label>
-                                                    <a href="<?php echo site_url('administrador/tabla_oficio'); ?>" class="btn btn-lg btn-block btn-azul">
-                                                    Oficios</a>
+                                                    <a href="<?php echo site_url('administrador/tabla_oficio'); ?>" 
+                                                    class="btn btn-lg btn-block btn-azul">Tabla de Oficios</a>
+                                                </label>
+                                                <label>
+                                                    <a href="<?php echo site_url('administrador/dependencias'); ?>" 
+                                                    class="btn btn-lg btn-block btn-azul">Dependencias</a>
                                                 </label>
                                                 </div>
 											</label>
