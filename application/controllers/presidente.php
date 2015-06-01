@@ -120,11 +120,11 @@ class Presidente extends CI_Controller {
 
                 $id = $this->session->userdata('id');
             	$comiteid = $this->colono_model->get_id_comite($id);
-            	$datos['comitedebarrio_Id']=$comitedebarrio_Id[0];
-
+            	$comite = $comiteid[0]['comitedebarrio_Id'];
+            	
                 $dep = $this->input->post('dependencia');
                 
-                $this->colono_model->inserta_oficio($asunto,$descr,$etado,$fechaenv,$fecharesp,$comitedebarrio_Id,$dep);
+                $this->colono_model->inserta_oficio($asunto,$descr,$estado,$fechaenv,$fecharesp,$comite,$dep);
 
 			} else{
 				echo json_encode(false);

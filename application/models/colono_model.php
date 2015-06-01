@@ -107,6 +107,6 @@ public function get_id_comite($id_colono){
 						->from('comitedebarrio_has_colono')
 						->where('comitedebarrio_has_colono.colono_Id',$id_colono)
 						->get()
-						->result();
+						->result_array();
 	}
 }
