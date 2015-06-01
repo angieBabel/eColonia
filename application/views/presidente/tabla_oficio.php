@@ -25,25 +25,34 @@
 									            <tr>
 													<th>Folio</th>
 													<th>Asunto</th>
+													<th>Descripción</th>
+													<th>Estado</th>
 													<th>Fecha de Envío</th>
 													<th>Fecha de Respuesta</th>
-													<th>Estado</th>
+													<th>Comite</th>
+													<th>IDDependencia</th>
 									            </tr>
 									        </thead>
-<!--
 									        <tbody>
-									        	<?php foreach($representante as $row) { ?> 
-												<tr>
-													<th><?php echo $row->nombre_colono." ".$row->ApellidoPaterno." ".$row->ApellidoMaterno;?></th>
-													<th><?php echo $row->Nombre_calle." ".$row->numero_casa?></th>
-													<th><?php echo $row->Nombre_comite?></th>
-													<th><?php echo $row->Nombre_calle_representa?></th>
-													<th><?php echo $row->Nombre_calle_representa?></th>
-													<th><?php echo $row->Nombre_calle_representa?></th>
-												</tr>
-									        	<?php } ?>
-									        </tbody>
--->
+                                                <?php foreach($oficios as $row){ ?>
+                                                <tr>
+                                                    <td><?php echo $row->Folio; ?></td>
+                                                    <td><?php echo $row->Asunto; ?></td>
+                                                    <td><?php echo $row->Descripcion; ?></td>
+                                                    
+                                                    <?php if ($row->Estado == '1') {?>
+                                                    <td><span class="glyphicon glyphicon-ok"></span></td>
+                                                    <?php } else { ?>
+                                                    <td><span class="glyphicon glyphicon-remove"></span></td>
+                                                    <?php } ?>
+
+                                                    <td><?php echo $row->FechaEnvio; ?></td>
+                                                    <td><?php echo $row->FechaResp; ?></td>
+                                                    <td><?php echo $row->IdComite; ?></td>
+                                                    <td><?php echo $row->IDDependencia; ?></td>
+                                                </tr>
+                                                <?php } ?>
+                                            </tbody>
 									    </table>
 									</div>
 								</div>

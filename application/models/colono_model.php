@@ -30,6 +30,18 @@ class Colono_model extends CI_Model{
 				 ->insert('peticion');
 	}
 
+	public function inserta_oficio($Asunto,$Descripcion,$Estado,$FechaEnvio,$FechaResp,$IDComite,$IDDependencia){
+		$this->db->set('Asunto',$Asunto)
+				 ->set('Descripcion',$Descripcion)
+				 ->set('Estado',$Estado)
+				 ->set('FechaEnvio',$FechaEnvio)
+				 ->set('FechaResp',$FechaResp)
+				 ->set('IdComite',$IDComite)
+				 ->set('IDDependencia',$IDDependencia)
+				 ->insert('oficio');
+	}
+
+
 	public function obtiene_id($Email,$Tel_celular) {
 		return $this->db->like('Email',$Email)
 						->like('Tel_celular',$Tel_celular)
@@ -61,8 +73,8 @@ class Colono_model extends CI_Model{
 	}
 	
 	public function get_all_peticiones($id_colono){
-		return $this->db->select ('peticion.Folio as Folio, peticion.Asunto as Asunto, peticion.FechaElab as Elaboracion,
-			   						peticion.FechaAten as Atencion, categoria.Nombre as Categoria, colono.Nombre as Colono')
+		return $this->db->select ('peticion.Folio as Folio, peticion.Asunto as Asunto, peticion.FechaElab as Elab,
+			   						peticion.FechaAten as Aten, categoria.Nombre as Categoria, colono.Nombre as Colono')
 						->from('peticion')
 						->join ('categoria','categoria.ID = peticion.IdCategoria')
 						->join ('colono','peticion.IdColono = colono.Id')
@@ -73,6 +85,27 @@ class Colono_model extends CI_Model{
 						//->where('colonia.Id','comitedebarrio.colonia')
 						->where('comitedebarrio_has_colono.colono_Id',$id_colono)
 						->where('comitedebarrio_has_colono.Puesto','Presidente')
+						->get()
+						->result();
+	}
+
+	public function get_all_oficios($id_colono){
+		return $this->db->select ('oficio.Folio as Folio, oficio.asunto as Asunto, oficio.descripcion as Descripcion, 
+			oficio.estado as Estado, oficio.FechaEnvio as FechaEnvio, oficio.FechaResp as FechaResp, oficio.IdComite as IdComite,
+			oficio.IdDependencia as IDDependencia')
+						->from('oficio')
+						->join ('comitedebarrio_has_colono','comitedebarrio_has_colono.comitedebarrio_Id = oficio.IdComite')
+						->where('comitedebarrio_has_colono.colono_Id',$id_colono)
+						->get()
+						->result();
+	}
+
+
+
+public function get_id_comite($id_colono){
+		return $this->db->select ('comitedebarrio_has_colono.comitedebarrio_Id as comitedebarrio_Id')
+						->from('comitedebarrio_has_colono')
+						->where('comitedebarrio_has_colono.colono_Id',$id_colono)
 						->get()
 						->result();
 	}

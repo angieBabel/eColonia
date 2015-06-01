@@ -52,7 +52,7 @@
                               <tr>
                                   <td><?php echo $row->Folio; ?></td>
                                   <td><?php echo $row->Asunto; ?></td>
-                                  <td><?php echo $row->Elaboracion; ?></td>
+                                  <td><?php echo $row->Elab; ?></td>
                                   <?php if ($row->Aten != NULL) {?>
                                   <td><span class="glyphicon glyphicon-ok"></span></td>
                                   <?php } else { ?>

@@ -109,6 +109,33 @@ class Presidente extends CI_Controller {
 		}
 	}
 
+	public function registrar_oficio(){
+        if($this->session->userdata('tipo')==2){
+			if($this->input->post()){				
+                $asunto = $this->input->post('asunto');
+                $descr = $this->input->post('descripcion');
+                $estado = "0";
+                $fechaenv = date("Y-m-d");
+                $fecharesp = "0000-00-00";
+
+                $id = $this->session->userdata('id');
+            	$comiteid = $this->colono_model->get_id_comite($id);
+            	$datos['comitedebarrio_Id']=$comitedebarrio_Id[0];
+
+                $dep = $this->input->post('dependencia');
+                
+                $this->colono_model->inserta_oficio($asunto,$descr,$etado,$fechaenv,$fecharesp,$comitedebarrio_Id,$dep);
+
+			} else{
+				echo json_encode(false);
+                redirect('presidente/gestion');
+			}
+		} else{
+			$this->session->sess_destroy();
+			redirect('ecolonia');
+		}
+    }
+
 	public function miembros(){
 		if($this->session->userdata('tipo')==2){
 			// consulta
@@ -212,13 +239,11 @@ class Presidente extends CI_Controller {
   
     public function tabla_oficio(){
 		if($this->session->userdata('tipo')==2){
-			$comite = $this->session->userdata('comite');
-//			$representantes = $this->especial_model->get_representantes_calle($comite);
-//			$data = array(
-//				'representante' => $representantes
-//			);
+			$id = $this->session->userdata('id');
+			$oficios = $this->colono_model->get_all_oficios($id);
+			$data = array('oficios'=>$oficios);
 			$this->load->view('presidente/header');
-			$this->load->view('presidente/tabla_oficio');//,$data);
+			$this->load->view('presidente/tabla_oficio',$data);
 			$this->load->view('presidente/footer');
 		}else{
 			$this->session->sess_destroy();
