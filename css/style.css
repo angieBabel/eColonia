@@ -46,12 +46,24 @@ a:hover{
   z-index: 1;
   color: white;
   font-weight: bold;
+  font-size: 3em;
 }
 
 #infoAmbiental{
   text-align: justify;
 
 }
-table thead{
-  border-bottom: 2px solid green;
-}
+
+hr {
+   border-bottom: 2px dashed #ACD254;
+   border-left:none;
+   border-right:none;
+   height: 6px;
+   width: 75%;
+ }
+
+ .tituloTabla{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+ }

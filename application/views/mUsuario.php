@@ -220,6 +220,7 @@
 
   <?php }?>
  <?php if (3==3) { ?>
+    <!-- Administrador -->
       <aside class="main-sidebar">
         <section class="sidebar">
 
@@ -286,13 +287,13 @@
                 <li>
                   <a href="#"><i class="fa fa-cogs"></i>Administrar<i class="fa fa-angle-left pull-right"></i></a>
                   <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Agregar Actividad</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Editar/Eliminar Actividad</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Agregar categoria de residuos solidos urbanos</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Actualizar datos de residuos solidos urbanos</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Generar reporte de residuos solidos urbanos</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Agregar ecotecnias</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Editar/Eliminar ecotecnias</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Agregar Actividad</a></li>
+                    <li><a href="#"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar Actividades</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Agregar categoria de residuos solidos urbanos</a></li>
+                    <li><a href="#"><i class="fa fa-upload"></i>Actualizar datos de residuos solidos urbanos</a></li>
+                    <li><a href="#"><i class="fa fa-file-text"></i>Reporte de residuos solidos urbanos</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Agregar ecotecnias</a></li>
+                    <li><a href="#"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar ecotecnias</a></li>
                   </ul>
                 </li>
               </ul>

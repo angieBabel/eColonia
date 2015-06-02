@@ -15,14 +15,13 @@
       <div class="col-lg-1"></div>
       <div class="col-lg-10">
       <!--Eventos-->
-        <h2>Eventos</h2>
+        <h2 class="tituloTabla">Eventos</h2>
             <table id="tabla-evento" class="table table-hover">
                 <thead>
                     <tr><!--Renglones-->
                         <th >Nombre</th><!--Colunas-->
                         <th >Ubicación</th>
                         <th >Horario</th>
-                        <th >Créditos</th>
                         <th >Detalles</th>
                     </tr>
                 </thead>
@@ -31,32 +30,29 @@
                         <td>Recolección de basura</td>
                         <td>Koyotlán 291</td>
                         <td>8:00 am</td>
-                        <td>5 eco-bonos</td>
                         <td>
-                            <a href="#modal1">Ver más</a>
-                            <!-- <input onclick="cargado();" type="button" value="Ver más" class="btn" data-type="zoomin"/> -->
+                            <a href="#modal1"> Ver más <i class="fa fa-plus"></i></a>
                         </td>
                     </tr>
                     <tr>
                         <td>Data 1</td>
                         <td>Data 2</td>
                         <td>Data 3</td>
-                        <td>Data 4</td>
-                        <td><a href="detalle_actividades.php" target="_blank" onClick="window.open(this.href, this.target, 'width=auto,height=auto'); return false;">ver más</a></td>
+                        <td><a href="#modal1">Ver más <i class="fa fa-plus"></i></a></td>
                     </tr>
                 </tbody>
             </table>
         <br>
-
+        <hr>
+        <br>
         <!--Talleres-->
-        <h2>Talleres</h2>
+        <h2 class="tituloTabla">Talleres</h2>
             <table id="tabla-taller" class="table table-hover">
                 <thead>
                     <tr> <!--Renglones-->
                         <th>Nombre</th><!--Colunas-->
                         <th>Ubicación</th>
                         <th>Horario</th>
-                        <th>Créditos</th>
                         <th>Detalles</th
                     </tr>
                 </thead>
@@ -65,35 +61,31 @@
                         <td>Cómo hacer ecoladrillos</td>
                         <td>Koyotlán 291</td>
                         <td>8:00 am</td>
-                        <td>5 eco-bonos</td>
                         <td>
-                            <a href="#modal1">Ver más</a>
-                            <!-- <input onclick="cargado();" type="button" value="Ver más" class="btn" data-type="zoomin"/> -->
+                            <a href="#modal1">Ver más <i class="fa fa-plus"></i></a>
                         </td>
                     </tr>
                     <tr>
                         <td>Data 1</td>
                         <td>Data 2</td>
                         <td>Data 3</td>
-                        <td>Data 4</td>
                         <td>
-                            <a href="#modal1">Ver más</a>
-                            <!-- <input onclick="cargado();" type="button" value="Ver más" class="btn" data-type="zoomin"/> -->
+                            <a href="#modal1">Ver más <i class="fa fa-plus"></i></a>
                         </td>
                     </tr>
                 </tbody>
             </table>
         <br>
-
+        <hr>
+        <br>
         <!--Eco-tecnias-->
-        <h2>Eco-técnias</h2>
+        <h2 class="tituloTabla">Eco-técnias</h2>
             <table id="tabla-ecotecnias" class="table table-hover">
                 <thead>
                     <tr> <!--Renglones-->
                         <th>Nombre</th><!--Colunas-->
                         <th>Ubicación</th>
                         <th>Horario</th>
-                        <th>Créditos</th>
                         <th>Detalles</th>
                     </tr>
                 </thead>
@@ -102,15 +94,13 @@
                         <td>Recolección de basura</td>
                         <td>Koyotlán 291</td>
                         <td>8:00 am</td>
-                        <td>5 eco-bonos</td>
-                        <td><a href="detalle_actividades.php" target="_blank" onClick="window.open(this.href, this.target, 'width=auto,height=auto'); return false;">ver más</a></td>
+                        <td><a href="#modal1">Ver más <i class="fa fa-plus"></i></a></td>
                     </tr>
                     <tr>
                         <td>Data 1</td>
                         <td>Data 2</td>
                         <td>Data 3</td>
-                        <td>Data 4</td>
-                        <td><a href="detalle_actividades.php" target="_blank" onClick="window.open(this.href, this.target, 'width=auto,height=auto'); return false;">ver más</a></td>
+                        <td><a href="#modal1">Ver más <i class="fa fa-plus"></i></a></td>
                     </tr>
                 </tbody>
             </table>
