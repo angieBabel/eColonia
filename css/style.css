@@ -67,3 +67,10 @@ hr {
     font-size: 2.5em;
     font-weight: bold;
  }
+.imagenEco{
+  margin-right: 5px;
+}
+table .ecotec{
+  border-collapse: separate;
+  border-spacing:  10px;
+}
