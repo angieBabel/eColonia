@@ -287,7 +287,14 @@
                 <li>
                   <a href="#"><i class="fa fa-cogs"></i>Administrar<i class="fa fa-angle-left pull-right"></i></a>
                   <ul class="treeview-menu">
-                    <li><a href="index.php/welcome/ambAgregaActividades"><i class="fa fa-plus-square"></i>Agregar Actividad</a></li>
+                    <li>
+                      <a href=""><i class="fa fa-plus-square"></i>Agregar Actividades</a>
+                        <ul class="treeview-menu">
+                          <li><a href="index.php/welcome/ambAgregaActividades"><i class="fa fa-thumb-tack"></i>Evento</a></li>
+                          <li><a href="#"><i class="fa fa-plus"></i>Taller</a></li>
+                          <li><a href="#"><i class="fa fa-leaf"></i>Actividad en ecotécnias</a></li>
+                        </ul
+                    </li>
                     <li><a href="#"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar Actividades</a></li>
                     <li><a href="#"><i class="fa fa-plus-square"></i>Agregar categoria de residuos solidos urbanos</a></li>
                     <li><a href="#"><i class="fa fa-upload"></i>Actualizar datos de residuos solidos urbanos</a></li>
