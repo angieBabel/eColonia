@@ -42,4 +42,7 @@ function __construct(){
 	public function ambEcotecnias(){
 		$this->load->view('ecotecnias');
 	}
+	public function ambAgregaActividades(){
+		$this->load->view('actividades');
+	}
 }
