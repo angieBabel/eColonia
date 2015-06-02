@@ -6,7 +6,6 @@
   <div class="container-fluid">
     <div class="row" id="r1">
       <h1 class="r1">Mapa de ecotécnias</h1>
-
     </div>
 
     <div class="row" id="r2">
@@ -19,79 +18,72 @@
               <td>
                 <!--Ecotecnia 1-->
                 <h3>Estufa ahorradora de leña</h3>
-                <table>
+                <table class="ecotec">
                   <tbody>
                     <tr><!--Renglones-->
-                      <td>
-
+                      <td class="imagenEco">
+                        <img src="img/estufa.jpg" alt="" width="100px" height="120px">
                       </td>
                       <td>
-                        <p>
+                        <p id="infoAmbiental">
                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, voluptatibus nisi mollitia,
                           aspernatur nemo deleniti cupiditate harum ad nobis eaque pariatur. Quaerat commodi obcaecati quisquam,
                           quia veritatis sequi tempore magnam.
                         </p>
-                      </td>
-                      <td>
-                          <button >Ubicación</button>
-                          <br>
-                          <button >Cómo usar</button>
+                        <p class="pull-right">
+                          <button class="btn btn-default" type="submit">Ubicación</button>
+                          <button class="btn btn-default" type="submit">Cómo usar</button>
+                        </p>
                       </td>
                     </tr>
                   </tbody>
                 </table>
                 <hr>
                 <!-- Ecotecnia 2 -->
-                <table id="tabla-taller" class="easyui-datagrid" style="width:400px;height:auto;" align="center">
-                  <thead>
-                    <tr> <!--Renglones-->
-                      <th></th>
-                      <th colspan="6">Eco-Ladrillos</th>
-                    </tr>
-                  </thead>
+                <h3>Eco-Ladrillos</h3>
+                <table id="tabla-taller" class="ecotec">
                   <tbody>
                     <tr>
-                      <td ><img src="img/batlike.jpg"  alt="" width="100" height="100"></td>
-                      <td>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, voluptatibus nisi mollitia,
-                          aspernatur nemo deleniti cupiditate harum ad nobis eaque pariatur.
-                          Quaerat commodi obcaecati quisquam, quia veritatis sequi tempore magnam.
-                        </p>
+                      <td >
+                        <img src="img/ecoladrillos.jpg" alt="" width="100px" height="120px">
                       </td>
                       <td>
-                        <table>
-                          <tr><input type="button"value="Ubicación" class="boton"></tr>
-                          <tr><input type="button"value="Agenda "class="boton"></tr>
-                          <tr><button class="boton">Cómo usar</button></tr>
-                        </table>
+                        <p id="infoAmbiental">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, voluptatibus nisi mollitia,
+                          aspernatur nemo deleniti cupiditate harum ad nobis eaque pariatur. Quaerat commodi obcaecati quisquam,
+                          quia veritatis sequi tempore magnam.
+                        </p>
+                        <p class="pull-right">
+                          <button class="btn btn-default" type="submit">Ubicación</button>
+                          <button class="btn btn-default" type="submit">Cómo usar</button>
+                        </p>
                       </td>
                     </tr>
                   </tbody>
                 </table>
                 <hr>
-                    <table border="1" id="tabla-taller" class="easyui-datagrid" style="width:400px;height:auto;" align="center">
-                      <thead>
-                        <tr> <!--Renglones-->
-                          <th colspan="6">Camas de cultivo</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                         <tr>
-                            <td ><img src="img/batlike.jpg"  alt="" width="50" height="50">
-                            </td>
-                            <td><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, voluptatibus nisi mollitia, aspernatur nemo deleniti cupiditate harum ad nobis eaque pariatur. Quaerat commodi obcaecati quisquam, quia veritatis sequi tempore magnam.</p></td>
-                            <td>
-                              <table>
-                                <tr><button size="auto">Ubicación</button></tr>
-                                <tr><button size="auto">Agenda</button></tr>
-                                <tr><button size="">Cómo usar</button></tr>
-                              </table>
-                            </td>
-                          </tr>
-                      </tbody>
-                    </table>
-                </section>
+                <!--Cama de cultivo-->
+                <h3>Camas de cultivo</h3>
+                  <table id="tabla-taller" class="ecotec">
+                    <tbody>
+                      <tr>
+                        <td >
+                          <img src="img/huerto.jpg" alt="" width="100px" height="120px">
+                        </td>
+                        <td>
+                          <p id="infoAmbiental">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, voluptatibus nisi mollitia,
+                            aspernatur nemo deleniti cupiditate harum ad nobis eaque pariatur. Quaerat commodi obcaecati quisquam,
+                            quia veritatis sequi tempore magnam.
+                          </p>
+                          <p class="pull-right">
+                            <button class="btn btn-default" type="submit">Ubicación</button>
+                            <button class="btn btn-default" type="submit">Cómo usar</button>
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
               </td>
               <!--Mapa-->
               <td padding-left="10px">
