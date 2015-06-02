@@ -1,0 +1,57 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+#lof{
+  text-align: center;
+}
+.Modulos{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+#menUsuario{
+  font-size: 2em;
+  vertical-align: middle;
+  margin-top: 8px;
+
+}
+a:hover{
+  background: transparent;
+}
+.loginout{
+  left: 1500px;
+}
+
+.imInicial{
+ height:150px;
+ width:150px;
+
+}
+#r1{
+  height: 200px;
+
+  background:url('../img/ecos.png')no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: bottom;
+  z-index: 0;
+  opacity: .6;
+}
+.r1{
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 10%;
+  height: auto;
+  z-index: 1;
+  color: white;
+  font-weight: bold;
+}
+
+#infoAmbiental{
+  text-align: justify;
+
+}
+table thead{
+  border-bottom: 2px solid green;
+}
