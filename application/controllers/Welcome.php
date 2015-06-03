@@ -23,38 +23,35 @@ function __construct(){
 
 		$this->load->model('m_eColonia');
 	}
-	public function index()
-	{
+	public function index(){ //Pagina principal
 		$this->load->view('index');
 	}
 
-	public function ambiental()
-	{
+	public function ambiental(){ //Cargar pagina principal de Ambiental
 		$this->load->view('ambiental');
 	}
-	public function ambActividades()
-	{
+	public function ambActividades(){//Ver agenda de actividades
 		$this->load->view('agenda_actividades');
 	}
-	public function ambResiduos(){
+	public function ambResiduos(){ //Ver tablas de residuos solidos
 		$this->load->view('manejo_residuos');
 	}
-	public function ambEcotecnias(){
+	public function ambEcotecnias(){ //Ver caracteristicas de ecotecnias
 		$this->load->view('ecotecnias');
 	}
-	public function ambAgregaActividades(){
+	public function ambAgregaEvento(){ //Agregar un nuevo evento
 		$this->load->view('actividades');
 	}
-	public function ambAgregaTaller(){
+	public function ambAgregaTaller(){ //Agregar un taller nuevo
 		$this->load->view('taller');
 	}
-	public function ambAgregarActEcotecnia(){
+	public function ambAgregarActEcotecnia(){ //Agregar una nueva actividad que incluya ecotecnias
 		$this->load->view('actividadesEcotecnias');
 	}
-	public function ambAgregarEcotecnia(){
+	public function ambAgregarEcotecnia(){ //Agregar una nueva ecotecnia
 		$this->load->view('agregarEcotecnia');
 	}
-	public function ambAgregarCategoria(){
+	public function ambAgregarCategoria(){ // Agregar una categoria nueva de residuos solidos
 		$this->load->view('categoriaResiduos');
 	}
 }

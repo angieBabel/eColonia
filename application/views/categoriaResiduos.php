@@ -10,7 +10,7 @@
     <div class="row" id="r2">
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
-        <h2>ECotecnias</h2>
+        <h2>Agregar Categorias de Residuos Solidos Urbanos</h2>
         <table class="table table-hover">
         <thead>
           <tr>
@@ -20,28 +20,47 @@
         </thead>
         <tbody>
           <tr>
-            <th>
-              <input class="form-control" type="text" placehoder="Nombre Categoria">
-            </th>
-            <th>
-              <a href=""><i class="fa fa-plus-square"></i></a>
-            </th>
+            <form action="">
+              <th>
+                <input class="form-control" type="text" placeholder="Nombre Categoria">
+              </th>
+              <th>
+                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+              </th>
+            </form>
           </tr>
+
           <tr>
-            <th>
-              <input class="form-control" type="text" placehoder="Nombre Categoria">
-            </th>
-            <th>
-              <a href=""><i class="fa fa-plus-square"></i></a>
-            </th>
+            <form action="">
+              <th>
+                <input class="form-control" type="text" placeholder="Nombre Categoria">
+              </th>
+              <th>
+                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+              </th>
+            </form>
           </tr>
+
           <tr>
-            <th>
-              <input class="form-control" type="text" placehoder="Nombre Categoria">
-            </th>
-            <th>
-              <a href=""><i class="fa fa-plus-square"></i></a>
-            </th>
+            <form action="">
+              <th>
+                <input class="form-control" type="text" placeholder="Nombre Categoria">
+              </th>
+              <th>
+                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+              </th>
+            </form>
+          </tr>
+
+          <tr>
+            <form action="">
+              <th>
+                <input class="form-control" type="text" placeholder="Nombre Categoria">
+              </th>
+              <th>
+                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+              </th>
+            </form>
           </tr>
         </tbody>
         </table>
