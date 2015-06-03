@@ -45,4 +45,7 @@ function __construct(){
 	public function ambAgregaActividades(){
 		$this->load->view('actividades');
 	}
+	public function ambAgregaTaller(){
+		$this->load->view('taller');
+	}
 }

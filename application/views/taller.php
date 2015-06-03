@@ -9,9 +9,9 @@
     </div>
     <br>
     <div class="row" id="r2">
-      <div class="col-lg-1"></div>
-      <div class="col-lg-10">
-        <h2>Evento</h2>
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8">
+        <h2>Taller</h2>
         <form class="form-horizontal">
           <div class="form-group col-lg-12">
             <label for="Nombre" class="col-lg-2 control-label">Nombre</label>
@@ -21,6 +21,12 @@
           </div>
           <div class="form-group col-lg-12">
             <label for="representante" class="col-lg-2 control-label">Encargado</label>
+            <div class="col-lg-10">
+              <input type="text" name="representante" class="form-control" placehoder="Encargado de la actividad">
+            </div>
+          </div>
+          <div class="form-group col-lg-12">
+            <label for="representante" class="col-lg-2 control-label">Instructor</label>
             <div class="col-lg-10">
               <input type="text" name="representante" class="form-control" placehoder="Encargado de la actividad">
             </div>
@@ -60,7 +66,7 @@
           </div>
         </form>
       </div>
-      <div class="col-lg-1"></div>
+      <div class="col-lg-2"></div>
     </div>
   </div>
 </section>
