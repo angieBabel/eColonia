@@ -10,7 +10,7 @@
     <div class="row" id="r2">
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
-        <h2>Taller</h2>
+        <h2>Actividades en eCotecnias</h2>
         <form class="form-group">
           <div class="form-group col-lg-12">
             <label for="Nombre" class="control-label">Nombre</label>
@@ -40,16 +40,19 @@
             </select>
           </div>
           <div class="form-group col-lg-4">
+            <label class="control-label" for="ecotecnia">Ecotecnia</label>
+            <select class="form-control" name="ecotecnia">
+              <option>Ecoladrillos</option>
+              <option>Estufa de leña</option>
+            </select>
+          </div>
+          <div class="form-group col-lg-4">
             <label for="hora" class="control-label">Horario</label>
             <input type="timer" name="hora" class="form-control" placehoder="--:--">
           </div>
           <div class="form-group col-lg-4">
             <label for="fecha" class="control-label">Fecha</label>
             <input type="timer" name="fecha" class="form-control" placehoder="dd/mm/aaaa">
-          </div>
-          <div class="form-group col-lg-4">
-            <label class="control-label" for="costo">Costo</label>
-            <input type="money" class="form-control" id="costo" placeholder="$00.00">
           </div>
           <div class="form-group col-lg-12">
             <label for="descripcion" class="control-label">Descripción</label>

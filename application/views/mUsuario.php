@@ -292,7 +292,7 @@
                         <ul class="treeview-menu">
                           <li><a href="index.php/welcome/ambAgregaActividades"><i class="fa fa-thumb-tack"></i>Evento</a></li>
                           <li><a href="index.php/welcome/ambAgregaTaller"><i class="fa fa-plus"></i>Taller</a></li>
-                          <li><a href="#"><i class="fa fa-leaf"></i>Actividad en ecotécnias</a></li>
+                          <li><a href="index.php/welcome/ambAgregarEcotecnia"><i class="fa fa-leaf"></i>Actividad en ecotécnias</a></li>
                         </ul
                     </li>
                     <li><a href="#"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar Actividades</a></li>

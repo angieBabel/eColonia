@@ -34,7 +34,7 @@
           </div>
           <div class="form-group col-lg-2">
             <label for="ecobonos" class="control-label">Ecobonos</label>
-            <select class="form-control">
+            <select class="form-control" name="ecobonos">
               <option>0</option>
               <option>1</option>
               <option>2</option>
