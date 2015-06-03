@@ -55,6 +55,9 @@ class Administrador extends CI_Controller {
 		if($this->session->userdata('tipo')==1){
 			$data['contenido'] = "administrador/tabla_peticion";
 			//$data['estado'] = $this->estados;
+            $peticiones = $this->colono_model->get_peticionesadmin();
+//            $dataplus = array('peticiones' => $peticiones);
+            $data['peticiones'] = $peticiones;
 			$this->load->view('administrador/template',$data);
 		} else{
 			$this->session->sess_destroy();
@@ -66,6 +69,8 @@ class Administrador extends CI_Controller {
 		if($this->session->userdata('tipo')==1){
 			$data['contenido'] = "administrador/tabla_oficio";
 			//$data['estado'] = $this->estados;
+            $oficios = $this->colono_model->get_all_oficiosadmin();
+            $data['oficios'] = $oficios;
 			$this->load->view('administrador/template',$data);
 		} else{
 			$this->session->sess_destroy();

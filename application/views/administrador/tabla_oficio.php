@@ -31,9 +31,8 @@
 													<th>Estado</th>
 									            </tr>
 									        </thead>
-<!--
 									        <tbody>
-									        	<?php foreach($representante as $row) { ?> 
+									        	<?php foreach($oficios as $row) { ?> 
 												<tr>
 													<th><?php echo $row->nombre_colono." ".$row->ApellidoPaterno." ".$row->ApellidoMaterno;?></th>
 													<th><?php echo $row->Nombre_calle." ".$row->numero_casa?></th>
@@ -44,7 +43,6 @@
 												</tr>
 									        	<?php } ?>
 									        </tbody>
--->
 									    </table>
 									</div>
 								</div>

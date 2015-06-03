@@ -71,6 +71,25 @@ class Colono_model extends CI_Model{
                         ->get()
 						->result();
 	}
+  
+   public function get_peticionesadmin(){
+		return $this->db->select('peticion.Folio as Folio, peticion.Asunto as Asunto, peticion.FechaElab as Elab, 
+                                peticion.FechaAten as Aten, categoria.Nombre as Categoria, peticion.IdColono as Colono')
+						->from('peticion')
+                        ->join('categoria','peticion.IdCategoria = categoria.iD')
+                        ->get()
+						->result();
+	}
+  
+    public function get_all_oficiosadmin(){
+		return $this->db->select ('oficio.Folio as Folio, oficio.asunto as Asunto, oficio.descripcion as Descripcion, 
+			oficio.estado as Estado, oficio.FechaEnvio as FechaEnvio, oficio.FechaResp as FechaResp, oficio.IdComite as IdComite,
+			oficio.IdDependencia as IDDependencia')
+						->from('oficio')
+						->join ('comitedebarrio_has_colono','comitedebarrio_has_colono.comitedebarrio_Id = oficio.IdComite')
+						->get()
+						->result();
+    }
 	
 	public function get_all_peticiones($id_colono){
 		return $this->db->select ('peticion.Folio as Folio, peticion.Asunto as Asunto, peticion.FechaElab as Elab,
@@ -88,7 +107,7 @@ class Colono_model extends CI_Model{
 						->get()
 						->result();
 	}
-
+  
 	public function get_all_oficios($id_colono){
 		return $this->db->select ('oficio.Folio as Folio, oficio.asunto as Asunto, oficio.descripcion as Descripcion, 
 			oficio.estado as Estado, oficio.FechaEnvio as FechaEnvio, oficio.FechaResp as FechaResp, oficio.IdComite as IdComite,
@@ -98,7 +117,7 @@ class Colono_model extends CI_Model{
 						->where('comitedebarrio_has_colono.colono_Id',$id_colono)
 						->get()
 						->result();
-	}
+    }
 
 
 

@@ -34,6 +34,10 @@
                                                     <a href="<?php echo site_url('administrador/dependencias'); ?>" 
                                                     class="btn btn-lg btn-block btn-azul">Dependencias</a>
                                                 </label>
+                                                <label>
+                                                    <a href="<?php echo site_url('administrador/categorias'); ?>" 
+                                                    class="btn btn-lg btn-block btn-azul">Categorías</a>
+                                                </label>
                                                 </div>
 											</label>
 										</fieldset>
