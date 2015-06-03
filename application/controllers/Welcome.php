@@ -54,4 +54,7 @@ function __construct(){
 	public function ambAgregarCategoria(){ // Agregar una categoria nueva de residuos solidos
 		$this->load->view('categoriaResiduos');
 	}
+	public function ambgeneraReportes(){ // Generar reportes
+		$this->load->view('generaReporte');
+	}
 }

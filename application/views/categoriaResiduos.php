@@ -22,7 +22,23 @@
           <tr>
             <form action="">
               <th>
-                <input class="form-control" type="text" placeholder="Nombre Categoria">
+                <div class="col-lg-10">
+                  <input class="form-control" type="text" placeholder="Nombre Categoria">
+                </div>
+              </th>
+              <th>
+                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+              </th>
+            </form>
+
+          </tr>
+
+          <tr>
+            <form action="">
+              <th>
+                <div class="col-lg-10">
+                  <input class="form-control" type="text" placeholder="Nombre Categoria">
+                </div>
               </th>
               <th>
                 <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
@@ -33,7 +49,9 @@
           <tr>
             <form action="">
               <th>
-                <input class="form-control" type="text" placeholder="Nombre Categoria">
+                <div class="col-lg-10">
+                  <input class="form-control" type="text" placeholder="Nombre Categoria">
+                </div>
               </th>
               <th>
                 <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
@@ -44,18 +62,9 @@
           <tr>
             <form action="">
               <th>
-                <input class="form-control" type="text" placeholder="Nombre Categoria">
-              </th>
-              <th>
-                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
-              </th>
-            </form>
-          </tr>
-
-          <tr>
-            <form action="">
-              <th>
-                <input class="form-control" type="text" placeholder="Nombre Categoria">
+                <div class="col-lg-10">
+                  <input class="form-control" type="text" placeholder="Nombre Categoria">
+                </div>
               </th>
               <th>
                 <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
