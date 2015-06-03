@@ -41,6 +41,16 @@ class Colono_model extends CI_Model{
 				 ->insert('oficio');
 	}
 
+	public function inserta_dependencia($nombre,$autoridad){
+		$this->db->set('Nombre',$nombre)
+				 ->set('IDAutoridad',$autoridad)
+				 ->insert('dependencia');
+	}
+
+	public function inserta_categoria($nombre,$autoridad){
+		$this->db->set('Nombre',$nombre)
+				 ->insert('categoria');
+	}
 
 	public function obtiene_id($Email,$Tel_celular) {
 		return $this->db->like('Email',$Email)

@@ -50,6 +50,26 @@ class Administrador extends CI_Controller {
 			redirect('ecolonia');
 		}
 	}
+
+	public function dependencias(){
+		if($this->session->userdata('tipo')==1){
+			$data['contenido'] = "administrador/dependencias";
+			$this->load->view('administrador/template',$data);
+		}else{
+			$this->session->sess_destroy();
+			redirect('ecolonia');
+		}
+	}
+
+	public function categorias(){
+		if($this->session->userdata('tipo')==1){
+			$data['contenido'] = "administrador/categorias";
+			$this->load->view('administrador/template',$data);
+		}else{
+			$this->session->sess_destroy();
+			redirect('ecolonia');
+		}
+	}
     
     public function tabla_peticion(){
 		if($this->session->userdata('tipo')==1){
@@ -398,4 +418,38 @@ class Administrador extends CI_Controller {
 			redirect('ecolonia');
 		}
 	}
+
+	public function registrar_dependencia(){
+        if($this->session->userdata('tipo')==1){
+			if($this->input->post()){				
+                $nombre = $this->input->post('nombre');
+                $autoridad = $this->input->post('autoridad');
+                
+                $this->colono_model->inserta_dependencia($nombre,$autoridad);
+
+			} else{
+				echo json_encode(false);
+                redirect('administrador/gestion');
+			}
+		} else{
+			$this->session->sess_destroy();
+			redirect('ecolonia');
+		}
+    }
+
+    public function registrar_categoria(){
+        if($this->session->userdata('tipo')==1){
+			if($this->input->post()){				
+                $nombre = $this->input->post('nombre');
+                $this->colono_model->inserta_categoria($nombre,$autoridad);
+
+			} else{
+				echo json_encode(false);
+                redirect('administrador/gestion');
+			}
+		} else{
+			$this->session->sess_destroy();
+			redirect('ecolonia');
+		}
+    }
 }
