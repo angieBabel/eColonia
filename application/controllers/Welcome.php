@@ -48,7 +48,13 @@ function __construct(){
 	public function ambAgregaTaller(){
 		$this->load->view('taller');
 	}
+	public function ambAgregarActEcotecnia(){
+		$this->load->view('actividadesEcotecnias');
+	}
 	public function ambAgregarEcotecnia(){
-		$this->load->view('agregarEcotecnias');
+		$this->load->view('agregarEcotecnia');
+	}
+	public function ambAgregarCategoria(){
+		$this->load->view('categoriaResiduos');
 	}
 }
