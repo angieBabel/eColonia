@@ -60,4 +60,7 @@ function __construct(){
 	public function ambactualizarActividad(){
 		$this->load->view('actualizarActividad');
 	}
+	public function ambDatosRS(){
+		$this->load->view('agregarDatosRS');
+	}
 }
