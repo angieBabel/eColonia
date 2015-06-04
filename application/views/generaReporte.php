@@ -8,90 +8,29 @@
     <div class="row" id="r2">
       <div class="col-lg-1"></div>
       <div class="col-lg-10">
-      <!---->
-        <h2 class="tituloTabla">Reportes</h2>
-            <table id="tabla-evento" class="table table-hover">
-                <thead>
-                    <tr><!--Renglones-->
-                        <th >Meses</th><!--Colunas-->
-                        <th ></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th >Enero</th><!--Colunas-->
-                        <td>
-                            <a href="#modal1"><i class="fa fa-print fa-2x"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th >Febreo</th><!--Colunas-->
-                        <td>
-                            <a href="#modal1"><i class="fa fa-print fa-2x"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th >Marzo</th><!--Colunas-->
-                        <td>
-                            <a href="#modal1"><i class="fa fa-print fa-2x"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th >Abril</th><!--Colunas-->
-                        <td>
-                            <a href="#modal1"><i class="fa fa-print fa-2x"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th >Mayo</th><!--Colunas-->
-                        <td>
-                            <a href="#modal1"><i class="fa fa-print fa-2x"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th >Junio</th><!--Colunas-->
-                        <td>
-                            <a href="#modal1"><i class="fa fa-print fa-2x"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th >Julio</th><!--Colunas-->
-                        <td>
-                            <a href="#modal1"><i class="fa fa-print fa-2x"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th >Agosto</th><!--Colunas-->
-                        <td>
-                            <a href="#modal1"><i class="fa fa-print fa-2x"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th >Septiembre</th><!--Colunas-->
-                        <td>
-                            <a href="#modal1"><i class="fa fa-print fa-2x"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th >Octubre</th><!--Colunas-->
-                        <td>
-                            <a href="#modal1"><i class="fa fa-print fa-2x"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th >Noviembre</th><!--Colunas-->
-                        <td>
-                            <a href="#modal1"><i class="fa fa-print fa-2x"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th >Diciembre</th><!--Colunas-->
-                        <td>
-                            <a href="#modal1"><i class="fa fa-print fa-2x"></i></a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <nav class="cl-effect-7" id="repo">
+        <table>
+            <tr>
+                <td><a href="#">Enero</a></td>
+                <td><a href="#">Febrero</a></td>
+                <td><a href="#">Marzo</a></td>
+                <td><a href="#">Abril</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">Mayo</a></td>
+                <td><a href="#">Junio</a></td>
+                <td><a href="#">Julio</a></td>
+                <td><a href="#">Agosto</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">Septiembre</a></td>
+                <td><a href="#">Octubre</a></td>
+                <td><a href="#">Noviembre</a></td>
+                <td><a href="#">Diciembre</a></td>
+            </tr>
+        </table>
+
+        </nav>
       </div>
       <div class="col-lg-2"></div>
     </div>
