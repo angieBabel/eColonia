@@ -6,8 +6,8 @@
   <div class="container-fluid">
     <div class="row" id="r1"><h1 class="r1">Reportes de residuos Solidos Urbanos</h1></div>
     <div class="row" id="r2">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-10">
       <!---->
         <h2 class="tituloTabla">Reportes</h2>
             <table id="tabla-evento" class="table table-hover">

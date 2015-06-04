@@ -57,4 +57,7 @@ function __construct(){
 	public function ambgeneraReportes(){ // Generar reportes
 		$this->load->view('generaReporte');
 	}
+	public function ambactualizarActividad(){
+		$this->load->view('actualizarActividad');
+	}
 }

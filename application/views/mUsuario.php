@@ -295,9 +295,9 @@
                           <li><a href="index.php/welcome/ambAgregarActEcotecnia"><i class="fa fa-leaf"></i>Actividad en ecotécnias</a></li>
                         </ul
                     </li>
-                    <li><a href="#"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar Actividades</a></li>
+                    <li><a href="index.php/welcome/ambactualizarActividad"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar Actividades</a></li>
                     <li><a href="index.php/welcome/ambAgregarCategoria"><i class="fa fa-plus-square"></i>Agregar categoria de residuos solidos urbanos</a></li>
-                    <li><a href="#"><i class="fa fa-upload"></i>Actualizar datos de residuos solidos urbanos</a></li>
+                    <li><a href="# "><i class="fa fa-upload"></i>Actualizar datos de residuos solidos urbanos</a></li>
                     <li><a href="index.php/welcome/ambgeneraReportes"><i class="fa fa-file-text"></i>Reporte de residuos solidos urbanos</a></li>
                     <li><a href="index.php/welcome/ambAgregarEcotecnia"><i class="fa fa-plus-square"></i>Agregar ecotecnias</a></li>
                     <li><a href="#"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar ecotecnias</a></li>
