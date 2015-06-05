@@ -31,7 +31,12 @@ function __construct(){
 		$this->load->view('ambiental');
 	}
 	public function ambActividades(){//Ver agenda de actividades
-		$this->load->view('agenda_actividades');
+			$data = array(
+					'eventos'=>$this->m_eColonia->get_actividadesEvento(),
+					'talleres'=>$this->m_eColonia->get_actividadesTaller(),
+					'ecotecnias'=>$this->m_eColonia->get_actividadesEcotecnias(),
+				);
+      $this->load->view('agenda_actividades',$data);
 	}
 	public function ambResiduos(){ //Ver tablas de residuos solidos
 		$this->load->view('manejo_residuos');

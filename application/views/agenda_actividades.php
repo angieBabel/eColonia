@@ -26,20 +26,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($eventos as $rowEventos){ ?>
                     <tr>
-                        <td>Recolección de basura</td>
-                        <td>Koyotlán 291</td>
-                        <td>8:00 am</td>
+                        <td><?php echo $rowEventos['nombre']; ?></td>
+                        <td><?php echo $rowEventos['lugar']; ?></td>
+                        <td><?php echo $rowEventos['horario']; ?></td>
                         <td>
                             <a href="#modal1"> Ver más <i class="fa fa-plus"></i></a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Data 1</td>
-                        <td>Data 2</td>
-                        <td>Data 3</td>
-                        <td><a href="#modal1">Ver más <i class="fa fa-plus"></i></a></td>
-                    </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         <br>
@@ -57,22 +53,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($talleres as $rowTalleres){ ?>
                     <tr>
-                        <td>Cómo hacer ecoladrillos</td>
-                        <td>Koyotlán 291</td>
-                        <td>8:00 am</td>
+                        <td><?php echo $rowTalleres['nombre']; ?></td>
+                        <td><?php echo $rowTalleres['lugar']; ?></td>
+                        <td><?php echo $rowTalleres['horario']; ?></td>
                         <td>
-                            <a href="#modal1">Ver más <i class="fa fa-plus"></i></a>
+                            <a href="#modal1"> Ver más <i class="fa fa-plus"></i></a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Data 1</td>
-                        <td>Data 2</td>
-                        <td>Data 3</td>
-                        <td>
-                            <a href="#modal1">Ver más <i class="fa fa-plus"></i></a>
-                        </td>
-                    </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         <br>
@@ -90,18 +80,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($ecotecnias as $rowEcotecnias){ ?>
                     <tr>
-                        <td>Recolección de basura</td>
-                        <td>Koyotlán 291</td>
-                        <td>8:00 am</td>
-                        <td><a href="#modal1">Ver más <i class="fa fa-plus"></i></a></td>
+                        <td><?php echo $rowEcotecnias['nombre']; ?></td>
+                        <td><?php echo $rowEcotecnias['lugar']; ?></td>
+                        <td><?php echo $rowEcotecnias['horario']; ?></td>
+                        <td>
+                            <a href="#modal1"> Ver más <i class="fa fa-plus"></i></a>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Data 1</td>
-                        <td>Data 2</td>
-                        <td>Data 3</td>
-                        <td><a href="#modal1">Ver más <i class="fa fa-plus"></i></a></td>
-                    </tr>
+                    <?php } ?>
                 </tbody>
             </table>
 
