@@ -53,7 +53,7 @@ public function altaActTaller(){
 
     $this->m_eColonia->altaActTaller($nombre,$encargado,$instructor,$hora,$fecha,
       $lugar,$costo,$descripcion,$ecobonos,$galeria);
-    $this->load->view('Welcome/ambiental');
+    $this->load->view('ambiental');
   }
 
 public function altaActEcotecnia(){
@@ -68,7 +68,7 @@ public function altaActEcotecnia(){
 
 
     $this->m_eColonia->altaEvento($nombre,$representante,$hora,$fecha,$lugar,$descripcion,$ecobonos,$galeria);
-    $this->load->view('Welcome/ambiental');
+    $this->load->view('welcome/ambiental');
   }
 //Alta de nueva ecotécnia
 
@@ -79,7 +79,7 @@ public function altaEcotecnia(){
     $modouso=$this->input->POST('uso');
     $imagen=$this->input->POST('imagen');
 
-    $this->m_eColonia->altaEvento($nombre,$descripcion,$ubicacion,$modouso,$imagen);
-    $this->load->view('Welcome/ambiental');
+    $this->m_eColonia->altaEcotecnia($nombre,$ubicacion,$descripcion,$modouso,$imagen);
+    $this->load->view('ambiental');
   }
 }

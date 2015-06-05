@@ -35,7 +35,7 @@ class M_eColonia extends CI_Model{
 
   }
 
-//obtención de las actividades de la base de datos
+//obtención de datos de la base de datos (actividades y catálogos)
   public function get_actividadesEvento(){
     return $this->db->from('evento')
                 ->get()
@@ -53,10 +53,18 @@ class M_eColonia extends CI_Model{
                   ->get()
                   ->result_array();
   }
+  public function get_Ecotecnias(){
+     return $this->db->from('catalogo-ecotecnia')
+                  ->get()
+                  ->result_array();
+  }
+
+
 
 //Agregar nueva ecotecnia
-  public function altaEcotecnia($nombre,$descripcion,$modouso,$imagen){
+  public function altaEcotecnia($nombre,$ubicacion,$descripcion,$modouso,$imagen){
   $this->db->set('nombre',$nombre)
+          ->set('ubicacion',$ubicacion)
            ->set('descripcion',$descripcion)
            ->set('modouso',$modouso)
            ->set('imagen',$imagen)

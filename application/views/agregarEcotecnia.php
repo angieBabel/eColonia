@@ -11,7 +11,7 @@
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
         <h2>ECotecnias</h2>
-        <form class="form-group">
+        <form class="form-group" method="POST" action="index.php/uploader/altaEcotecnia">
           <div class="form-group col-lg-12">
             <label for="Nombre" class="control-label">Nombre</label>
             <input type="text" name="Nombre" class="form-control" placehoder="Nombre de la actividad">
