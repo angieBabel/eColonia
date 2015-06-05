@@ -72,6 +72,14 @@ class Colono_model extends CI_Model{
 						->result();
 	}
   
+    public function get_dependencias(){
+		return $this->db->select('dependencia.Nombre as Nombre, dependencia.Id as Id, autoridad.Nombre as Autoridad, autoridad.Correo as Correo')
+                        ->from('dependencia')
+                        ->join('autoridad','dependencia.IdAutoridad = autoridad.Id')
+						->get()
+						->result();
+	}
+  
     public function get_peticiones($id_colono){
 		return $this->db->select('peticion.Folio as Folio, peticion.Asunto as Asunto, peticion.FechaElab as Elab, 
                                 peticion.FechaAten as Aten, categoria.Nombre as Categoria')

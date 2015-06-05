@@ -53,7 +53,9 @@ class Administrador extends CI_Controller {
 
 	public function dependencias(){
 		if($this->session->userdata('tipo')==1){
-			$data['contenido'] = "administrador/dependencias";
+			$dependencias = $this->colono_model->get_dependencias();
+            $data['contenido'] = "administrador/dependencias";
+            $data['dependencias'] = $dependencias;
 			$this->load->view('administrador/template',$data);
 		}else{
 			$this->session->sess_destroy();
@@ -63,7 +65,9 @@ class Administrador extends CI_Controller {
 
 	public function categorias(){
 		if($this->session->userdata('tipo')==1){
-			$data['contenido'] = "administrador/categorias";
+			$categorias = $this->colono_model->get_categorias();
+            $data['contenido'] = "administrador/categorias";
+            $data['categorias'] = $categorias;
 			$this->load->view('administrador/template',$data);
 		}else{
 			$this->session->sess_destroy();
