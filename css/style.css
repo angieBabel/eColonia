@@ -78,6 +78,14 @@ table .ecotec{
 
 /* Effect 7: second border slides up */
 
+.tabla{
+  border-collapse: separate;
+  border-spacing:  5px;
+}
+
+.tabla tr td{
+  background: cyan;
+}
 
 #repo nav a:hover,
 #repo nav a:focus {

@@ -9,7 +9,7 @@
       <div class="col-lg-1"></div>
       <div class="col-lg-10">
         <nav class="cl-effect-7" id="repo">
-        <table>
+        <table class="tabla">
             <tr>
                 <td><a href="#">Enero</a></td>
                 <td><a href="#">Febrero</a></td>
