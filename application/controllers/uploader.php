@@ -53,7 +53,7 @@ public function altaActTaller(){
 
     $this->m_eColonia->altaActTaller($nombre,$encargado,$instructor,$hora,$fecha,
       $lugar,$costo,$descripcion,$ecobonos,$galeria);
-    $this->load->view('ambiental');
+    $this->load->view('welcome/ambTaller');
   }
 
 public function altaActEcotecnia(){
@@ -68,18 +68,43 @@ public function altaActEcotecnia(){
 
 
     $this->m_eColonia->altaEvento($nombre,$representante,$hora,$fecha,$lugar,$descripcion,$ecobonos,$galeria);
-    $this->load->view('welcome/ambiental');
+    $this->load->view('welcome/ambEcotecnia');
   }
 //Alta de nueva ecotécnia
 
 public function altaEcotecnia(){
-    $nombre=$this->input->POST('Nombre');
-    $ubicacion=$this->input->POST('lugar');
-    $descripcion=$this->input->POST('descripcion');
-    $modouso=$this->input->POST('uso');
-    $imagen=$this->input->POST('imagen');
+    $config['upload_path'] = './img/';
+    $config['allowed_types'] = 'gif|jpg|png';
+    $config['max_size'] = '100';
+    $config['max_width']  = '1024';
+    $config['max_height']  = '768';
 
-    $this->m_eColonia->altaEcotecnia($nombre,$ubicacion,$descripcion,$modouso,$imagen);
-    $this->load->view('ambiental');
+    $this->load->library('upload', $config);
+
+    if ( ! $this->upload->do_upload())
+    {
+      $error = array('error' => $this->upload->display_errors());
+
+      //$this->load->view('formulario_carga', $error);
+    }
+    else
+    {
+      //$data = array('upload_data' => $this->upload->data());
+        $data = $this->upload->data();
+        $nombre=$this->input->POST('Nombre');
+        $ubicacion=$this->input->POST('lugar');
+        $descripcion=$this->input->POST('descripcion');
+        $modouso=$this->input->POST('uso');
+        $imagen=$data['file_name'];
+        $add="img/$imagen";
+        $this->m_eColonia->altaEcotecnia($nombre,$ubicacion,$descripcion,$modouso,$add);
+    }
+    $this->load->view('welcome/ambEcotecnias');
+
+
   }
+
 }
+
+
+

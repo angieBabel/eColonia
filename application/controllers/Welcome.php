@@ -42,12 +42,12 @@ function __construct(){
 		$this->load->view('manejo_residuos');
 	}
 	public function ambEcotecnias(){ //Ver caracteristicas de ecotecnias
-		//$data = $this->m_eColonia->get_Ecotecnias();
-      $this->load->view('ecotecnias');
-
-
-		$this->load->view('ecotecnias');
+		$data = array(
+			'eco'=>$this->m_eColonia->get_Ecotecnias()
+			);
+		$this->load->view('ecotecnias',$data);
 	}
+
 	public function ambAgregaEvento(){ //Agregar un nuevo evento
 		$this->load->view('actividades');
 	}

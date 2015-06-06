@@ -17,64 +17,17 @@
               <!--Informacion-->
               <td>
                 <!--Ecotecnia 1-->
-                <h3>Estufa ahorradora de leña</h3>
-                <table class="ecotec">
-                  <tbody>
-                    <tr><!--Renglones-->
-                      <td class="imagenEco">
-                        <img src="img/estufa.jpg" alt="" width="100px" height="120px">
-                      </td>
-                      <td>
-                        <p id="infoAmbiental">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, voluptatibus nisi mollitia,
-                          aspernatur nemo deleniti cupiditate harum ad nobis eaque pariatur. Quaerat commodi obcaecati quisquam,
-                          quia veritatis sequi tempore magnam.
-                        </p>
-                        <p class="pull-right">
-                          <button class="btn btn-default" type="submit">Ubicación</button>
-                          <button class="btn btn-default" type="submit">Cómo usar</button>
-                        </p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <hr>
-                <!-- Ecotecnia 2 -->
-                <h3>Eco-Ladrillos</h3>
-                <table id="tabla-taller" class="ecotec">
-                  <tbody>
-                    <tr>
-                      <td >
-                        <img src="img/ecoladrillos.jpg" alt="" width="100px" height="120px">
-                      </td>
-                      <td>
-                        <p id="infoAmbiental">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, voluptatibus nisi mollitia,
-                          aspernatur nemo deleniti cupiditate harum ad nobis eaque pariatur. Quaerat commodi obcaecati quisquam,
-                          quia veritatis sequi tempore magnam.
-                        </p>
-                        <p class="pull-right">
-                          <button class="btn btn-default" type="submit">Ubicación</button>
-                          <button class="btn btn-default" type="submit">Cómo usar</button>
-                        </p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <hr>
-                <!--Cama de cultivo-->
-                <h3>Camas de cultivo</h3>
-                  <table id="tabla-taller" class="ecotec">
+                <?php foreach($eco as $rowCatEcotecnias){ ?>
+                  <h3><?php echo $rowCatEcotecnias['nombre']; ?></h3>
+                  <table class="ecotec">
                     <tbody>
-                      <tr>
-                        <td >
-                          <img src="img/huerto.jpg" alt="" width="100px" height="120px">
+                      <tr><!--Renglones-->
+                        <td class="imagenEco">
+                          <img src="<?php echo $rowCatEcotecnias['imagen']; ?>" alt="" width="100px" height="120px">
                         </td>
                         <td>
                           <p id="infoAmbiental">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, voluptatibus nisi mollitia,
-                            aspernatur nemo deleniti cupiditate harum ad nobis eaque pariatur. Quaerat commodi obcaecati quisquam,
-                            quia veritatis sequi tempore magnam.
+                            <?php echo $rowCatEcotecnias['descripcion']; ?>
                           </p>
                           <p class="pull-right">
                             <button class="btn btn-default" type="submit">Ubicación</button>
@@ -84,7 +37,9 @@
                       </tr>
                     </tbody>
                   </table>
-              </td>
+                  <hr>
+                <?php } ?>
+
               <!--Mapa-->
               <td>
                 <div class="col-lg-12">

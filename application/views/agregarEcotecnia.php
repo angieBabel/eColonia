@@ -11,7 +11,8 @@
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
         <h2>ECotecnias</h2>
-        <form class="form-group" method="POST" action="index.php/uploader/altaEcotecnia">
+        <form class="form-group" method="POST" enctype="multipart/form-data" action="index.php/uploader/altaEcotecnia">
+        <?php form_open_multipart('uploader/altaEcotecnia'); ?>
           <div class="form-group col-lg-12">
             <label for="Nombre" class="control-label">Nombre</label>
             <input type="text" name="Nombre" class="form-control" placehoder="Nombre de la actividad">
@@ -31,7 +32,8 @@
 
           <div class="form-group col-lg-12">
             <label for="imagen" class="control-label">Imagen</label>
-            <input type="file" name="imagen">
+            <input type="hidden" name="MAX_FILE_SIZE" value="200000">
+            <input type="file" name="userfile">
           </div>
           <div class="form-group col-lg-12">
             <div class="col-lg-10"></div>

@@ -62,12 +62,12 @@ class M_eColonia extends CI_Model{
 
 
 //Agregar nueva ecotecnia
-  public function altaEcotecnia($nombre,$ubicacion,$descripcion,$modouso,$imagen){
+  public function altaEcotecnia($nombre,$ubicacion,$descripcion,$modouso,$add){
   $this->db->set('nombre',$nombre)
           ->set('ubicacion',$ubicacion)
            ->set('descripcion',$descripcion)
            ->set('modouso',$modouso)
-           ->set('imagen',$imagen)
+           ->set('imagen',$add)
            ->insert('catalogo-ecotecnia');
   }
 //Agregar espacio para galeria
