@@ -8,6 +8,7 @@
     <div class="row" id="r2">
       <div class="col-lg-1"></div>
       <div class="col-lg-10">
+      <br><br>
         <nav class="cl-effect-7" id="repo">
         <table class="tabla">
             <tr>
