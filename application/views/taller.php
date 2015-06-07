@@ -24,9 +24,37 @@
             <label for="representante" class="control-label">Instructor</label>
             <input type="text" name="representante" class="form-control" placehoder="Encargado de la actividad">
           </div>
-          <div class="form-group col-lg-8">
+          <div class="form-group col-lg-12">
             <label for="lugar" class="control-label">Lugar</label>
             <input type="text" name="lugar" class="form-control" placehoder="Calle #, Colonia">
+          </div>
+
+          <div class="form-group col-lg-4">
+            <label for="hora" class="control-label">Horario</label>
+            <input type="timer" name="hora" class="form-control" placehoder="--:--">
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="fecha" class="control-label">Fecha Inicio</label>
+            <input type="timer" name="fecha" class="form-control" placehoder="dd/mm/aaaa">
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="fecha" class="control-label">Fecha Termino</label>
+            <input type="timer" name="fecha" class="form-control" placehoder="dd/mm/aaaa">
+          </div>
+          <div class="form-group col-lg-4">
+            <label class="control-label" for="costo">Costo</label>
+            <input type="money" class="form-control" id="costo" placeholder="$00.00">
+          </div>
+          <div class="form-group col-lg-4">
+            <label class="control-label" for="costo">Cupo</label>
+            <select class="form-control" name="Cupo">
+              <option>10</option>
+              <option>15</option>
+              <option>25</option>
+              <option>35</option>
+              <option>40</option>
+              <option>50</option>
+            </select>
           </div>
           <div class="form-group col-lg-4">
             <label for="ecobonos" class="control-label">Ecobonos</label>
@@ -38,18 +66,6 @@
               <option>4</option>
               <option>5</option>
             </select>
-          </div>
-          <div class="form-group col-lg-4">
-            <label for="hora" class="control-label">Horario</label>
-            <input type="timer" name="hora" class="form-control" placehoder="--:--">
-          </div>
-          <div class="form-group col-lg-4">
-            <label for="fecha" class="control-label">Fecha</label>
-            <input type="timer" name="fecha" class="form-control" placehoder="dd/mm/aaaa">
-          </div>
-          <div class="form-group col-lg-4">
-            <label class="control-label" for="costo">Costo</label>
-            <input type="money" class="form-control" id="costo" placeholder="$00.00">
           </div>
           <div class="form-group col-lg-12">
             <label for="descripcion" class="control-label">Descripción</label>
