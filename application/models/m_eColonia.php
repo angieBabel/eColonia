@@ -18,16 +18,21 @@ class M_eColonia extends CI_Model{
             ->insert('evento');
   }
 
-  public function altaActTaller($nombre,$encargado,$instructor,$hora,
-    $fecha,$lugar,$costo,$descripcion,$ecobonos,$galeria){
+  public function altaActTaller($nombre,$encargado,$instructor,$lugar,
+    $ecobonos,$hora,$fecha_inicio,$fecha_fin,$cupo,$costo,$descripcion,$galeria){
     $this->db->set('nombre',$nombre)
-            ->set('descripcion',$descripcion)
-            ->set('responsable',$representante)
-            ->set('fecha_Inicio',$fecha)
-            ->set('lugar',$lugar)
-            ->set('eco-bonos',$ecobonos)
-            ->set('galeria_idGaleria')
-            ->insert('evento');
+             ->set('descripcion',$descripcion)
+             ->set('responsable',$encargado)
+             ->set('fecha-inicio',$fecha_inicio)
+             ->set('fecha-fin',$fecha_fin)
+             ->set('horario',$hora)
+             ->set('lugar',$lugar)
+             ->set('eco-bonos',$ecobonos)
+             ->set('cupo',$cupo)
+             ->set('cuota',$costo)
+             ->set('galeria_idGaleria',$galeria)
+             ->insert('taller');
+
 
   }
 
@@ -69,7 +74,19 @@ class M_eColonia extends CI_Model{
                   ->result_array();
   }
 
+  //Obtener instructores y residuos del catalogo
 
+  public function getInstructor(){
+    return $this->db->from('instructor')
+                ->get()
+                ->result_array();
+  }
+
+  public function getColono(){
+    return $this->db->from('colono')
+                ->get()
+                ->result_array();
+  }
 
 //Agregar nueva ecotecnia
   public function altaEcotecnia($nombre,$ubicacion,$descripcion,$modouso,$add){

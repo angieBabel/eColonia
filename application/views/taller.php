@@ -11,18 +11,36 @@
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
         <h2>Taller</h2>
-        <form class="form-group">
+        <form class="form-group" action="index.php/uploader/altaActTaller" method="POST">
           <div class="form-group col-lg-12">
             <label for="Nombre" class="control-label">Nombre</label>
             <input type="text" name="Nombre" class="form-control" placehoder="Nombre de la actividad">
           </div>
           <div class="form-group col-lg-6">
             <label for="encargado" class="control-label">Encargado</label>
-            <input type="text" name="encargado" class="form-control" placehoder="Encargado de la actividad">
+            <!-- <input type="text" name="encargado" class="form-control" placehoder="Encargado de la actividad"> -->
+            <select name="encargado" id="encargado" class="form-control" >
+              <?php
+              foreach ($colonos as $colono) {?>
+                <option value="<?php echo $colono['id'] ?>">
+                    <?php echo $colono['nombre'] ?>
+                </option>
+            <?php }
+           ?>
+            </select>
           </div>
           <div class="form-group col-lg-6">
             <label for="instructor" class="control-label">Instructor</label>
-            <input type="text" name="instructor" class="form-control" placehoder="Encargado de la actividad">
+            <!-- <input type="text" name="instructor" class="form-control" placehoder="Encargado de la actividad"> -->
+            <select name="instructor" id="instructor" class="form-control" >
+              <?php
+              foreach ($instructores as $instructor) {?>
+                <option value="<?php echo $instructor['idInstructor'] ?>">
+                    <?php echo $instructor['nombre'] ?>
+                </option>
+            <?php }
+           ?>
+            </select>
           </div>
           <div class="form-group col-lg-12">
             <label for="lugar" class="control-label">Lugar</label>
@@ -35,19 +53,19 @@
           </div>
           <div class="form-group col-lg-4">
             <label for="fecha_inicio" class="control-label">Fecha Inicio</label>
-            <input type="timer" name="fecha_inicio" class="form-control" placehoder="dd/mm/aaaa">
+            <input type="date" name="fecha_inicio" class="form-control" placehoder="dd/mm/aaaa">
           </div>
           <div class="form-group col-lg-4">
             <label for="fecha_fin" class="control-label">Fecha Termino</label>
-            <input type="timer" name="fecha_fin" class="form-control" placehoder="dd/mm/aaaa">
+            <input type="date" name="fecha_fin" class="form-control" placehoder="dd/mm/aaaa">
           </div>
           <div class="form-group col-lg-4">
             <label class="control-label" for="costo">Costo</label>
-            <input type="money" class="form-control" id="costo" placeholder="$00.00">
+            <input type="money" class="form-control" id="costo" name="costo" placeholder="$00.00">
           </div>
           <div class="form-group col-lg-4">
             <label class="control-label" for="costo">Cupo</label>
-            <select class="form-control" name="Cupo">
+            <select class="form-control" id="cupo" name="cupo">
               <option>10</option>
               <option>15</option>
               <option>25</option>
