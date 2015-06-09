@@ -21,8 +21,8 @@
             <input type="text" name="encargado" class="form-control" placehoder="Encargado de la actividad">
           </div>
           <div class="form-group col-lg-6">
-            <label for="representante" class="control-label">Instructor</label>
-            <input type="text" name="representante" class="form-control" placehoder="Encargado de la actividad">
+            <label for="encargado" class="control-label">Encargado</label>
+            <input type="text" name="encargado" class="form-control" placehoder="Encargado de la actividad">
           </div>
           <div class="form-group col-lg-8">
             <label for="lugar" class="control-label">Lugar</label>
@@ -51,8 +51,12 @@
             <input type="timer" name="hora" class="form-control" placehoder="--:--">
           </div>
           <div class="form-group col-lg-4">
-            <label for="fecha" class="control-label">Fecha</label>
-            <input type="timer" name="fecha" class="form-control" placehoder="dd/mm/aaaa">
+            <label for="fecha-inicio" class="control-label">Fecha inicio</label>
+            <input type="timer" name="fecha-inicio" class="form-control" placehoder="dd/mm/aaaa">
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="fecha-fin" class="control-label">Fecha fin</label>
+            <input type="timer" name="fecha-fin" class="form-control" placehoder="dd/mm/aaaa">
           </div>
           <div class="form-group col-lg-12">
             <label for="descripcion" class="control-label">Descripción</label>

@@ -31,8 +31,18 @@ class M_eColonia extends CI_Model{
 
   }
 
-  public function altaActEctoecnia(){
-
+  public function altaActEctoecnia($nombre,$encargado,$encargado,$lugar,
+    $ecobonos,$ecotecnia,$hora,$fecha_inicio,$fecha_fin,$descripcion){
+    $this->db->set('nombre',$nombre)
+              ->set('responsable',$encargado)
+              ->set('lugar',$lugar)
+              ->set('eco-bonos',$ecobonos)
+              ->set('idEcotecnia',$ecotecnia)
+              ->set('horario',$hora)
+              ->set('fecha-inicio',$fecha_inicio)
+              ->set('fecha_fin',$fecha_fin)
+              ->set('descripcion',$descripcion)
+              ->insert('ecotecnia');
   }
 
 //obtención de datos de la base de datos (actividades y catálogos)
