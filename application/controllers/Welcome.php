@@ -39,7 +39,11 @@ function __construct(){
       $this->load->view('agenda_actividades',$data);
 	}
 	public function ambResiduos(){ //Ver tablas de residuos solidos
-		$this->load->view('manejo_residuos');
+		$data = array(
+			'datos_actuales'=>$this->m_eColonia->get_ResiduosActuales(),
+			'datos_historial'=>$this->m_eColonia->get_Residuos()
+			);
+		$this->load->view('manejo_residuos',$data);
 	}
 	public function ambEcotecnias(){ //Ver caracteristicas de ecotecnias
 		$data = array(
@@ -52,10 +56,17 @@ function __construct(){
 		$this->load->view('actividades');
 	}
 	public function ambAgregaTaller(){ //Agregar un taller nuevo
-		$this->load->view('taller');
+		$data = array(
+			'instructores'=>$this->m_eColonia->getInstructor(),
+			'colonos'=>$this->m_eColonia->getColono()
+			);
+		$this->load->view('taller',$data);
 	}
 	public function ambAgregarActEcotecnia(){ //Agregar una nueva actividad que incluya ecotecnias
-		$this->load->view('actividadesEcotecnias');
+		$data = array(
+			'eco'=>$this->m_eColonia->get_Ecotecnias()
+			);
+		$this->load->view('actividadesEcotecnias',$data);
 	}
 	public function ambAgregarEcotecnia(){ //Agregar una nueva ecotecnia
 		$this->load->view('agregarEcotecnia');

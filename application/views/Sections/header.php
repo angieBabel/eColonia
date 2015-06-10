@@ -25,6 +25,8 @@
     webshims.setOptions('forms-ext', {types: 'date'});
 webshims.polyfill('forms forms-ext');
 </script>
+  <script type="text/javascript" src="js/Chart.min.js"></script><!-- Archivos de javascript para los charts -->
+  <script type="text/javascript" src="js/Chart.js"></script><!-- Archivos de javascript para los charts -->
 
   </head>
   <body>

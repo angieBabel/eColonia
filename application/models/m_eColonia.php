@@ -88,6 +88,22 @@ class M_eColonia extends CI_Model{
                 ->result_array();
   }
 
+  public function get_Residuos(){
+    return $this->db->from('residuos_has_catalogo-residuos')
+                ->get()
+                ->result_array();
+  }
+
+  public function get_ResiduosActuales(){
+
+    return $this->db->from('residuos_has_catalogo-residuos')
+                ->order_by('Residuos_idResiduos','desc')
+                ->limit(3)
+                ->get()
+                ->result_array();
+  }
+
+
 //Agregar nueva ecotecnia
   public function altaEcotecnia($nombre,$ubicacion,$descripcion,$modouso,$add){
   $this->db->set('nombre',$nombre)

@@ -63,7 +63,7 @@ public function altaActTaller(){
 
 public function altaActEcotecnia(){
     $nombre=$this->input->POST('Nombre');
-    $representante=$this->input->POST('encargado');
+    $encargado=$this->input->POST('encargado');
     $hora=$this->input->POST('hora');
     $ecobonos=$this->input->POST('ecobonos');
     $ecotecnias=$this->input->POST('ecotecnia');

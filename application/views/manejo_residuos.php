@@ -13,7 +13,11 @@
 
   <section>
     <div>
-      <h1 id="" align="center">Reporte de residuos PERIODO Enero-Febrero</h1>
+
+      <?php foreach ($datos_actuales as $datos_actualess) {
+        # code...
+      } ?>
+      <h1 id="" align="center">Reporte de residuos <?php echo $datos_actualess  ['periodo'] ?></h1>
       <div id="canvas-holder" align="center">
         <canvas id="actuales" width="300" height="300"></canvas>
         <a type="button" href="#modal1">Generar reporte</a>
@@ -29,11 +33,12 @@
 
   <script>
 
+
         var datosActuales =
         [
-          {value:10,color:"#0b82FF",highlight: "#0c62ab",label: "PET"},
-          {value:80,color:"#bb8Fe7",highlight: "#0c62ab",label: "Papel y Cartón"},
-          {value:10,color:"#bb82e7",highlight: "#0c62ab",label: "Aluminio"}
+            <?php foreach ($datos_actuales as $datos_actualess) { ?>
+              {value:<?php echo $datos_actualess['cantidad'] ?>,color:"#0b82FF",highlight: "#0c62ab",label: "'<?php echo $datos_actualess['Catalogo-residuos_idResiduo'] ?>'"},
+           <?php } ?>
         ];
 
         var datosHistoriales =

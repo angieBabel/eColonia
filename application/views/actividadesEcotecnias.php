@@ -42,8 +42,11 @@
           <div class="form-group col-lg-4">
             <label class="control-label" for="ecotecnia">Ecotecnia</label>
             <select class="form-control" name="ecotecnia">
-              <option>Ecoladrillos</option>
-              <option>Estufa de leña</option>
+              <?php foreach ($eco as $ecotecnia) {?>
+                <option value="<?php echo $ecotecnia['idEcotecnia'] ?>">
+                    <?php echo $ecotecnia['nombre'] ?>
+                </option>
+             <?php }?>
             </select>
           </div>
           <div class="form-group col-lg-4">
