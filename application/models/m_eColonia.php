@@ -89,18 +89,28 @@ class M_eColonia extends CI_Model{
   }
 
   public function get_Residuos(){
-    return $this->db->from('residuos_has_catalogo-residuos')
+    return $this->db->select ('*')
+                ->from('residuos_has_catalogo-residuos AS R-CR')
+                ->join('catalogo-residuos as CR', 'R-CR.Catalogo-residuos_idResiduo = CR.idResiduo')
                 ->get()
                 ->result_array();
-  }
+}
 
   public function get_ResiduosActuales(){
 
-    return $this->db->from('residuos_has_catalogo-residuos')
+    return $this->db->select ('*')
+                ->from('residuos_has_catalogo-residuos AS R-CR')
+                ->join('catalogo-residuos as CR', 'R-CR.Catalogo-residuos_idResiduo = CR.idResiduo')
                 ->order_by('Residuos_idResiduos','desc')
                 ->limit(3)
                 ->get()
                 ->result_array();
+
+    /*$this->db->select('*');
+    $this->db->from('TableA AS A');// I use aliasing make joins easier
+    $this->db->join('TableC AS C', 'A.ID = C.TableAId', 'INNER');
+    $this->db->join('TableB AS B', 'B.ID = C.TableBId', 'INNER');
+    $result = $this->db->get();*/
   }
 
 

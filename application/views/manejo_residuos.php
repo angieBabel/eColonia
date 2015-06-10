@@ -37,7 +37,7 @@
         var datosActuales =
         [
             <?php foreach ($datos_actuales as $datos_actualess) { ?>
-              {value:<?php echo $datos_actualess['cantidad'] ?>,color:"#0b82FF",highlight: "#0c62ab",label: "'<?php echo $datos_actualess['Catalogo-residuos_idResiduo'] ?>'"},
+              {value:<?php echo $datos_actualess['cantidad'] ?>,color:"#0b82FF",highlight: "#0c62ab",label: "'<?php echo $datos_actualess['nombre'] ?>'"},
            <?php } ?>
         ];
 
