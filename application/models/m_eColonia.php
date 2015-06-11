@@ -114,7 +114,7 @@ class M_eColonia extends CI_Model{
     return $this->db->select ('*')
                 ->from('residuos_has_catalogo-residuos AS R-CR')
                 ->join('catalogo-residuos as CR', 'R-CR.Catalogo-residuos_idResiduo = CR.idResiduo')
-                ->where ('periodo',$mes)
+                ->where ('month(periodo)',$mes)
                 ->get()
                 ->result_array();
 }
