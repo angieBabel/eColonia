@@ -12,22 +12,22 @@
         <nav class="cl-effect-7" id="repo">
         <table class="tabla">
             <tr>
-                <td><a href="index.php/welcome/ambReportes" onclick="periodo()">Enero</a></td>
-                <td><a href="index.php/welcome/ambReportes">Febrero</a></td>
-                <td><a href="index.php/welcome/ambReportes">Marzo</a></td>
-                <td><a href="index.php/welcome/ambReportes">Abril</a></td>
+                <td><a href="index.php/welcome/ambReportes?id=1">Enero</a></td>
+                <td><a href="index.php/welcome/ambReportes?id=2">Febrero</a></td>
+                <td><a href="index.php/welcome/ambReportes?id=3">Marzo</a></td>
+                <td><a href="index.php/welcome/ambReportes?id=4">Abril</a></td>
             </tr>
-            <tr>
-                <td><a href="index.php/welcome/ambReportes">Mayo</a></td>
-                <td><a href="index.php/welcome/ambReportes">Junio</a></td>
-                <td><a href="index.php/welcome/ambReportes">Julio</a></td>
-                <td><a href="index.php/welcome/ambReportes">Agosto</a></td>
+            <t1
+                <td><a href="index.php/welcome/ambReportes?id=5">Mayo</a></td>
+                <td><a href="index.php/welcome/ambReportes?id=6">Junio</a></td>
+                <td><a href="index.php/welcome/ambReportes?id=7">Julio</a></td>
+                <td><a href="index.php/welcome/ambReportes?id=8">Agosto</a></td>
             </tr>
-            <tr>
-                <td><a href="index.php/welcome/ambReportes">Septiembre</a></td>
-                <td><a href="index.php/welcome/ambReportes">Octubre</a></td>
-                <td><a href="index.php/welcome/ambReportes">Noviembre</a></td>
-                <td><a href="index.php/welcome/ambReportes">Diciembre</a></td>
+            <t1
+                <td><a href="index.php/welcome/ambReportes?id=9">Septiembre</a></td>
+                <td><a href="index.php/welcome/ambReportes?id=10">Octubre</a></td>
+                <td><a href="index.php/welcome/ambReportes?id=11">Noviembre</a></td>
+                <td><a href="index.php/welcome/ambReportes?id=12">Diciembre</a></td>
             </tr>
         </table>
 
