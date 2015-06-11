@@ -10,16 +10,17 @@ class M_eColonia extends CI_Model{
     $horario,$fecha,$lugar,$descripcion,$ecobonos,$galeria){
     $this->db->set('nombre',$nombre)
             ->set('descripcion',$descripcion)
-            ->set('responsable',$representante)
+            ->set('responsable',$encargado)
             ->set('fecha_Inicio',$fecha)
             ->set('lugar',$lugar)
+            ->set('horario',$horario)
             ->set('eco-bonos',$ecobonos)
             ->set('galeria_idGaleria')
             ->insert('evento');
   }
 
   public function altaActTaller($nombre,$encargado,$instructor,$lugar,
-    $ecobonos,$hora,$fecha_inicio,$fecha_fin,$cupo,$costo,$descripcion,$galeria){
+    $ecobonos,$hora,$fecha_inicio,$fecha_fin,$cupo,$costo,$descripcion,$galeria,$estado){
     $this->db->set('nombre',$nombre)
              ->set('descripcion',$descripcion)
              ->set('responsable',$encargado)
@@ -30,14 +31,15 @@ class M_eColonia extends CI_Model{
              ->set('eco-bonos',$ecobonos)
              ->set('cupo',$cupo)
              ->set('cuota',$costo)
+             ->set('estado',$estado)
              ->set('galeria_idGaleria',$galeria)
              ->insert('taller');
 
 
   }
 
-  public function altaActEctoecnia($nombre,$encargado,$encargado,$lugar,
-    $ecobonos,$ecotecnia,$hora,$fecha_inicio,$fecha_fin,$descripcion){
+  public function altaActEctoecnia($nombre,$encargado,$lugar,
+    $ecobonos,$ecotecnia,$hora,$fecha_inicio,$fecha_fin,$cupo,$descripcion,$estado){
     $this->db->set('nombre',$nombre)
               ->set('responsable',$encargado)
               ->set('lugar',$lugar)
@@ -45,7 +47,9 @@ class M_eColonia extends CI_Model{
               ->set('idEcotecnia',$ecotecnia)
               ->set('horario',$hora)
               ->set('fecha-inicio',$fecha_inicio)
-              ->set('fecha_fin',$fecha_fin)
+              ->set('fecha-fin',$fecha_fin)
+              ->set('cupo',$cupo)
+              ->set('estado',$estado)
               ->set('descripcion',$descripcion)
               ->insert('ecotecnia');
   }
@@ -74,7 +78,7 @@ class M_eColonia extends CI_Model{
                   ->result_array();
   }
 
-  //Obtener instructores y residuos del catalogo
+//Obtener instructores y residuos del catalogo
 
   public function getInstructor(){
     return $this->db->from('instructor')
@@ -105,6 +109,15 @@ class M_eColonia extends CI_Model{
                 ->limit(3)
                 ->get()
                 ->result_array();
+//Generador de PDF
+function obtenerReporteResiduos()
+    {
+        return $this->db->select ('*')
+                ->from('residuos_has_catalogo-residuos AS R-CR')
+                ->join('catalogo-residuos as CR', 'R-CR.Catalogo-residuos_idResiduo = CR.idResiduo')
+                ->get()
+                ->result_array();
+    }
 
     /*$this->db->select('*');
     $this->db->from('TableA AS A');// I use aliasing make joins easier

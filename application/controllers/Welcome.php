@@ -22,9 +22,11 @@ function __construct(){
 		parent::__construct();
 
 		$this->load->model('m_eColonia');
+
 	}
 	public function index(){ //Pagina principal
 		$this->load->view('index');
+
 	}
 
 	public function ambiental(){ //Cargar pagina principal de Ambiental
@@ -53,7 +55,10 @@ function __construct(){
 	}
 
 	public function ambAgregaEvento(){ //Agregar un nuevo evento
-		$this->load->view('actividades');
+		$data = array(
+			'colonos'=>$this->m_eColonia->getColono()
+			);
+		$this->load->view('actividades',$data);
 	}
 	public function ambAgregaTaller(){ //Agregar un taller nuevo
 		$data = array(
@@ -64,7 +69,8 @@ function __construct(){
 	}
 	public function ambAgregarActEcotecnia(){ //Agregar una nueva actividad que incluya ecotecnias
 		$data = array(
-			'eco'=>$this->m_eColonia->get_Ecotecnias()
+			'eco'=>$this->m_eColonia->get_Ecotecnias(),
+			'colonos'=>$this->m_eColonia->getColono()
 			);
 		$this->load->view('actividadesEcotecnias',$data);
 	}

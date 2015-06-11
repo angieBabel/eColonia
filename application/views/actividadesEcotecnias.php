@@ -18,13 +18,17 @@
           </div>
           <div class="form-group col-lg-6">
             <label for="encargado" class="control-label">Encargado</label>
-            <input type="text" name="encargado" class="form-control" placehoder="Encargado de la actividad">
+            <!-- <input type="text" name="encargado" class="form-control" placehoder="Encargado de la actividad"> -->
+            <select name="encargado" id="encargado" class="form-control" >
+              <?php
+              foreach ($colonos as $colono) {?>
+                <option value="<?php echo $colono['id'] ?>">
+                    <?php echo $colono['nombre'] ?>
+                </option>
+              <?php } ?>
+            </select>
           </div>
           <div class="form-group col-lg-6">
-            <label for="encargado" class="control-label">Encargado</label>
-            <input type="text" name="encargado" class="form-control" placehoder="Encargado de la actividad">
-          </div>
-          <div class="form-group col-lg-8">
             <label for="lugar" class="control-label">Lugar</label>
             <input type="text" name="lugar" class="form-control" placehoder="Calle #, Colonia">
           </div>
@@ -55,11 +59,22 @@
           </div>
           <div class="form-group col-lg-4">
             <label for="fecha-inicio" class="control-label">Fecha inicio</label>
-            <input type="timer" name="fecha-inicio" class="form-control" placehoder="dd/mm/aaaa">
+            <input type="date" name="fecha-inicio" class="form-control" placehoder="dd/mm/aaaa">
           </div>
           <div class="form-group col-lg-4">
             <label for="fecha-fin" class="control-label">Fecha fin</label>
-            <input type="timer" name="fecha-fin" class="form-control" placehoder="dd/mm/aaaa">
+            <input type="date" name="fecha-fin" class="form-control" placehoder="dd/mm/aaaa">
+          </div>
+          <div class="form-group col-lg-4">
+            <label class="control-label" for="costo">Cupo</label>
+            <select class="form-control" id="cupo" name="cupo">
+              <option>10</option>
+              <option>15</option>
+              <option>25</option>
+              <option>35</option>
+              <option>40</option>
+              <option>50</option>
+            </select>
           </div>
           <div class="form-group col-lg-12">
             <label for="descripcion" class="control-label">Descripción</label>

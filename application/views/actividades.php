@@ -18,7 +18,15 @@
           </div>
           <div class="form-group col-lg-6">
             <label for="encargado" class="control-label">Encargado</label>
-            <input type="text" name="encargado" class="form-control" placehoder="Encargado de la actividad">
+            <select name="encargado" id="encargado" class="form-control" >
+              <?php
+              foreach ($colonos as $colono) {?>
+                <option value="<?php echo $colono['id'] ?>">
+                    <?php echo $colono['nombre'] ?>
+                </option>
+            <?php }
+           ?>
+            </select>
           </div>
           <div class="form-group col-lg-6">
             <label for="lugar" class="control-label">Lugar</label>
@@ -30,7 +38,7 @@
           </div>
           <div class="form-group col-lg-5">
             <label for="fecha" class="control-label">Fecha</label>
-            <input type="timer" name="fecha" class="form-control" placehoder="dd/mm/aaaa">
+            <input type="date" name="fecha" class="form-control" placehoder="dd/mm/aaaa">
           </div>
           <div class="form-group col-lg-2">
             <label for="ecobonos" class="control-label">Ecobonos</label>

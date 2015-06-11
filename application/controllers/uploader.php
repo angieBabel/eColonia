@@ -28,15 +28,17 @@ function __construct(){
 
 public function altaActEvento(){
     $nombre=$this->input->POST('Nombre');
-    $representante=$this->input->POST('representante');
-    $hora=$this->input->POST('hora');
+    $representante=$this->input->POST('encargado');
+    $horario=$this->input->POST('hora');
     $fecha=$this->input->POST('fecha');
     $lugar=$this->input->POST('lugar');
     $descripcion=$this->input->POST('descripcion');
     $ecobonos=$this->input->POST('ecobonos');
     $galeria= $this->m_eColonia->agregarGaleria();
+    $estado=("en espera");
 
-
+    $this->m_eColonia->altaActEvento($nombre,$representante,
+    $horario,$fecha,$lugar,$descripcion,$ecobonos,$galeria,$estado);
    redirect('welcome/ambActividades');
   }
 
@@ -51,12 +53,13 @@ public function altaActTaller(){
     $lugar=$this->input->POST('lugar');
     $cupo=$this->input->POST('cupo');
     $costo=$this->input->POST('costo');
+    $estado=('en espera');
     $descripcion=$this->input->POST('descripcion');
     $galeria= $this->m_eColonia->agregarGaleria();
 
 
     $this->m_eColonia->altaActTaller($nombre,$encargado,$instructor,$lugar,
-    $ecobonos,$hora,$fecha_inicio,$fecha_fin,$cupo,$costo,$descripcion,$galeria);
+    $ecobonos,$hora,$fecha_inicio,$fecha_fin,$cupo,$costo,$descripcion,$galeria,$estado);
 
     redirect('welcome/ambActividades');
   }
@@ -67,15 +70,17 @@ public function altaActEcotecnia(){
     $hora=$this->input->POST('hora');
     $ecobonos=$this->input->POST('ecobonos');
     $ecotecnias=$this->input->POST('ecotecnia');
-    $fecha_inicio=$this->input->POST('fecha_inicio');
-    $fecha_fin=$this->input->POST('fecha_fin');
+    $fecha_inicio=$this->input->POST('fecha-inicio');
+    $fecha_fin=$this->input->POST('fecha-fin');
     $lugar=$this->input->POST('lugar');
+    $cupo=$this->input->POST('cupo');
+    $estado=('en espera');
     $descripcion=$this->input->POST('descripcion');
     $galeria= $this->m_eColonia->agregarGaleria();
 
 
-    $this->m_eColonia->altaEvento($nombre,$encargado,$encargado,$lugar,
-    $ecobonos,$ecotecnia,$hora,$fecha_inicio,$fecha_fin,$descripcion);
+    $this->m_eColonia->altaActEctoecnia($nombre,$encargado,$lugar,
+    $ecobonos,$ecotecnias,$hora,$fecha_inicio,$fecha_fin,$cupo,$descripcion,$galeria,$estado);
     redirect('welcome/ambActividades');
   }
 //Alta de nueva ecotécnia
