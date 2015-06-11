@@ -27,14 +27,6 @@
           Doloremque qui numquam nemo molestiae fugit nostrum ipsum repellat.Soluta fuga cum consectetur impedit earum nesciunt dolor nulla! Aspernatur reprehenderit,
           tenetur harum distinctio possimus ab tempora alias aut voluptatem in! Harum, aut libero eaque voluptate? Culpa autem sunt similique?Adipisci aperiam rem placeat
         </p>
-                      <a href="#modal1" style="color:black"><i class="fa fa-plus-square" onclick="" ></i></a>
-                      <div id="modal1" class="modalmask">
-                          <div class="modalbox movedown">
-                              <a href="#close" title="Close" class="close">X</a>
-                              <p id="informacion"></p>
-
-                          </div>
-                      </div>
       </div>
       <div class="col-lg-1"></div>
     </div>

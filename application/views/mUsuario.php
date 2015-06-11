@@ -1,8 +1,9 @@
 <?php
   include_once "/Sections/header.php";
 ?>
+  <!-- Usurio Externo-->
   <?php if (1==0) { ?>
-      <!-- Usurio Externo-->
+
       <aside class="main-sidebar">
         <section class="sidebar">
 
@@ -51,9 +52,9 @@
                 <i class="fa fa-pagelines"></i> <span>Ambiental</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="index.php/welcome/ambActividades"><i class="fa fa-calendar"></i> Agenda de Actividades</a></li>
-                <li><a href="agenda_actividades.php"><i class="fa fa-pie-chart"></i>Manejo de Residuos Sólidos</a></li>
-                <li><a href="agenda_actividades.php"><i class="fa fa-leaf"></i>Eco-técnias</a></li>
+                <li><a href="index.php/welcome/ambActividades"><i class="fa fa-calendar"></i> Agenda de Actividades</a></li>
+                <li><a href="index.php/welcome/ambResiduos"><i class="fa fa-pie-chart"></i>Residuos Sólidos</a></li>
+                <li><a href="index.php/welcome/ambEcotecnias"><i class="fa fa-leaf"></i>Eco-técnias</a></li>
               </ul>
             </li>
             <!--Salud-->
@@ -104,8 +105,8 @@
       </aside>
 
   <?php }?>
+    <!-- Usurio Colono-->
     <?php if (2==0) { ?>
-      <!-- Usurio Colono-->
       <aside class="main-sidebar">
         <section class="sidebar">
 
@@ -119,7 +120,7 @@
             <div class="pull-center info">
               <p>UserName</p>
               <!-- EstadoUsuario -->
-              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+              <a href="#"><i class="fa fa-circle text-success"></i> Colono</a>
             </div>
           </div>
           <!-- sidebar menu -->
@@ -219,8 +220,8 @@
       </aside>
 
   <?php }?>
+  <!-- Administrador -->
  <?php if (3==3) { ?>
-    <!-- Administrador -->
       <aside class="main-sidebar">
         <section class="sidebar">
 
@@ -234,7 +235,7 @@
             <div class="pull-center info">
               <p>UserName</p>
               <!-- EstadoUsuario -->
-              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+              <a href="#"><i class="fa fa-circle text-success"></i> Administrador</a>
             </div>
           </div>
           <!-- sidebar menu -->
@@ -296,6 +297,7 @@
                         </ul>
                     </li>
                     <li><a href="index.php/welcome/ambInstructor"><i class="fa fa-male"></i>Agregar Instructor</a></li>
+                    <li><a href="index.php/welcome/ambInstructor"><i class="fa fa-male"></i>Estatus de actividades</a></li>
                     <li><a href="index.php/welcome/ambactualizarActividad"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar Actividades</a></li>
                     <li><a href="index.php/welcome/ambactualizarTaller"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar Talleres</a></li>
                     <li><a href="index.php/welcome/ambAgregarCategoria"><i class="fa fa-plus-square"></i>Agregar categoria de residuos solidos urbanos</a></li>

@@ -64,39 +64,6 @@ webshims.polyfill('forms forms-ext');
                         <i class="fa fa-bell-o"></i>
                         <span class="label label-success">4</span>
                       </a>
-                      <ul class="dropdown-menu">
-                        <li class="header">You have 4 messages</li>
-                        <li>
-                          <!-- inner menu: contains the actual data -->
-                          <ul class="menu">
-                            <li><!-- start message -->
-                              <a href="#">
-                                <div class="pull-left">
-                                  <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
-                                </div>
-                                <h4>
-                                  Support Team
-                                  <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                </h4>
-                                <p>Why not buy a new awesome theme?</p>
-                              </a>
-                            </li><!-- end message -->
-                            <li>
-                              <a href="#">
-                                <div class="pull-left">
-                                  <img src="img/user4-128x128.jpg" class="img-circle" alt="user image"/>
-                                </div>
-                                <h4>
-                                  Reviewers
-                                  <small><i class="fa fa-clock-o"></i> 2 days</small>
-                                </h4>
-                                <p>Why not buy a new awesome theme?</p>
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="footer"><a href="#">See All Messages</a></li>
-                      </ul>
                     </li>
                     <!-- Cerrar Sesion -->
                     <li class="dropdown tasks-menu">
@@ -107,34 +74,32 @@ webshims.polyfill('forms forms-ext');
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="img/user2-160x160.jpg" class="user-image" alt="User Image"/>
-                        <span class="hidden-xs">Hola</span>
+                        <img src="img/avatar5.png" class="user-image" alt="User Image"/>
+                        <span class="hidden-xs"></span>
                       </a>
                       <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                          <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                          <img src="img/avatar5.png" class="img-circle" alt="User Image" />
                           <p>
                             Alexander Pierce - Web Developer
                             <small>Member since Nov. 2012</small>
                           </p>
                         </li>
                         <!-- Menu Body -->
-                        <li class="user-body">
-                          <div class="col-xs-4 text-center">
-                            <a href="#">Followers</a>
-                          </div>
-                          <div class="col-xs-4 text-center">
-                            <a href="#">Sales</a>
-                          </div>
-                          <div class="col-xs-4 text-center">
-                            <a href="#">Friends</a>
-                          </div>
-                        </li>
+                          <li class="user-body">
+                            <div class="col-xs-6 text-center" style="text-aligin:center">
+                              <a href="#">Gestión</a>
+                            </div>
+                            <div class="col-xs-6 text-center" style="text-aligin:center">
+                              <a href="index.php/welcome/ambiental">Ambiental</a>
+                            </div>
+                          </li>
+
                         <!-- Menu Footer-->
                         <li class="user-footer">
                           <div class="pull-left">
-                            <a href="#" class="btn btn-default btn-flat">Profile</a>
+                            <a href="#"  data-toggle="offcanvas" class="btn btn-default btn-flat ">Profile</a>
                           </div>
                           <div class="pull-right">
                             <a href="#" class="btn btn-default btn-flat">Sign out</a>
@@ -147,7 +112,7 @@ webshims.polyfill('forms forms-ext');
             <?php } else{ ?>
                <ul class="nav navbar-nav navbar-right" id="prueba" >
                   <li><a href="#" class="">Registrarse</a></li><!-- class="glyphicon glyphicon-user" -->
-                  <li><a href="#"><i class="fa fa-sign-in fa-2x"></i></a></li>
+                  <li><a href="#"><i class="fa fa-sign-in fa-lg"></i></a></li>
                 </ul>
             <?php } ?>
           </div>
