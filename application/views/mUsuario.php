@@ -297,6 +297,7 @@
                     </li>
                     <li><a href="index.php/welcome/ambInstructor"><i class="fa fa-male"></i>Agregar Instructor</a></li>
                     <li><a href="index.php/welcome/ambactualizarActividad"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar Actividades</a></li>
+                    <li><a href="index.php/welcome/ambactualizarTaller"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar Talleres</a></li>
                     <li><a href="index.php/welcome/ambAgregarCategoria"><i class="fa fa-plus-square"></i>Agregar categoria de residuos solidos urbanos</a></li>
                     <li><a href="index.php/welcome/ambDatosRs"><i class="fa fa-upload"></i>Agregar datos de residuos solidos urbanos</a></li>
                     <li><a href="index.php/welcome/ambgeneraReportes"><i class="fa fa-file-text"></i>Reporte de residuos solidos urbanos</a></li>

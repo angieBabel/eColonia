@@ -96,6 +96,14 @@ function __construct(){
 				);
 			$this->load->view('actualizarActividadEcotecnia',$data);
 	}
+
+	public function ambactualizarTaller(){
+		$data = array(
+					'talleres'=>$this->m_eColonia->get_actividadesTaller()
+				);
+			$this->load->view('actualizarActividadTaller',$data);
+	}
+//otras funciones
 	public function ambDatosRS(){
 		$this->load->view('agregarDatosRS');
 	}
@@ -103,6 +111,10 @@ function __construct(){
 		$this->load->view('agregaInstructor');
 	}
 	public function ambReportes(){
-		$this->load->view('reportes');
+		$mes = $_GET['id'];
+		$data = array(
+			'datos_historial'=>$this->m_eColonia->get_ResiduosMes($mes)
+			);
+		$this->load->view('reportes',$data);
 	}
 }

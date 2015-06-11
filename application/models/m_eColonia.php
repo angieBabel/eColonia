@@ -101,7 +101,6 @@ class M_eColonia extends CI_Model{
 }
 
   public function get_ResiduosActuales(){
-
     return $this->db->select ('*')
                 ->from('residuos_has_catalogo-residuos AS R-CR')
                 ->join('catalogo-residuos as CR', 'R-CR.Catalogo-residuos_idResiduo = CR.idResiduo')
@@ -109,8 +108,19 @@ class M_eColonia extends CI_Model{
                 ->limit(3)
                 ->get()
                 ->result_array();
+}
+
+  public function get_ResiduosMes($mes){
+    return $this->db->select ('*')
+                ->from('residuos_has_catalogo-residuos AS R-CR')
+                ->join('catalogo-residuos as CR', 'R-CR.Catalogo-residuos_idResiduo = CR.idResiduo')
+                ->where ('periodo',$mes)
+                ->get()
+                ->result_array();
+}
+
 //Generador de PDF
-function obtenerReporteResiduos()
+/*function obtenerReporteResiduos()
     {
         return $this->db->select ('*')
                 ->from('residuos_has_catalogo-residuos AS R-CR')
@@ -118,15 +128,7 @@ function obtenerReporteResiduos()
                 ->get()
                 ->result_array();
     }
-
-    /*$this->db->select('*');
-    $this->db->from('TableA AS A');// I use aliasing make joins easier
-    $this->db->join('TableC AS C', 'A.ID = C.TableAId', 'INNER');
-    $this->db->join('TableB AS B', 'B.ID = C.TableBId', 'INNER');
-    $result = $this->db->get();*/
-  }
-
-
+*/
 //Agregar nueva ecotecnia
   public function altaEcotecnia($nombre,$ubicacion,$descripcion,$modouso,$add){
   $this->db->set('nombre',$nombre)
@@ -148,10 +150,14 @@ function obtenerReporteResiduos()
              ->delete('evento');
   }
 
-   public function eliminaEventoEcotecnia($evento){
+  public function eliminaEventoEcotecnia($evento){
     $this->db->where('idActividad',$evento)
              ->delete('ecotecnia');
   }
 
+  public function eliminaEventoTaller($evento){
+    $this->db->where('idTaller',$evento)
+             ->delete('taller');
+  }
 
 }
