@@ -8,13 +8,14 @@
       <h1 class="r1">Catergorizacion de Residuos Solidos Urbanos</h1>
     </div>
     <div class="row" id="r2">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-10">
         <h2>Agregar Categorias de Residuos Solidos Urbanos</h2>
         <table class="table table-hover">
         <thead>
           <tr>
             <th>Categoría</th>
+            <th>Descripcion</th>
             <th></th>
           </tr>
         </thead>
@@ -27,6 +28,11 @@
                 </div>
               </th>
               <th>
+                <div class="col-lg-10">
+                  <input class="form-control" type="text" placeholder="Descripción de la Categoria">
+                </div>
+              </th>
+              <th>
                 <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
               </th>
             </form>
@@ -38,6 +44,11 @@
               <th>
                 <div class="col-lg-10">
                   <input class="form-control" type="text" placeholder="Nombre Categoria">
+                </div>
+              </th>
+              <th>
+                <div class="col-lg-10">
+                  <input class="form-control" type="text" placeholder="Descripción de la Categoria">
                 </div>
               </th>
               <th>
@@ -54,6 +65,11 @@
                 </div>
               </th>
               <th>
+                <div class="col-lg-10">
+                  <input class="form-control" type="text" placeholder="Descripción de la Categoria">
+                </div>
+              </th>
+              <th>
                 <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
               </th>
             </form>
@@ -64,6 +80,11 @@
               <th>
                 <div class="col-lg-10">
                   <input class="form-control" type="text" placeholder="Nombre Categoria">
+                </div>
+              </th>
+              <th>
+                <div class="col-lg-10">
+                  <input class="form-control" type="text" placeholder="Descripción de la Categoria">
                 </div>
               </th>
               <th>
@@ -74,7 +95,7 @@
         </tbody>
         </table>
       </div>
-      <div class="col-lg-2"></div>
+      <div class="col-lg-1"></div>
     </div>
   </div>
 </section>
