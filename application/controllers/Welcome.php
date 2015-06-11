@@ -83,8 +83,18 @@ function __construct(){
 	public function ambgeneraReportes(){ // Generar reportes
 		$this->load->view('generaReporte');
 	}
+//ACtualizaciones
 	public function ambactualizarActividad(){
-		$this->load->view('actualizarActividad');
+		$data = array(
+					'eventos'=>$this->m_eColonia->get_actividadesEvento(),
+				);
+			$this->load->view('actualizarActividad',$data);
+	}
+	public function ambactualizarEcotecnia(){
+		$data = array(
+					'ecotecnias'=>$this->m_eColonia->get_actividadesEcotecnias(),
+				);
+			$this->load->view('actualizarActividadEcotecnia',$data);
 	}
 	public function ambDatosRS(){
 		$this->load->view('agregarDatosRS');

@@ -65,7 +65,6 @@
     </div>
   </div>
 </section>
-
 <?php
     include_once "/Sections/footer.php";
 ?>

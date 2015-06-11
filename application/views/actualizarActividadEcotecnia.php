@@ -3,36 +3,37 @@
 ?>
 <section class="content" id="contenido">
   <div class="container-fluid">
-    <div class="row" id="r1"><h1 class="r1">Agenda de actividades</h1></div>
+    <div class="row" id="r1"><h1 class="r1">Agenda de actividades en Ecotécnias</h1></div>
     <div class="row" id="r2">
       <div class="col-lg-1"></div>
       <div class="col-lg-10">
       <!--Editar actividades-->
-       <h2 class="tituloTabla">Eventos</h2>
-            <table id="tabla-evento" class="table table-hover">
+       <h2 class="tituloTabla">Eco-técnias</h2>
+            <table id="tabla-ecotecnias" class="table table-hover">
                 <thead>
-                    <tr><!--Renglones-->
-                        <th >Nombre</th><!--Colunas-->
-                        <th >Ubicación</th>
-                        <th >Horario</th>
+                    <tr> <!--Renglones-->
+                        <th>Nombre</th><!--Colunas-->
+                        <th>Ubicación</th>
+                        <th>Horario</th>
                         <th>Ecobonos</th>
                         <th></th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($eventos as $rowEventos){ ?>
+                    <?php foreach($ecotecnias as $rowEcotecnias){ ?>
                     <tr>
-                        <td><?php echo $rowEventos['nombre']; ?></td>
-                        <td><?php echo $rowEventos['lugar']; ?></td>
-                        <td><?php echo $rowEventos['horario']; ?></td>
-                        <td><?php echo $rowEventos['eco-bonos']; ?></td>
+                        <td><?php echo $rowEcotecnias['nombre']; ?></td>
+                        <td><?php echo $rowEcotecnias['lugar']; ?></td>
+                        <td><?php echo $rowEcotecnias['horario']; ?></td>
+                        <td><?php echo $rowEcotecnias['eco-bonos']; ?></td>
                         <td><a href="#modal1"><i class="fa fa-pencil fa-lg"></i></a></td>
                         <td><a href="#modal1"><i class="fa fa-trash fa-lg"></i></a></td>
                     </tr>
                     <?php } ?>
                 </tbody>
             </table>
+
       </div>
       <div class="col-lg-1"></div>
     </div>
