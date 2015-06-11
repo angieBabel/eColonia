@@ -12,7 +12,7 @@
         <nav class="cl-effect-7" id="repo">
         <table class="tabla">
             <tr>
-                <td><a href="index.php/welcome/ambReportes">Enero</a></td>
+                <td><a href="index.php/welcome/ambReportes" onclick="periodo()">Enero</a></td>
                 <td><a href="index.php/welcome/ambReportes">Febrero</a></td>
                 <td><a href="index.php/welcome/ambReportes">Marzo</a></td>
                 <td><a href="index.php/welcome/ambReportes">Abril</a></td>

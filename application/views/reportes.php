@@ -9,8 +9,8 @@
       <div class="col-lg-1"></div>
       <div class="col-lg-10">
       <!--Eventos-->
-        <h2 class="tituloTabla">Periodo</h2>
-        <p id="periodo"></p>
+        <h2 class="tituloTabla" id="per">Periodo</h2>
+        <p >D:</p>
             <table id="tabla-evento" class="table table-hover">
                 <thead>
                     <tr><!--Renglones-->
