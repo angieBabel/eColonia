@@ -5,17 +5,17 @@
 <section class="content" id="contenido">
   <div class="container-fluid">
     <div class="row" id="r1">
-      <h1 class="r1">Catergorización de Residuos Solidos Urbanos</h1>
+      <h1 class="r1">Instructores</h1>
     </div>
     <div class="row" id="r2">
       <div class="col-lg-1"></div>
       <div class="col-lg-10">
-        <h2>Agregar Categorias de Residuos Solidos Urbanos</h2>
+        <h2>Agregar Instructores/Profesores</h2>
         <table class="table table-hover">
         <thead>
           <tr>
-            <th>Categoría</th>
-            <th>Descripcion</th>
+            <th>Nombre</th>
+            <th>Profesión</th>
             <th></th>
           </tr>
         </thead>
@@ -24,12 +24,12 @@
             <form action="">
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Nombre Categoria">
+                  <input class="form-control" type="text" placeholder="Nombre ">
                 </div>
               </th>
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Descripción de la Categoria">
+                  <input class="form-control" type="text" placeholder="Profesión">
                 </div>
               </th>
               <th>
@@ -43,30 +43,12 @@
             <form action="">
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Nombre Categoria">
+                  <input class="form-control" type="text" placeholder="Nombre ">
                 </div>
               </th>
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Descripción de la Categoria">
-                </div>
-              </th>
-              <th>
-                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
-              </th>
-            </form>
-          </tr>
-
-          <tr>
-            <form action="">
-              <th>
-                <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Nombre Categoria">
-                </div>
-              </th>
-              <th>
-                <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Descripción de la Categoria">
+                  <input class="form-control" type="text" placeholder="Profesión">
                 </div>
               </th>
               <th>
@@ -79,12 +61,30 @@
             <form action="">
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Nombre Categoria">
+                  <input class="form-control" type="text" placeholder="Nombre ">
                 </div>
               </th>
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Descripción de la Categoria">
+                  <input class="form-control" type="text" placeholder="Profesión">
+                </div>
+              </th>
+              <th>
+                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+              </th>
+            </form>
+          </tr>
+
+          <tr>
+            <form action="">
+              <th>
+                <div class="col-lg-10">
+                  <input class="form-control" type="text" placeholder="Nombre ">
+                </div>
+              </th>
+              <th>
+                <div class="col-lg-10">
+                  <input class="form-control" type="text" placeholder="Profesión">
                 </div>
               </th>
               <th>

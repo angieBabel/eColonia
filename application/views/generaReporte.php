@@ -12,22 +12,22 @@
         <nav class="cl-effect-7" id="repo">
         <table class="tabla">
             <tr>
-                <td><a href="#">Enero</a></td>
-                <td><a href="#">Febrero</a></td>
-                <td><a href="#">Marzo</a></td>
-                <td><a href="#">Abril</a></td>
+                <td><a href="index.php/welcome/ambReportes">Enero</a></td>
+                <td><a href="index.php/welcome/ambReportes">Febrero</a></td>
+                <td><a href="index.php/welcome/ambReportes">Marzo</a></td>
+                <td><a href="index.php/welcome/ambReportes">Abril</a></td>
             </tr>
             <tr>
-                <td><a href="#">Mayo</a></td>
-                <td><a href="#">Junio</a></td>
-                <td><a href="#">Julio</a></td>
-                <td><a href="#">Agosto</a></td>
+                <td><a href="index.php/welcome/ambReportes">Mayo</a></td>
+                <td><a href="index.php/welcome/ambReportes">Junio</a></td>
+                <td><a href="index.php/welcome/ambReportes">Julio</a></td>
+                <td><a href="index.php/welcome/ambReportes">Agosto</a></td>
             </tr>
             <tr>
-                <td><a href="#">Septiembre</a></td>
-                <td><a href="#">Octubre</a></td>
-                <td><a href="#">Noviembre</a></td>
-                <td><a href="#">Diciembre</a></td>
+                <td><a href="index.php/welcome/ambReportes">Septiembre</a></td>
+                <td><a href="index.php/welcome/ambReportes">Octubre</a></td>
+                <td><a href="index.php/welcome/ambReportes">Noviembre</a></td>
+                <td><a href="index.php/welcome/ambReportes">Diciembre</a></td>
             </tr>
         </table>
 

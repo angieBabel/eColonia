@@ -293,8 +293,9 @@
                           <li><a href="index.php/welcome/ambAgregaEvento"><i class="fa fa-thumb-tack"></i>Evento</a></li>
                           <li><a href="index.php/welcome/ambAgregaTaller"><i class="fa fa-plus"></i>Taller</a></li>
                           <li><a href="index.php/welcome/ambAgregarActEcotecnia"><i class="fa fa-leaf"></i>Talleres en ecotécnias</a></li>
-                        </ul
+                        </ul>
                     </li>
+                    <li><a href="index.php/welcome/ambInstructor"><i class="fa fa-male"></i>Agregar Instructor</a></li>
                     <li><a href="index.php/welcome/ambactualizarActividad"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar Actividades</a></li>
                     <li><a href="index.php/welcome/ambAgregarCategoria"><i class="fa fa-plus-square"></i>Agregar categoria de residuos solidos urbanos</a></li>
                     <li><a href="index.php/welcome/ambDatosRs"><i class="fa fa-upload"></i>Agregar datos de residuos solidos urbanos</a></li>

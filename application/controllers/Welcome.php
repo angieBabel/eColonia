@@ -99,4 +99,10 @@ function __construct(){
 	public function ambDatosRS(){
 		$this->load->view('agregarDatosRS');
 	}
+	public function ambInstructor(){
+		$this->load->view('agregaInstructor');
+	}
+	public function ambReportes(){
+		$this->load->view('reportes');
+	}
 }
