@@ -115,6 +115,12 @@ public function altaEcotecnia(){
     redirect('welcome/ambEcotecnias');
 
   }
+public function altaInstructor(){
+    $nombre=$this->input->POST('nombre');
+    $profesion=$this->input->POST('profesion');
+    $this->m_eColonia->altaInstructor($nombre,$profesion);
+    redirect('welcome/ambInstructor');
+}
 
 //eliminar eventos, talleres o ecotecnias
   public function eliminaEvento(){

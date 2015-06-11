@@ -53,6 +53,11 @@ class M_eColonia extends CI_Model{
               ->set('descripcion',$descripcion)
               ->insert('ecotecnia');
   }
+public function altaInstructor($nombre,$profesion){
+  $this->db->set('nombre',$nombre)
+            ->set('profesion',$profesion)
+            ->insert('instructor');
+}
 
 //obtención de datos de la base de datos (actividades y catálogos)
   public function get_actividadesEvento(){

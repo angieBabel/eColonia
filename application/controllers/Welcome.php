@@ -108,6 +108,7 @@ function __construct(){
 		$this->load->view('agregarDatosRS');
 	}
 	public function ambInstructor(){
+
 		$this->load->view('agregaInstructor');
 	}
 	public function ambReportes(){

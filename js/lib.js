@@ -1,4 +1,5 @@
-function periodo(){
-  document.getElementById("per").innerHTML="Enero";
+function mensaje(){
+  alert('Intructor agregado con éxito')
+
 };
 

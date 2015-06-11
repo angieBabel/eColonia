@@ -21,74 +21,74 @@
         </thead>
         <tbody>
           <tr>
-            <form action="">
+            <form action="index.php/uploader/altaInstructor" method="POST">
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Nombre ">
+                  <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre">
                 </div>
               </th>
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Profesión">
+                  <input class="form-control" type="text" name="profesion" id="profesion" placeholder="Profesión">
                 </div>
               </th>
               <th>
-                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                <button type="submit" onclick="mensaje();" class="btn btn-success"><i class="fa fa-plus"></i></button>
               </th>
             </form>
 
           </tr>
 
           <tr>
-            <form action="">
+           <form action="index.php/uploader/altaInstructor" method="POST">
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Nombre ">
+                  <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre ">
                 </div>
               </th>
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Profesión">
+                  <input class="form-control" type="text" name="profesion" name="profesion" placeholder="Profesión">
                 </div>
               </th>
               <th>
-                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                <button type="submit" onclick="mensaje();" class="btn btn-success"><i class="fa fa-plus"></i></button>
               </th>
             </form>
           </tr>
 
           <tr>
-            <form action="">
+            <form action="index.php/uploader/altaInstructor" method="POST">
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Nombre ">
+                  <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre ">
                 </div>
               </th>
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Profesión">
+                  <input class="form-control" type="text"  name="profesion" id="profeion" placeholder="Profesión">
                 </div>
               </th>
               <th>
-                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                <button type="submit" onclick="mensaje();" class="btn btn-success"><i class="fa fa-plus"></i></button>
               </th>
             </form>
           </tr>
 
           <tr>
-            <form action="">
+            <form action="index.php/uploader/altaInstructor" method="POST">
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Nombre ">
+                  <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre ">
                 </div>
               </th>
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Profesión">
+                  <input class="form-control" type="text" name="profesion" id="profesion" placeholder="Profesión">
                 </div>
               </th>
               <th>
-                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                <button type="submit" onclick="mensaje();" class="btn btn-success"><i class="fa fa-plus"></i></button>
               </th>
             </form>
           </tr>
