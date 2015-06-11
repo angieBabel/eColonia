@@ -9,16 +9,15 @@
       <div class="col-lg-1"></div>
       <div class="col-lg-10">
       <!--Eventos-->
-<<<<<<< HEAD
+
         <h2 class="tituloTabla" id="per">Periodo</h2>
-        <p ></p>
-=======
+
       <?php foreach ($datos_historial as $datos_historiales) {
         # code...
       } ?>
         <h2 class="tituloTabla" id="per"><?php echo $datos_historiales['periodo']; ?></h2>
-        <p >D:</p>
->>>>>>> origin/Ambiental
+
+
             <table id="tabla-evento" class="table table-hover">
                 <thead>
                     <tr><!--Renglones-->

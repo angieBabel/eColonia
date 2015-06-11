@@ -17,13 +17,13 @@
                 <td><a href="index.php/welcome/ambReportes?id=3">Marzo</a></td>
                 <td><a href="index.php/welcome/ambReportes?id=4">Abril</a></td>
             </tr>
-            <t1
+            <tr>
                 <td><a href="index.php/welcome/ambReportes?id=5">Mayo</a></td>
                 <td><a href="index.php/welcome/ambReportes?id=6">Junio</a></td>
                 <td><a href="index.php/welcome/ambReportes?id=7">Julio</a></td>
                 <td><a href="index.php/welcome/ambReportes?id=8">Agosto</a></td>
             </tr>
-            <t1
+            <tr>
                 <td><a href="index.php/welcome/ambReportes?id=9">Septiembre</a></td>
                 <td><a href="index.php/welcome/ambReportes?id=10">Octubre</a></td>
                 <td><a href="index.php/welcome/ambReportes?id=11">Noviembre</a></td>
