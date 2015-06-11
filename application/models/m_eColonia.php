@@ -142,6 +142,16 @@ function obtenerReporteResiduos()
               ->insert('galeria');
     return $this->db->insert_id();
   }
+//eliminar actividades de eventos y ecotecnia
+  public function eliminaEvento($evento){
+    $this->db->where('idEvento',$evento)
+             ->delete('evento');
+  }
+
+   public function eliminaEventoEcotecnia($evento){
+    $this->db->where('idActividad',$evento)
+             ->delete('ecotecnia');
+  }
 
 
 }

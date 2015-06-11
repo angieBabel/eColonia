@@ -116,6 +116,20 @@ public function altaEcotecnia(){
 
   }
 
+//eliminar eventos, talleres o ecotecnias
+  public function eliminaEvento(){
+    $id = $_GET['id'];
+    $this->m_eColonia->eliminaEvento($id);
+    redirect('welcome/ambactualizarActividad');
+  }
+
+  public function eliminaEventoEcotecnia(){
+    $id = $_GET['id'];
+    $this->m_eColonia->eliminaEventoEcotecnia($id);
+    redirect('welcome/ambactualizarEcotecnia');
+  }
+
+
 }
 
 
