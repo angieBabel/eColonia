@@ -21,9 +21,9 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Cositas</td>
+                        <td>Cositas</td>
+                        <td>Cositas</td>
                         <td><input type="checkbox">Finalizar</td>
                     </tr>
                 </tbody>

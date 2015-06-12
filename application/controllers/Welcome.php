@@ -118,4 +118,12 @@ function __construct(){
 			);
 		$this->load->view('reportes',$data);
 	}
+
+	public function ambfinalizarActividad(){
+		$this->load->view('statusActividades');
+	}
+
+	public function login(){
+		$this->load->view('login');
+	}
 }

@@ -55,7 +55,7 @@ webshims.polyfill('forms forms-ext');
               <li id="lista7"><a href="#">Ayuda </a></li>
             </ul>
 
-            <?php if (1==1) { ?>
+            <?php if (1==0) { ?>
               <div class="navbar-custom-menu">
                   <ul class="nav navbar-nav">
                     <!-- Notificacion de actividades-->
@@ -99,7 +99,7 @@ webshims.polyfill('forms forms-ext');
                         <!-- Menu Footer-->
                         <li class="user-footer">
                           <div class="pull-left">
-                            <a href="#"  data-toggle="offcanvas" class="btn btn-default btn-flat ">Profile</a>
+                            <a href="#"  data-toggle="offcanvas" class="btn btn-default btn-flat ">Perfil</a>
                           </div>
                           <div class="pull-right">
                             <a href="#" class="btn btn-default btn-flat">Sign out</a>
@@ -112,7 +112,7 @@ webshims.polyfill('forms forms-ext');
             <?php } else{ ?>
                <ul class="nav navbar-nav navbar-right" id="prueba" >
                   <li><a href="#" class="">Registrarse</a></li><!-- class="glyphicon glyphicon-user" -->
-                  <li><a href="#"><i class="fa fa-sign-in fa-lg"></i></a></li>
+                  <li><a href="index.php/welcome/login"><i class="fa fa-sign-in fa-lg"></i></a></li>
                 </ul>
             <?php } ?>
           </div>

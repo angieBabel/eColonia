@@ -2,7 +2,7 @@
   include_once "/Sections/header.php";
 ?>
   <!-- Usurio Externo-->
-  <?php if (1==0) { ?>
+  <?php if (1==1) { ?>
 
       <aside class="main-sidebar">
         <section class="sidebar">
@@ -221,7 +221,7 @@
 
   <?php }?>
   <!-- Administrador -->
- <?php if (3==3) { ?>
+ <?php if (3==0) { ?>
       <aside class="main-sidebar">
         <section class="sidebar">
 
@@ -297,7 +297,7 @@
                         </ul>
                     </li>
                     <li><a href="index.php/welcome/ambInstructor"><i class="fa fa-male"></i>Agregar Instructor</a></li>
-                    <li><a href="index.php/welcome/ambInstructor"><i class="fa fa-male"></i>Estatus de actividades</a></li>
+                    <li><a href="index.php/welcome/ambfinalizarActividad"><i class="fa fa-check"></i>Estatus de actividades</a></li>
                     <li><a href="index.php/welcome/ambactualizarActividad"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar Actividades</a></li>
                     <li><a href="index.php/welcome/ambactualizarTaller"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar Talleres</a></li>
                     <li><a href="index.php/welcome/ambAgregarCategoria"><i class="fa fa-plus-square"></i>Agregar categoria de residuos solidos urbanos</a></li>
