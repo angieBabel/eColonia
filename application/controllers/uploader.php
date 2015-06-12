@@ -1,23 +1,9 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 
-class uploader extends CI_Controller {
-    /**
-   * Index Page for this controller.
-   *ambiental
-   * Maps to the following URL
-   *    http://example.com/index.php/welcome
-   *  - or -
-   *    http://example.com/index.php/welcome/index
-   *  - or -
-   * Since this controller is set as the default controller in
-   * config/routes.php, it's displayed at http://example.com/
-   *
-   * So any other public methods not prefixed with an underscore will
-   * map to /index.php/welcome/<method_name>
-   * @see http://codeigniter.com/user_guide/general/urls.html
-   */
+class uploader extends CI_Controller
+{
+
 function __construct(){
     parent::__construct();
 
@@ -30,15 +16,19 @@ function __construct(){
       $usuario=$this->m_eColonia->validarUsuario($user,$pass);
       /*$admon=$this->m_eColonia->validarUsuarioAdmon($user,$pass);*/
       print_r($usuario);
+      /*$this->session->sess_destroy();*/
       if (!empty($usuario))
       {
         $datos=array('email'=>$usuario[0]['email'],
                       'nombre'=>$usuario[0]['nombre'],
                       'pass'=>$usuario[0]['password']);
-        $this->session->set_userdata($datos);
+        print_r($datos);
         $this->load->view('index');
-      }else{$this->load->view('welcome/login');
-    }
+
+        $this->session->set_userdata($datos);
+      }else
+      {$this->load->view('welcome/login');
+      }
   }
 
 public function cierraSesion(){
