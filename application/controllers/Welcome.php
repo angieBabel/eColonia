@@ -89,7 +89,7 @@ function __construct(){
 	}
 
 //ACtualizaciones
-	public function ambactualizarActividad(){
+	public function amblistaActividad(){
 		$data = array(
 					'eventos'=>$this->m_eColonia->get_actividadesEvento(),
 				);
@@ -101,9 +101,10 @@ function __construct(){
 				);
 			$this->load->view('actualizarActividadEcotecnia',$data);
 	}
-	public function ambactualizarTaller(){
+	public function amblistaTaller(){
 		$data = array(
-					'talleres'=>$this->m_eColonia->get_actividadesTaller()
+					'talleres'=>$this->m_eColonia->get_actividadesTaller(),
+					'ecotecnias'=>$this->m_eColonia->get_actividadesEcotecnias(),
 				);
 			$this->load->view('actualizarActividadTaller',$data);
 	}
