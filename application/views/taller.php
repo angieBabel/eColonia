@@ -97,8 +97,8 @@
             </select>
           </div>
           <div class="form-group col-lg-12">
-            <label for="descripcion" class="control-label">Material</label>
-            <textarea name="descripcion" id="" cols="30" rows="5" class="form-control" placehoder="Descripción de la actividad"></textarea>
+            <label for="material" class="control-label">Material</label>
+            <textarea name="material" id="" cols="30" rows="5" class="form-control" placehoder="Material necesario para el taller"></textarea>
           </div>
 
           <div class="form-group col-lg-12">

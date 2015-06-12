@@ -24,7 +24,7 @@
                         <td><?php echo $rowTalleres['nombre']; ?></td>
                         <td><?php echo $rowTalleres['lugar']; ?></td>
                         <td><?php echo $rowTalleres['horario']; ?></td>
-                        <td><a href="#modal1"><i class="fa fa-pencil fa-lg"></i></a></td>
+                        <td><a href="index.php/uploader/editaTaller?id=<?php echo $rowTalleres['idTaller'];?>"><i class="fa fa-pencil fa-lg"></i></a></td>
                         <td><a href="index.php/uploader/eliminaEventoTaller?id=<?php echo $rowTalleres['idTaller'];?>"><i class="fa fa-trash fa-lg"></i></a></td>
 
                     </tr>
@@ -54,7 +54,7 @@
                         <td><?php echo $rowEcotecnias['lugar']; ?></td>
                         <td><?php echo $rowEcotecnias['horario']; ?></td>
                         <td><?php echo $rowEcotecnias['eco-bonos']; ?></td>
-                        <td><a href="#modal1"><i class="fa fa-pencil fa-lg"></i></a></td>
+                        <td><a <a href="index.php/uploader/editaEcotecnia?id=<?php echo $rowEcotecnias['idActividad'];?>"><i class="fa fa-pencil fa-lg"></i></a></td>
                         <td><a href="index.php/uploader/eliminaEventoEcotecnia?id=<?php echo $rowEcotecnias['idActividad'];?>"><i class="fa fa-trash fa-lg"></i></a></td>
                     </tr>
                     <?php } ?>

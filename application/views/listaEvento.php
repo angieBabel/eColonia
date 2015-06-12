@@ -27,7 +27,7 @@
                         <td><?php echo $rowEventos['lugar']; ?></td>
                         <td><?php echo $rowEventos['horario']; ?></td>
                         <td><?php echo $rowEventos['eco-bonos']; ?></td>
-                        <td><a href="#modal1"><i class="fa fa-pencil fa-lg"></i></a></td>
+                        <td><a href="index.php/uploader/editaEvento?id=<?php echo $rowEventos['idEvento'];?>"><i class="fa fa-pencil fa-lg"></i></a></td>
                         <td><a href="index.php/uploader/eliminaEvento?id=<?php echo $rowEventos['idEvento'];?>"><i class="fa fa-trash fa-lg"></i></a></td>
                     </tr>
                     <?php } ?>

@@ -29,17 +29,16 @@ function __construct(){
       $pass=$this->input->POST('contrasenia');
       $usuario=$this->m_eColonia->validarUsuario($user,$pass);
       $admon=$this->m_eColonia->validarUsuarioAdmon($user,$pass);
-      if (isset($usuario->id)) {
-        $_SESSION['logueado']=true;
-        echo ($_SESSION['logueado']);
+      print_r($usuario);
+      print_r($admon);
+      if (empty($usuario)) {
         $this->load->view('index');
-      }elseif (isset($admon->idAdmon)) {
-       $_SESSION['logueado']=true;
-       echo $_SESSION['logueado'];
-        $this->load->view('index');
-      }else {
-        echo "no encontro";
-
+        # code...
+      }else{
+      $datos=array('email'=>$usuario[0]['email'],
+                      'nombre'=>$usuario[0]['nombre'],
+                      'pass'=>$usuario[0]['password']);
+        $this->session->set_userdata($datos);
         $this->load->view('index');
     }
   }
@@ -47,6 +46,7 @@ function __construct(){
   public function altaActEvento(){
       $nombre=$this->input->POST('Nombre');
       $representante=$this->input->POST('encargado');
+
       $horario=$this->input->POST('hora');
       $fecha=$this->input->POST('fecha');
       $lugar=$this->input->POST('lugar');
@@ -73,11 +73,12 @@ function __construct(){
       $costo=$this->input->POST('costo');
       $estado=('en espera');
       $descripcion=$this->input->POST('descripcion');
+      $material=$this->input->POST('material');
       $galeria= $this->m_eColonia->agregarGaleria();
 
 
       $this->m_eColonia->altaActTaller($nombre,$encargado,$instructor,$lugar,
-      $ecobonos,$hora,$fecha_inicio,$fecha_fin,$cupo,$costo,$descripcion,$galeria,$estado);
+      $ecobonos,$hora,$fecha_inicio,$fecha_fin,$cupo,$costo,$descripcion,$material,$galeria,$estado);
 
       redirect('welcome/ambActividades');
     }
@@ -190,6 +191,89 @@ function __construct(){
     $datosEcotecnia=$this->input->POST('ecotecnias');
     $this->m_eColonia->cambiaEstdo($datosEvento,$datosTaller,$datosEcotecnia);
     redirect('welcome/ambfinalizarActividad');
+  }
+
+  public function editaEvento(){
+    $id = $_GET['id'];
+    $datos_evento=$this->m_eColonia->get_Evento($id);
+    $datos['evento']=$datos_evento[0];
+
+    $this->load->view('actualizaEventos',$datos);
+  }
+
+  public function actualizaEvento(){
+      $id=$this->input->POST('id');
+      $nombre=$this->input->POST('Nombre');
+      $representante=$this->input->POST('encargado');
+      $horario=$this->input->POST('hora');
+      $fecha=$this->input->POST('fecha');
+      $lugar=$this->input->POST('lugar');
+      $descripcion=$this->input->POST('descripcion');
+      $ecobonos=$this->input->POST('ecobonos');
+      $estado=$this->input->POST('estado');
+      $this->m_eColonia->actualizaEvento($id,$nombre,$representante,
+      $horario,$fecha,$lugar,$descripcion,$ecobonos,$estado);
+      redirect('welcome/ambActividades');
+  }
+  public function editaTaller(){
+    $id = $_GET['id'];
+    $datos_taller=$this->m_eColonia->get_Taller($id);
+    $datos['taller']=$datos_taller[0];
+
+    $this->load->view('actualizaTaller',$datos);
+  }
+  public function actualizaTaller(){
+      $id=$this->input->POST('id');
+      $nombre=$this->input->POST('Nombre');
+      $encargado=$this->input->POST('encargado');
+      $material=$this->input->POST('material');
+      $instructor=$this->input->POST('instructor');
+      $hora=$this->input->POST('hora');
+      $ecobonos=$this->input->POST('ecobonos');
+      $fecha_inicio=$this->input->POST('fecha_inicio');
+      $fecha_fin=$this->input->POST('fecha_fin');
+      $lugar=$this->input->POST('lugar');
+      $cupo=$this->input->POST('cupo');
+      $costo=$this->input->POST('costo');
+      $estado=$this->input->POST('estado');
+      $descripcion=$this->input->POST('descripcion');
+
+      $this->m_eColonia->actualizaTaller($id,$nombre,$encargado,$instructor,$lugar,
+    $ecobonos,$hora,$fecha_inicio,$fecha_fin,$cupo,$costo,$descripcion,$material,$estado);
+
+      redirect('welcome/ambActividades');
+  }
+  public function editaEcotecnia(){
+    $id = $_GET['id'];
+    $datos_ecotecnia=$this->m_eColonia->get_Ecotecnia($id);
+    $datos['ecotecnia']=$datos_ecotecnia[0];
+    $data = array(
+      'eco'=>$this->m_eColonia->get_Ecotecnias(),
+      'colonos'=>$this->m_eColonia->getColono()
+      );
+
+    $this->load->view('actualizaEcotecnia',$datos  );
+  }
+
+
+  public function actualizaEcotecnia(){
+      $id=$this->input->POST('id');
+      $nombre=$this->input->POST('Nombre');
+      $encargado=$this->input->POST('encargado');
+      $hora=$this->input->POST('hora');
+      $ecobonos=$this->input->POST('ecobonos');
+      $ecotecnias=$this->input->POST('ecotecnia');
+      $fecha_inicio=$this->input->POST('fecha-inicio');
+      $fecha_fin=$this->input->POST('fecha-fin');
+      $lugar=$this->input->POST('lugar');
+      $cupo=$this->input->POST('cupo');
+      $estado=('en espera');
+      $descripcion=$this->input->POST('descripcion');
+
+
+      $this->m_eColonia->actualizaEcotecnia($id,$nombre,$encargado,$lugar,
+      $ecobonos,$ecotecnias,$hora,$fecha_inicio,$fecha_fin,$cupo,$descripcion,$estado);
+      redirect('welcome/ambActividades');
   }
 
 }

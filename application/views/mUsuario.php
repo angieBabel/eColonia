@@ -4,7 +4,7 @@
 <!--/*<?php//  session_start(); ?>*/-->
   <!-- Usurio Externo-->
 
-  <?php if /*(!isSet($_SESSION['logueado']))*/ (1==0) { ?>
+  <?php if /*(!$this->session->userdata('email') != '')*/(1==0) { ?>
 
       <aside class="main-sidebar">
         <section class="sidebar">
@@ -108,7 +108,7 @@
 
   <?php }?>
     <!-- Usurio Colono-->
-    <?php if (2==0) /*(isSet($_SESSION['logueado']))*/ { ?>
+    <?php if /*($this->session->userdata('email') != '')*/(2==0) /*(isSet($_SESSION['logueado']))*/ { ?>
       <aside class="main-sidebar">
         <section class="sidebar">
 
@@ -223,7 +223,7 @@
 
   <?php }?>
   <!-- Administrador -->
- <?php if (3==3)/*(isSet($_SESSION['logueado']))*/ { ?>
+ <?php if /*($this->session->userdata('email') != '')*/(3==3)/*(isSet($_SESSION['logueado']))*/ { ?>
       <aside class="main-sidebar">
         <section class="sidebar">
 
@@ -306,7 +306,7 @@
                     <li><a href="index.php/welcome/ambDatosRs"><i class="fa fa-upload"></i>Agregar datos de residuos solidos urbanos</a></li>
                     <li><a href="index.php/welcome/ambgeneraReportes"><i class="fa fa-file-text"></i>Reporte de residuos solidos urbanos</a></li>
                     <li><a href="index.php/welcome/ambAgregarEcotecnia"><i class="fa fa-plus-square"></i>Agregar ecotecnias</a></li>
-                    <li><a href="index.php/welcome/ambactualizarEcotecnia"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar ecotecnias</a></li>
+                    <!-- <li><a href="index.php/welcome/ambactualizarEcotecnia"><i class="fa fa-pencil-square-o"></i>Editar/Eliminar ecotecnias</a></li> -->
                   </ul>
                 </li>
               </ul>

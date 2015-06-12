@@ -54,8 +54,8 @@ webshims.polyfill('forms forms-ext');
               <li id="lista6"><a href="#">Servicios </a></li>
               <li id="lista7"><a href="#">Ayuda </a></li>
             </ul>
-            <?php  session_start(); ?>
-            <?php if (!isSet($_SESSION['logueado'])) { ?>
+
+            <?php if /*($this->welcome->validaSesion())*/(1==0) { ?>
               <div class="navbar-custom-menu">
                   <ul class="nav navbar-nav">
                     <!-- Notificacion de actividades-->
@@ -102,7 +102,7 @@ webshims.polyfill('forms forms-ext');
                             <a href="#"  data-toggle="offcanvas" class="btn btn-default btn-flat ">Perfil</a>
                           </div>
                           <div class="pull-right">
-                            <a href="index.php/welcome/log_out" class="btn btn-default btn-flat">Sign out</a>
+                            <a href="index.php/welcome/cierraSesion" class="btn btn-default btn-flat">Sign out</a>
                           </div>
                         </li>
                       </ul>
