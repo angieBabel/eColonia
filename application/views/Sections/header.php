@@ -102,7 +102,7 @@ webshims.polyfill('forms forms-ext');
                             <a href="#"  data-toggle="offcanvas" class="btn btn-default btn-flat ">Perfil</a>
                           </div>
                           <div class="pull-right">
-                            <a href="index.php/welcome/cierraSesion" class="btn btn-default btn-flat">Sign out</a>
+                            <a href="index.php/uploader/cierraSesion" class="btn btn-default btn-flat">Sign out</a>
                           </div>
                         </li>
                       </ul>

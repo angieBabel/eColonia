@@ -14,7 +14,6 @@ class M_eColonia extends CI_Model{
   public function validarUsuario($cuenta,$clave){
     $this->db->where('email',$cuenta);
     $this->db->where('password',$clave);
-
     $query=$this->db->get('colono');
     return $query->result_array();
    }
