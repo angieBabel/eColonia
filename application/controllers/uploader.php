@@ -21,10 +21,8 @@ function __construct(){
         $datos=array('email'=>$usuario[0]['email'],
                       'nombre'=>$usuario[0]['nombre'],
                       'pass'=>$usuario[0]['password']);
-        print_r($datos);
-        $this->load->view('index');
-
         $this->session->set_userdata($datos);
+        redirect('welcome/ambiental');
       }else
       {$this->load->view('login');
       }

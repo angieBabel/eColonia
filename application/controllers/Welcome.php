@@ -24,7 +24,13 @@ function __construct(){
 
 	}
 	public function index(){ //Pagina principal
-		$this->load->view('login');
+		if (validaSesion()) {
+			# code...
+			redirect('welcome/amiental');
+		}else{
+			$this->load->view('login');
+		}
+
 
 	}
 //Muestra las funciones pricnipales, SOLO VISTAS
