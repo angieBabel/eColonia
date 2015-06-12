@@ -110,7 +110,10 @@ function __construct(){
 	}
 //otras funciones
 	public function ambDatosRS(){
-		$this->load->view('agregarDatosRS');
+		$data = array(
+			'catalogo'=>$this->m_eColonia->get_CatalogoResiduos()
+			);
+		$this->load->view('agregarDatosRS',$data);
 	}
 
 	public function ambReportes(){

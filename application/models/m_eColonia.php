@@ -65,6 +65,13 @@ public function altaNuevoResiduo($nombre,$descripcion){
             ->insert('catalogo-residuos');
 }
 
+public function altaDatoResiduo($fecha,$PET,$Vidrio,$PapelYCarton){
+  $this->db->set('periodo',$fecha)
+           ->set('cantidad',$PET)
+           ->set('cantidad',$PapelYCarton)
+           ->set('cantidad',$Vidrio)
+}
+
 //obtención de datos de la base de datos (actividades y catálogos)
   public function get_actividadesEvento(){
     return $this->db->from('evento')
@@ -109,7 +116,7 @@ public function altaNuevoResiduo($nombre,$descripcion){
                 ->join('catalogo-residuos as CR', 'R-CR.Catalogo-residuos_idResiduo = CR.idResiduo')
                 ->get()
                 ->result_array();
-}
+  }
 
   public function get_ResiduosActuales(){
     return $this->db->select ('*')
@@ -119,7 +126,7 @@ public function altaNuevoResiduo($nombre,$descripcion){
                 ->limit(3)
                 ->get()
                 ->result_array();
-}
+  }
 
   public function get_ResiduosMes($mes){
     return $this->db->select ('*')
@@ -128,7 +135,14 @@ public function altaNuevoResiduo($nombre,$descripcion){
                 ->where ('month(periodo)',$mes)
                 ->get()
                 ->result_array();
-}
+  }
+
+  public function get_CatalogoResiduos(){
+    return $this->db->select('*')
+                ->from('catalogo-residuos')
+                ->get()
+                ->result_array();
+  }
 
 //Generador de PDF
 /*function obtenerReporteResiduos()
