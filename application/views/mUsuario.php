@@ -2,7 +2,7 @@
   include_once "/Sections/header.php";
 ?>
   <!-- Usurio Externo-->
-  <?php if (1==1) { ?>
+  <?php if (1==0) { ?>
 
       <aside class="main-sidebar">
         <section class="sidebar">
@@ -221,7 +221,7 @@
 
   <?php }?>
   <!-- Administrador -->
- <?php if (3==0) { ?>
+ <?php if (3==3) { ?>
       <aside class="main-sidebar">
         <section class="sidebar">
 

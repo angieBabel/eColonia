@@ -3,3 +3,8 @@ function mensaje(){
 
 };
 
+function mensaje2(){
+  alert('Nuevo residuo agregado con éxito')
+
+};
+

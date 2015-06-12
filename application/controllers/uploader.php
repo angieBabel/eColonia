@@ -122,6 +122,14 @@ public function altaInstructor(){
     redirect('welcome/ambInstructor');
 }
 
+public function altaNuevoResiduo(){
+    $nombre=$this->input->POST('nombre');
+    $descripcion=$this->input->POST('descripcion');
+    $this->m_eColonia->altaNuevoResiduo($nombre,$descripcion);
+    redirect('welcome/ambAgregarCategoria');
+
+}
+
 //eliminar eventos, talleres o ecotecnias
   public function eliminaEvento(){
     $id = $_GET['id'];

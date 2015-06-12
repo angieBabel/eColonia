@@ -59,6 +59,12 @@ public function altaInstructor($nombre,$profesion){
             ->insert('instructor');
 }
 
+public function altaNuevoResiduo($nombre,$descripcion){
+  $this->db->set('nombre',$nombre)
+            ->set('descripcion',$descripcion)
+            ->insert('catalogo-residuos');
+}
+
 //obtención de datos de la base de datos (actividades y catálogos)
   public function get_actividadesEvento(){
     return $this->db->from('evento')

@@ -21,77 +21,77 @@
         </thead>
         <tbody>
           <tr>
-            <form action="">
+            <form action="index.php/uploader/altaNuevoResiduo" method="POST">
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Nombre Categoria">
+                  <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre Categoria">
                 </div>
               </th>
               <th>
                 <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Descripción de la Categoria">
+                  <input class="form-control" type="text" id="descripcion" name="descripcion" placeholder="Descripción de la Categoria">
                 </div>
               </th>
               <th>
-                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                <button type="submit" onclick="mensaje2();"  class="btn btn-success"><i class="fa fa-plus"></i></button>
               </th>
             </form>
 
           </tr>
 
-          <tr>
-            <form action="">
-              <th>
-                <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Nombre Categoria">
-                </div>
-              </th>
-              <th>
-                <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Descripción de la Categoria">
-                </div>
-              </th>
-              <th>
-                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
-              </th>
-            </form>
-          </tr>
+<!--           <tr>
+  <form action="">
+    <th>
+      <div class="col-lg-10">
+        <input class="form-control" type="text" placeholder="Nombre Categoria">
+      </div>
+    </th>
+    <th>
+      <div class="col-lg-10">
+        <input class="form-control" type="text" placeholder="Descripción de la Categoria">
+      </div>
+    </th>
+    <th>
+      <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+    </th>
+  </form>
+</tr>
 
-          <tr>
-            <form action="">
-              <th>
-                <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Nombre Categoria">
-                </div>
-              </th>
-              <th>
-                <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Descripción de la Categoria">
-                </div>
-              </th>
-              <th>
-                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
-              </th>
-            </form>
-          </tr>
+<tr>
+  <form action="">
+    <th>
+      <div class="col-lg-10">
+        <input class="form-control" type="text" placeholder="Nombre Categoria">
+      </div>
+    </th>
+    <th>
+      <div class="col-lg-10">
+        <input class="form-control" type="text" placeholder="Descripción de la Categoria">
+      </div>
+    </th>
+    <th>
+      <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+    </th>
+  </form>
+</tr>
 
-          <tr>
-            <form action="">
-              <th>
-                <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Nombre Categoria">
-                </div>
-              </th>
-              <th>
-                <div class="col-lg-10">
-                  <input class="form-control" type="text" placeholder="Descripción de la Categoria">
-                </div>
-              </th>
-              <th>
-                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
-              </th>
-            </form>
-          </tr>
+<tr>
+  <form action="">
+    <th>
+      <div class="col-lg-10">
+        <input class="form-control" type="text" placeholder="Nombre Categoria">
+      </div>
+    </th>
+    <th>
+      <div class="col-lg-10">
+        <input class="form-control" type="text" placeholder="Descripción de la Categoria">
+      </div>
+    </th>
+    <th>
+      <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+    </th>
+  </form>
+</tr> -->
         </tbody>
         </table>
       </div>

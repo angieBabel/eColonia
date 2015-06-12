@@ -3,14 +3,6 @@
 ?>
 
 <section class="content" id="contenido">
-
-    <div id="modal1" class="modalmask">
-      <div class="modalbox movedown">
-        <a href="#close" title="Close" class="close">X</a>
-        <?php include_once 'generar_reporte.php' ?>
-      </div>
-    </div>
-
   <section>
     <div>
 
@@ -20,8 +12,8 @@
       <h1 id="" align="center">Reporte de residuos <?php echo $datos_actualess  ['periodo'] ?></h1>
       <div id="canvas-holder" align="center">
         <canvas id="actuales" width="300" height="300"></canvas>
-        <a type="button" href="#modal1">Generar reporte</a>
-        <a type="button"  href="index.php/pdfgenerator/pdf" >Prueba PDF</a>
+        <a type="button" href="index.php/welcome/ambgeneraReportes">Ver historial de reportes</a>
+
       </div>
 
     </div>
