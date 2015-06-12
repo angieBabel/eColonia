@@ -93,7 +93,7 @@ function __construct(){
 		$data = array(
 					'eventos'=>$this->m_eColonia->get_actividadesEvento(),
 				);
-			$this->load->view('actualizarActividad',$data);
+			$this->load->view('listaEvento',$data);
 	}
 	public function ambactualizarEcotecnia(){
 		$data = array(
@@ -106,7 +106,7 @@ function __construct(){
 					'talleres'=>$this->m_eColonia->get_actividadesTaller(),
 					'ecotecnias'=>$this->m_eColonia->get_actividadesEcotecnias(),
 				);
-			$this->load->view('actualizarActividadTaller',$data);
+			$this->load->view('listaTaller',$data);
 	}
 //otras funciones
 	public function ambDatosRS(){
