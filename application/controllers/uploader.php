@@ -23,7 +23,26 @@ function __construct(){
 
     $this->load->model('m_eColonia');
   }
+//inicio de sesion
+  public function sesion(){
+      $user=$this->input->POST('nombre');
+      $pass=$this->input->POST('contrasenia');
+      $usuario=$this->m_eColonia->validarUsuario($user,$pass);
+      $admon=$this->m_eColonia->validarUsuarioAdmon($user,$pass);
+      if (isset($usuario->id)) {
+        $_SESSION['logueado']=true;
+        echo ($_SESSION['logueado']);
+        $this->load->view('index');
+      }elseif (isset($admon->idAdmon)) {
+       $_SESSION['logueado']=true;
+       echo $_SESSION['logueado'];
+        $this->load->view('index');
+      }else {
+        echo "no encontro";
 
+        $this->load->view('index');
+    }
+  }
 //Alta de actividades de las ecotécnias
   public function altaActEvento(){
       $nombre=$this->input->POST('Nombre');

@@ -156,11 +156,18 @@ class M_eColonia extends CI_Model{
                 ->get()
                 ->result_array();
   }
-  public function get_Colono(){
-   return $this->db->select('*')
-                ->from('catalogo-residuos')
-                ->get()
-                ->result_array();
+  public function validarUsuario($user,$pass){
+        $query = $this->db->where('email',$user);    //    La consulta se efectúa mediante Active Record. Una manera alternativa, y en lenguaje más sencillo, de generar las consultas Sql.
+        $query = $this->db->where('password',$pass);
+        $query = $this->db->get('colono');
+        return $query->row();
+  }
+
+  public function validarUsuarioAdmon($user,$pass){
+        $query = $this->db->where('email',$user);    //    La consulta se efectúa mediante Active Record. Una manera alternativa, y en lenguaje más sencillo, de generar las consultas Sql.
+        $query = $this->db->where('password',$pass);
+        $query = $this->db->get('admon');
+        return $query->row();
   }
 
 //Generador de PDF

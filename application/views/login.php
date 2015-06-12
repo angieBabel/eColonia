@@ -13,7 +13,7 @@
           <hr>
           <br>
 
-          <form action="index.php/uploader/altaInstructor" method="POST">
+          <form action="index.php/uploader/sesion" method="POST">
           <label for="exampleInputEmail1">Email address</label>
             <div class="col-lg-12 input-group margin-bottom-sm form-group">
               <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
@@ -23,7 +23,7 @@
             <label for="exampleInputPassword1">Password</label>
             <div class="col-lg-12 input-group margin-bottom-sm form-group">
               <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-              <input class="form-control" type="password"  name="contrasenia" id="profesion" placeholder="Contraseña">
+              <input class="form-control" type="password"  name="contrasenia" id="contrasenia" placeholder="Contraseña">
             </div>
             <div class="col-lg-12 form-group" >
               <button type="submit" onclick="" class="btn btn-success btn-block">Ingresar</button>

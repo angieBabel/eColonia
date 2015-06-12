@@ -10,7 +10,7 @@
     <div class="row" id="r2">
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
-        <h2>ECotecnias</h2>
+        <h2>Ecotecnias</h2>
         <form class="form-group" method="POST" enctype="multipart/form-data" action="index.php/uploader/altaEcotecnia">
         <?php form_open_multipart('uploader/altaEcotecnia'); ?>
           <div class="form-group col-lg-12">

@@ -1,7 +1,9 @@
 <?php
-  include_once "/mUsuario.php";
+    include_once "/mUsuario.php";
 ?>
-
+<?php session_start(); ?>
+<?php print_r($_SESSION) ?>
+<?php echo $_SESSION['logueado']; ?>
 <section class="content" id="contenido">
   <div class="container-fluid">
     <div class="row" id="r1">

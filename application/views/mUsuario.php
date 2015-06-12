@@ -1,8 +1,10 @@
 <?php
   include_once "/Sections/header.php";
 ?>
+<!--/*<?php//  session_start(); ?>*/-->
   <!-- Usurio Externo-->
-  <?php if (1==0) { ?>
+
+  <?php if (!isSet($_SESSION['logueado'])) { ?>
 
       <aside class="main-sidebar">
         <section class="sidebar">
@@ -106,7 +108,7 @@
 
   <?php }?>
     <!-- Usurio Colono-->
-    <?php if (2==0) { ?>
+    <?php if (isSet($_SESSION['logueado'])) { ?>
       <aside class="main-sidebar">
         <section class="sidebar">
 
@@ -221,7 +223,7 @@
 
   <?php }?>
   <!-- Administrador -->
- <?php if (3==3) { ?>
+ <?php if (1==0)/*(isSet($_SESSION['logueado']))*/ { ?>
       <aside class="main-sidebar">
         <section class="sidebar">
 

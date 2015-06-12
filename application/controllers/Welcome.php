@@ -131,4 +131,7 @@ function __construct(){
 	public function login(){
 		$this->load->view('login');
 	}
+		public function log_out(){
+		$this->load->view('log_out');
+	}
 }
