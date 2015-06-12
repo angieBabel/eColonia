@@ -1,4 +1,6 @@
-		<nav>
+<section class="content" id="contenido">
+<!--
+<nav>
 			<div class="container">
 				<ul class="navbar izquierda">
  					<li><a href="<?php echo site_url('colono'); ?>">Menú</a></li>
@@ -10,7 +12,8 @@
  				</ul>
 			</div>
 		</nav>
-		<section>
+-->
+<!--		<section>-->
 			<div class="container">
 				<article>
 					<div class="row">
@@ -26,11 +29,11 @@
 											</label>
 										</fieldset>
 									</div>
-									<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
 								</div>
 							</article>					
 						</div>
 					</div>
 				</article>
 			</div>
-		</section>
+<!--		</section>-->
+</section>

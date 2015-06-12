@@ -22,9 +22,10 @@ class Colono extends CI_Controller {
 
 	public function estructura(){
 		if($this->session->userdata('tipo')==5){
-			$this->load->view('colono/header');
+			$this->load->view('Sections/header');
+            $this->load->view('mUsuario.php');
 			$this->load->view('colono/estructura');
-			$this->load->view('colono/footer');
+			$this->load->view('Sections/footer');
 		} else{
 			$this->session->sess_destroy();
 			redirect('ecolonia');
