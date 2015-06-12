@@ -60,7 +60,7 @@
 */
 
 $active_group = 'default';
-$query_builder = TRUE;
+/*$query_builder = TRUE;*/
 $active_record = TRUE;
 
 $db['default'] = array(

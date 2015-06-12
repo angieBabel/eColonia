@@ -55,7 +55,7 @@ webshims.polyfill('forms forms-ext');
               <li id="lista7"><a href="#">Ayuda </a></li>
             </ul>
 
-            <?php if /*($this->welcome->validaSesion())*/(1==0) { ?>
+            <?php if ($this->session->userdata('email') != '') {//*(1==0) { ?>
               <div class="navbar-custom-menu">
                   <ul class="nav navbar-nav">
                     <!-- Notificacion de actividades-->
@@ -109,8 +109,8 @@ webshims.polyfill('forms forms-ext');
                     </li>
                   </ul>
               </div>
-            <?php } else{ ?>
-               <ul class="nav navbar-nav navbar-right" id="prueba" >
+            <?php } else { ?>
+                   <ul class="nav navbar-nav navbar-right" id="prueba" >
                   <li><a href="#" class="">Registrarse</a></li><!-- class="glyphicon glyphicon-user" -->
                   <li><a href="index.php/welcome/login"><i class="fa fa-sign-in fa-lg"></i></a></li>
                 </ul>

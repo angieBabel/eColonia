@@ -15,8 +15,7 @@ function __construct(){
       $pass=$this->input->POST('contrasenia');
       $usuario=$this->m_eColonia->validarUsuario($user,$pass);
       /*$admon=$this->m_eColonia->validarUsuarioAdmon($user,$pass);*/
-      print_r($usuario);
-      /*$this->session->sess_destroy();*/
+
       if (!empty($usuario))
       {
         $datos=array('email'=>$usuario[0]['email'],
@@ -27,16 +26,16 @@ function __construct(){
 
         $this->session->set_userdata($datos);
       }else
-      {$this->load->view('welcome/login');
+      {$this->load->view('login');
       }
   }
 
 public function cierraSesion(){
-      echo "hola";
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('nombre');
         $this->session->unset_userdata('pass');
-        $this->sess_destroy();
+        $this->session->sess_destroy();
+        $this->load->view('login');
 }
 //Alta de actividades de talleres, eventos o en ecotecnias
   public function altaActEvento(){
