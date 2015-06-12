@@ -53,37 +53,37 @@ class M_eColonia extends CI_Model{
               ->set('descripcion',$descripcion)
               ->insert('ecotecnia');
   }
-public function altaInstructor($nombre,$profesion){
-  $this->db->set('nombre',$nombre)
-            ->set('profesion',$profesion)
-            ->insert('instructor');
-}
+  public function altaInstructor($nombre,$profesion){
+    $this->db->set('nombre',$nombre)
+              ->set('profesion',$profesion)
+              ->insert('instructor');
+  }
 
-public function altaNuevoResiduo($nombre,$descripcion){
-  $this->db->set('nombre',$nombre)
-            ->set('descripcion',$descripcion)
-            ->insert('catalogo-residuos');
-}
+  public function altaNuevoResiduo($nombre,$descripcion){
+    $this->db->set('nombre',$nombre)
+              ->set('descripcion',$descripcion)
+              ->insert('catalogo-residuos');
+  }
 
-public function altaDatoResiduo($id,$fecha,$PET,$Vidrio,$PapelYCarton){
-  $this->db->set('Residuos_idResiduos',$id)
-           ->set('periodo',$fecha)
-           ->set('Catalogo-residuos_idResiduo',1)
-           ->set('cantidad',$PET)
-           ->insert('residuos_has_catalogo-residuos');
+  public function altaDatoResiduo($id,$fecha,$PET,$Vidrio,$PapelYCarton){
+    $this->db->set('Residuos_idResiduos',$id)
+             ->set('periodo',$fecha)
+             ->set('Catalogo-residuos_idResiduo',1)
+             ->set('cantidad',$PET)
+             ->insert('residuos_has_catalogo-residuos');
 
-  $this->db->set('Residuos_idResiduos',$id)
-           ->set('periodo',$fecha)
-           ->set('Catalogo-residuos_idResiduo',2)
-           ->set('cantidad',$Vidrio)
-           ->insert('residuos_has_catalogo-residuos');
+    $this->db->set('Residuos_idResiduos',$id)
+             ->set('periodo',$fecha)
+             ->set('Catalogo-residuos_idResiduo',2)
+             ->set('cantidad',$Vidrio)
+             ->insert('residuos_has_catalogo-residuos');
 
-  $this->db->set('Residuos_idResiduos',$id)
-           ->set('periodo',$fecha)
-           ->set('Catalogo-residuos_idResiduo',3)
-           ->set('cantidad',$PapelYCarton)
-           ->insert('residuos_has_catalogo-residuos');
-}
+    $this->db->set('Residuos_idResiduos',$id+1)
+             ->set('periodo',$fecha)
+             ->set('Catalogo-residuos_idResiduo',3)
+             ->set('cantidad',$PapelYCarton)
+             ->insert('residuos_has_catalogo-residuos');
+  }
 
 //obtención de datos de la base de datos (actividades y catálogos)
   public function get_actividadesEvento(){
@@ -152,6 +152,12 @@ public function altaDatoResiduo($id,$fecha,$PET,$Vidrio,$PapelYCarton){
 
   public function get_CatalogoResiduos(){
     return $this->db->select('*')
+                ->from('catalogo-residuos')
+                ->get()
+                ->result_array();
+  }
+  public function get_Colono(){
+   return $this->db->select('*')
                 ->from('catalogo-residuos')
                 ->get()
                 ->result_array();

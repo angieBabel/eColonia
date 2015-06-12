@@ -140,10 +140,9 @@ function __construct(){
           'ultimo'=>$this->m_eColonia->get_ResiduosActuales()
         );
       $ultimo=$data['ultimo'][2];
-      echo ($fecha);
-      /*$id=($ultimo['Residuos_idResiduos']+1);
+      $id=($ultimo['Residuos_idResiduos']+1);
       $this->m_eColonia->altaDatoResiduo($id,$fecha,$PET,$Vidrio,$PapelYCarton);
-      redirect('welcome/ambDatosRS');*/
+      redirect('welcome/ambDatosRS');
   }
 
 //eliminar eventos, talleres o ecotecnias
