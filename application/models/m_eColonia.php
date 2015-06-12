@@ -210,5 +210,23 @@ class M_eColonia extends CI_Model{
     $this->db->where('idTaller',$evento)
              ->delete('taller');
   }
+//Actualizar datos de tablas
+  public function cambiaEstdo($datosEvento,$datosTaller,$datosEcotecnia){
+    foreach ($datosEvento as $evento) {
+      $this->db->set('estado','Finalizado')
+                ->where('idEvento',$evento[0])
+                ->update('evento');
+    }
+    foreach ($datosTaller as $taller) {
+      $this->db->set('estado','Finalizado')
+                ->where('idTaller',$taller[0])
+                ->update('taller');
+    }
+    foreach ($datosEcotecnia as $ecotecnia) {
+      $this->db->set('estado','Finalizado')
+                ->where('idActividad',$ecotecnia[0])
+                ->update('ecotecnia');
+    }
 
+  }
 }

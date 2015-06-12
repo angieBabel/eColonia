@@ -4,7 +4,7 @@
 <!--/*<?php//  session_start(); ?>*/-->
   <!-- Usurio Externo-->
 
-  <?php if (!isSet($_SESSION['logueado'])) { ?>
+  <?php if /*(!isSet($_SESSION['logueado']))*/ (1==0) { ?>
 
       <aside class="main-sidebar">
         <section class="sidebar">
@@ -108,7 +108,7 @@
 
   <?php }?>
     <!-- Usurio Colono-->
-    <?php if (isSet($_SESSION['logueado'])) { ?>
+    <?php if (2==0) /*(isSet($_SESSION['logueado']))*/ { ?>
       <aside class="main-sidebar">
         <section class="sidebar">
 
@@ -223,7 +223,7 @@
 
   <?php }?>
   <!-- Administrador -->
- <?php if (1==0)/*(isSet($_SESSION['logueado']))*/ { ?>
+ <?php if (3==3)/*(isSet($_SESSION['logueado']))*/ { ?>
       <aside class="main-sidebar">
         <section class="sidebar">
 

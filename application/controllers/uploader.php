@@ -168,23 +168,29 @@ function __construct(){
   public function eliminaEvento(){
     $id = $_GET['id'];
     $this->m_eColonia->eliminaEvento($id);
-    redirect('welcome/ambactualizarActividad');
+    redirect('welcome/amblistaActividad');
   }
 
   public function eliminaEventoEcotecnia(){
     $id = $_GET['id'];
     $this->m_eColonia->eliminaEventoEcotecnia($id);
-    redirect('welcome/ambactualizarEcotecnia');
+    redirect('welcome/amblistaTaller');
   }
 
     public function eliminaEventoTaller(){
     $id = $_GET['id'];
     $this->m_eColonia->eliminaEventoTaller($id);
-    redirect('welcome/ambactualizarTaller');
+    redirect('welcome/amblistaTaller');
   }
 
 //Edita eventos, talleres o ecotecnias
-
+  public function cambiaEstado(){
+    $datosEvento=$this->input->POST('eventos');
+    $datosTaller=$this->input->POST('talleres');
+    $datosEcotecnia=$this->input->POST('ecotecnias');
+    $this->m_eColonia->cambiaEstdo($datosEvento,$datosTaller,$datosEcotecnia);
+    redirect('welcome/ambfinalizarActividad');
+  }
 
 }
 

@@ -95,12 +95,12 @@ function __construct(){
 				);
 			$this->load->view('listaEvento',$data);
 	}
-	public function ambactualizarEcotecnia(){
+	/*public function ambactualizarEcotecnia(){
 		$data = array(
 					'ecotecnias'=>$this->m_eColonia->get_actividadesEcotecnias(),
 				);
 			$this->load->view('actualizarActividadEcotecnia',$data);
-	}
+	}*/
 	public function amblistaTaller(){
 		$data = array(
 					'talleres'=>$this->m_eColonia->get_actividadesTaller(),
@@ -125,7 +125,12 @@ function __construct(){
 	}
 
 	public function ambfinalizarActividad(){
-		$this->load->view('statusActividades');
+		$data = array(
+					'eventos'=>$this->m_eColonia->get_actividadesEvento(),
+					'talleres'=>$this->m_eColonia->get_actividadesTaller(),
+					'ecotecnias'=>$this->m_eColonia->get_actividadesEcotecnias(),
+				);
+		$this->load->view('statusActividades',$data);
 	}
 
 	public function login(){
