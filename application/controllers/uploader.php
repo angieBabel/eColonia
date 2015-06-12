@@ -136,8 +136,9 @@ function __construct(){
       $PET=$this->input->POST('PET');
       $Vidrio=$this->input->POST('Vidrio');
       $PapelYCarton=$this->input->POST('Papel y Carton');
-      $this->m_eColonia->altaDatoResiduo($fecha,$PET,$Vidrio,$PapelYCarton);
-      redirect('welcome/ambAgregarCategoria');
+      echo $PET;
+      /*$this->m_eColonia->altaDatoResiduo($fecha,$PET,$Vidrio,$PapelYCarton);
+      redirect('welcome/ambAgregarCategoria');*/
   }
 
 //eliminar eventos, talleres o ecotecnias

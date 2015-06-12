@@ -11,7 +11,7 @@
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
         <h2>Agregar información</h2>
-        <form class="form-group" action="index/upolader/agregaDatosRS" method="POST">
+        <form class="form-group" action="index.php/uploader/agregaDatosRS" method="POST">
           <h3>Periodo</h3>
           <div class="form-group col-lg-12">
             <label for="finicio" class="control-label">Fecha</label>

@@ -66,10 +66,10 @@ public function altaNuevoResiduo($nombre,$descripcion){
 }
 
 public function altaDatoResiduo($fecha,$PET,$Vidrio,$PapelYCarton){
-  $this->db->set('periodo',$fecha)
+  /*$this->db->set('periodo',$fecha)
            ->set('cantidad',$PET)
            ->set('cantidad',$PapelYCarton)
-           ->set('cantidad',$Vidrio)
+           ->set('cantidad',$Vidrio)*/
 }
 
 //obtención de datos de la base de datos (actividades y catálogos)
