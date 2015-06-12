@@ -198,20 +198,10 @@ class M_eColonia extends CI_Model{
                 ->result_array();
   }
 
-//Generador de PDF
-/*function obtenerReporteResiduos()
-    {
-        return $this->db->select ('*')
-                ->from('residuos_has_catalogo-residuos AS R-CR')
-                ->join('catalogo-residuos as CR', 'R-CR.Catalogo-residuos_idResiduo = CR.idResiduo')
-                ->get()
-                ->result_array();
-    }
-*/
 //Agregar nueva ecotecnia
   public function altaEcotecnia($nombre,$ubicacion,$descripcion,$modouso,$add){
   $this->db->set('nombre',$nombre)
-          ->set('ubicacion',$ubicacion)
+           ->set('ubicacion',$ubicacion)
            ->set('descripcion',$descripcion)
            ->set('modouso',$modouso)
            ->set('imagen',$add)

@@ -29,19 +29,12 @@
                           <p id="infoAmbiental">
                             <?php echo $rowCatEcotecnias['descripcion']; ?>
                           </p>
-                          <p class="pull-right">
+                        </td>
+                        <td><p class="pull-right">
                             <button class="btn btn-default" type="button" >Ubicación</button>
-                            <a class="btn btn-default" href="#modal1" role="button">Cómo usar</a>
+                            <a class="btn btn-default" href="#m" role="button">Cómo usar</a>
 
                           </p> <!-- Modal frame -->
-                                <div id="modal1" class="modalmask">
-                                  <div class="modalbox movedown">
-                                    <a href="#close" title="Close" class="close">X</a>
-                                    <p id="informacion">
-                                      <?php echo $rowCatEcotecnias['modouso'];?>
-                                    </p>
-                                  </div>
-                                </div>
                         </td>
                       </tr>
                     </tbody>

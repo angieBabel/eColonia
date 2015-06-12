@@ -24,8 +24,7 @@ function __construct(){
 
 	}
 	public function index(){ //Pagina principal
-		if (validaSesion()) {
-			# code...
+		if ($this->validaSesion()) {
 			redirect('welcome/amiental');
 		}else{
 			$this->load->view('login');
