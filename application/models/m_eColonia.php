@@ -65,11 +65,24 @@ public function altaNuevoResiduo($nombre,$descripcion){
             ->insert('catalogo-residuos');
 }
 
-public function altaDatoResiduo($fecha,$PET,$Vidrio,$PapelYCarton){
-  /*$this->db->set('periodo',$fecha)
+public function altaDatoResiduo($id,$fecha,$PET,$Vidrio,$PapelYCarton){
+  $this->db->set('Residuos_idResiduos',$id)
+           ->set('periodo',$fecha)
+           ->set('Catalogo-residuos_idResiduo',1)
            ->set('cantidad',$PET)
+           ->insert('residuos_has_catalogo-residuos');
+
+  $this->db->set('Residuos_idResiduos',$id)
+           ->set('periodo',$fecha)
+           ->set('Catalogo-residuos_idResiduo',2)
+           ->set('cantidad',$Vidrio)
+           ->insert('residuos_has_catalogo-residuos');
+
+  $this->db->set('Residuos_idResiduos',$id)
+           ->set('periodo',$fecha)
+           ->set('Catalogo-residuos_idResiduo',3)
            ->set('cantidad',$PapelYCarton)
-           ->set('cantidad',$Vidrio)*/
+           ->insert('residuos_has_catalogo-residuos');
 }
 
 //obtención de datos de la base de datos (actividades y catálogos)

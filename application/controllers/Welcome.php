@@ -85,7 +85,6 @@ function __construct(){
 		$this->load->view('categoriaResiduos');
 	}
 	public function ambInstructor(){
-
 		$this->load->view('agregaInstructor');
 	}
 

@@ -135,10 +135,15 @@ function __construct(){
       $fecha=$this->input->POST('fecha');
       $PET=$this->input->POST('PET');
       $Vidrio=$this->input->POST('Vidrio');
-      $PapelYCarton=$this->input->POST('Papel y Carton');
-      echo $PET;
-      /*$this->m_eColonia->altaDatoResiduo($fecha,$PET,$Vidrio,$PapelYCarton);
-      redirect('welcome/ambAgregarCategoria');*/
+      $PapelYCarton=$this->input->POST('Papel-Carton');
+      $data = array(
+          'ultimo'=>$this->m_eColonia->get_ResiduosActuales()
+        );
+      $ultimo=$data['ultimo'][2];
+      echo ($fecha);
+      /*$id=($ultimo['Residuos_idResiduos']+1);
+      $this->m_eColonia->altaDatoResiduo($id,$fecha,$PET,$Vidrio,$PapelYCarton);
+      redirect('welcome/ambDatosRS');*/
   }
 
 //eliminar eventos, talleres o ecotecnias

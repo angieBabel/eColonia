@@ -14,8 +14,8 @@
         <form class="form-group" action="index.php/uploader/agregaDatosRS" method="POST">
           <h3>Periodo</h3>
           <div class="form-group col-lg-12">
-            <label for="finicio" class="control-label">Fecha</label>
-            <input type="date" name="finicio" class="form-control" placeholder="Nombre de la actividad">
+            <label for="fecha" class="control-label">Fecha</label>
+            <input type="date" name="fecha" id="fecha" class="form-control" placeholder="Periodo">
           </div>
           <?php foreach ($catalogo as $cat) { ?>
            <div class="form-group col-lg-4">
@@ -53,7 +53,7 @@
           </div>
           <div class="form-group col-lg-12">
             <div class="col-lg-10"></div>
-            <div class="col-lg-2"><button class="btn btn-success">Guardar</button></div>
+            <div class="col-lg-2"><button onclick="mensaje3();" class="btn btn-success">Guardar</button></div>
           </div>
         </form>
       </div>
