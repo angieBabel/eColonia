@@ -11,18 +11,45 @@
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
         <h2>Taller</h2>
+        <table class="table">
+          <tr>
+            <td>Nombre del Taller:</td><td><?php echo $taller['nombre']; ?></td>
+          </tr>
+          <tr>
+            <td>Encargado:</td><td><?php echo $taller['responsable']; ?></td>
+          </tr>
+          <tr>
+            <td>Lugar:</td><td><?php echo $taller['lugar']; ?></td>
+          </tr>
+          <tr>
+            <td>Horario: </td><td><?php echo $taller['horario']; ?></td>
+          </tr>
+          <tr>
+            <td>Fecha de Inicio:</td><td><?php echo $taller['fecha-inicio']; ?></td>
+          </tr>
+          <tr>
+            <td>Fecha de finalización:</td><td><?php echo $taller['fecha-fin']; ?></td>
+          </tr>
+          <tr>
+            <td>Costo:</td><td><?php echo $taller['cuota']; ?></td>
+          </tr>
+          <tr>
+            <td>Cupo:</td><td><?php echo $taller['cupo']; ?></td>
+          </tr>
+          <tr>
+            <td>Material:</td><td><?php echo $taller['materiales']; ?></td>
+          </tr>
+          <tr>
+            <td>Ecobonos: </td><td><?php echo $taller['eco-bonos'] ?></td>
+          </tr>
+          <tr>
+            <td>Descripcion:</td><td><?php echo $taller['descripcion']; ?></td>
+          </tr>
+        </table>
         <input type="hidden" name="id" value="<?php echo $taller['idTaller']?>" >
-        <p>Nombre del Taller: <?php echo $taller['nombre']; ?></p>
-        <p>Encargado: <?php echo $taller['responsable']; ?></p>
-        <p>Lugar: <?php echo $taller['lugar']; ?></p>
-        <p>Horario: <?php echo $taller['horario']; ?></p>
-        <p>Fecha de Inicio: <?php echo $taller['fecha-inicio']; ?></p>
-        <p>Fecha de finalización:<?php echo $taller['fecha-fin']; ?> </p>
-        <p>Costo: <?php echo $taller['cuota']; ?> </p>
-        <p>Cupo: <?php echo $taller['cupo']; ?></p>
-        <p>Material: <?php echo $taller['materiales']; ?></p>
-        <p>Ecobonos: <?php echo $taller['eco-bonos'] ?> </p>
-        <p>Descripcion: <?php echo $taller['descripcion']; ?> </p>
+
+        <a href="index.php/welcome/ambActividades" style="color:black"><i class="fa fa-reply fa-lg"></i></a>
+        <a href="index.php/welcome/ambiental" style="color:black"><i class="fa fa-home fa-lg"></i></a>
 
       </div>
       <div class="col-lg-2"></div>
