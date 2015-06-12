@@ -28,21 +28,18 @@ function __construct(){
       $user=$this->input->POST('nombre');
       $pass=$this->input->POST('contrasenia');
       $usuario=$this->m_eColonia->validarUsuario($user,$pass);
-      $admon=$this->m_eColonia->validarUsuarioAdmon($user,$pass);
+      /*$admon=$this->m_eColonia->validarUsuarioAdmon($user,$pass);*/
       print_r($usuario);
-      print_r($admon);
-      if (empty($usuario)) {
-        $this->load->view('index');
-        # code...
-      }else{
-      $datos=array('email'=>$usuario[0]['email'],
+      if (!empty($usuario)) {
+        $datos=array('email'=>$usuario[0]['email'],
                       'nombre'=>$usuario[0]['nombre'],
                       'pass'=>$usuario[0]['password']);
         $this->session->set_userdata($datos);
         $this->load->view('index');
+      }else{$this->load->view('welcome/login');
     }
   }
-//Alta de actividades de las ecotécnias
+//Alta de actividades de talleres, eventos o en ecotecnias
   public function altaActEvento(){
       $nombre=$this->input->POST('Nombre');
       $representante=$this->input->POST('encargado');
@@ -134,7 +131,7 @@ function __construct(){
       redirect('welcome/ambEcotecnias');
 
     }
-  //alta nuevo instructor
+//alta nuevo instructor y nuevo tipo de residuo
   public function altaInstructor(){
       $nombre=$this->input->POST('nombre');
       $profesion=$this->input->POST('profesion');
@@ -150,7 +147,7 @@ function __construct(){
 
   }
 
-  //agregar nuevos datos de residuos
+//agregar nuevos datos de residuos
   public function agregaDatosRS(){
       $fecha=$this->input->POST('fecha');
       $PET=$this->input->POST('PET');

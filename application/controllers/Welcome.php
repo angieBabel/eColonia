@@ -25,10 +25,14 @@ function __construct(){
 
 	}
 	public function index(){ //Pagina principal
-		$this->load->view('index');
+		$this->load->view('login');
 
 	}
 //Muestra las funciones pricnipales, SOLO VISTAS
+	public function login(){
+		$this->load->view('login');
+	}
+
 	public function ambiental(){ //Cargar pagina principal de Ambiental
 		$this->load->view('ambiental');
 	}
@@ -133,8 +137,14 @@ function __construct(){
 		$this->load->view('statusActividades',$data);
 	}
 
-	public function login(){
-		$this->load->view('login');
+function validaSesion()
+	{
+		if ($this->session->userdata('email') != '') {
+            return true;
+        }
+        else {
+            return false;
+        }
 	}
 
 	function cierraSesion()
