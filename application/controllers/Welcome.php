@@ -152,4 +152,13 @@ function validaSesion()
 		$this->session->sess_destroy();
 		redirect('welcome/ambiental');
 	}
+
+	function descripcionEventos(){
+		 $id = $_GET['id'];
+    $datos_evento=$this->m_eColonia->get_Evento($id);
+    $datos['evento']=$datos_evento[0];
+
+    $this->load->view('descripcionEventos',$datos);
+		//$this->load->view('descripcionEventos');
+	}
 }

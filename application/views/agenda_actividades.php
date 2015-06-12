@@ -32,7 +32,7 @@
                         <td><?php echo $rowEventos['lugar']; ?></td>
                         <td><?php echo $rowEventos['horario']; ?></td>
                         <td>
-                            <a href="#modal1"> Ver más <i class="fa fa-plus"></i></a>
+                            <a href="index.php/welcome/descripcionEventos?id=<?php echo $rowEventos['idEvento'];?>"> Ver más <i class="fa fa-plus"></i></a>
                         </td>
                     </tr>
                     <?php } ?>
