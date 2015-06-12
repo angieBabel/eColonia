@@ -222,7 +222,7 @@ public function cierraSesion(){
       $id=$this->input->POST('id');
       $nombre=$this->input->POST('Nombre');
       $encargado=$this->input->POST('encargado');
-      $material=$this->input->POST('material');
+      $material=$this->input->POST('materiales');
       $instructor=$this->input->POST('instructor');
       $hora=$this->input->POST('hora');
       $ecobonos=$this->input->POST('ecobonos');

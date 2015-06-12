@@ -20,7 +20,7 @@
           <div class="form-group col-lg-6">
             <label for="encargado" class="control-label">Encargado</label>
             <!-- <input type="text" name="encargado" class="form-control" placehoder="Encargado de la actividad"> -->
-            <input value="<?php echo $ecotecnia['responsable']; ?>"type="text" name="responsable" id="responsable">
+            <input value="<?php echo $ecotecnia['responsable']; ?>" type="text"  class="form-control"  name="responsable" id="responsable">
           </div>
           <div class="form-group col-lg-6">
             <label for="lugar" class="control-label">Lugar</label>
@@ -39,7 +39,7 @@
           </div>
           <div class="form-group col-lg-4">
             <label class="control-label" for="ecotecnia">Ecotecnia</label>
-            <input value="<?php echo $ecotecnia['idEcotecnia']; ?>"type="text" name="ecotecnia" id="ecotecnia">
+            <input value="<?php echo $ecotecnia['idEcotecnia']; ?>"type="text" name="ecotecnia" id="ecotecnia" class="form-control" >
           </div>
           <div class="form-group col-lg-4">
             <label for="hora" class="control-label">Horario</label>

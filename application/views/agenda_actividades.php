@@ -59,7 +59,7 @@
                         <td><?php echo $rowTalleres['lugar']; ?></td>
                         <td><?php echo $rowTalleres['horario']; ?></td>
                         <td>
-                            <a href="#modal1"> Ver más <i class="fa fa-plus"></i></a>
+                            <a href="index.php/welcome/descripcionTaller?id=<?php echo $rowTalleres['idTaller'];?>"> Ver más <i class="fa fa-plus"></i></a>
                         </td>
                     </tr>
                     <?php } ?>
@@ -86,7 +86,7 @@
                         <td><?php echo $rowEcotecnias['lugar']; ?></td>
                         <td><?php echo $rowEcotecnias['horario']; ?></td>
                         <td>
-                            <a href="#modal1"> Ver más <i class="fa fa-plus"></i></a>
+                            <a href="index.php/welcome/descripcionTaller?id=<?php echo $rowEventos['idEvento'];?>"> Ver más <i class="fa fa-plus"></i></a>
                         </td>
                     </tr>
                     <?php } ?>

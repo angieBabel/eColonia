@@ -24,13 +24,13 @@
           <div class="form-group col-lg-6">
             <label for="instructor" class="control-label">Instructor</label>
             <!-- <input type="text" name="instructor" class="form-control" placehoder="Encargado de la actividad"> -->
-           <input  type="text" name="instructor" id="instructor">
+           <input  type="text" name="instructor" id="instructor" class="form-control">
           </div>
 
           <div class="form-group col-lg-6">
             <label for="encargado" class="control-label">Encargado</label>
             <!-- <input type="text" name="encargado" class="form-control" placehoder="Encargado de la actividad"> -->
-            <input value="<?php echo $taller['responsable']; ?>" type="text" name="responsable" id="responsable" >
+            <input value="<?php echo $taller['responsable']; ?>" type="text" name="responsable" id="responsable" class="form-control" >
           </div>
 
           <div class="form-group col-lg-12">
@@ -85,7 +85,7 @@
           <div class="form-group col-lg-12">
             <label for="material" class="control-label">Material</label>
             <textarea name="material" id="" cols="30" rows="5" class="form-control" placehoder="Material necesario para el taller">
-                <?php echo $taller['material']; ?>
+                <?php echo $taller['materiales']; ?>
             </textarea>
           </div>
 

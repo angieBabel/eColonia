@@ -160,4 +160,11 @@ function validaSesion()
     $this->load->view('descripcionEventos',$datos);
 		//$this->load->view('descripcionEventos');
 	}
+	function descripcionTaller(){
+		 $id = $_GET['id'];
+    $datos_taller=$this->m_eColonia->get_Taller($id);
+    $datos['taller']=$datos_taller[0];
+
+    $this->load->view('descripcionTaller',$datos);
+	}
 }

@@ -275,7 +275,7 @@ class M_eColonia extends CI_Model{
     $ecobonos,$hora,$fecha_inicio,$fecha_fin,$cupo,$costo,$descripcion,$material,$estado){
     $this->db->set('nombre',$nombre)
              ->set('descripcion',$descripcion)
-             ->set('material',$material)
+             ->set('materiales',$material)
              ->set('responsable',$encargado)
              ->set('fecha-inicio',$fecha_inicio)
              ->set('fecha-fin',$fecha_fin)

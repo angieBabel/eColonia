@@ -15,7 +15,8 @@
         <p>Nombre del evento: <?php echo $evento['nombre'] ?> </p>
         <p>Encargado: <?php echo $evento['responsable'] ?></p>
         <p>Lugar: <?php echo $evento['lugar'] ?></p>
-        <p>Fecha: <?php echo $evento['horario'] ?></p>
+        <p>Fecha: <?php echo $evento['fecha_Inicio'] ?> </p>
+        <p>Hora: <?php echo $evento['horario'] ?></p>
         <p>Ecobonos: <?php echo $evento['eco-bonos'] ?> </p>
         <p>Descripcion: <?php echo $evento['descripcion'] ?></p>
 

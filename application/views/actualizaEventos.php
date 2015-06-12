@@ -52,8 +52,7 @@
             </textarea>
           </div>
           <div "form-group col-lg-4">
-            <label for="estado">Estado</label>
-            <input value="<?php echo $evento['estado'] ?>" type="text" name="estado" id="estado"  >
+            <input value="<?php echo $evento['estado'] ?>" type="hidden" name="estado" id="estado"  >
           </div>
           <div class="form-group col-lg-12">
             <div class="col-lg-10"></div>
