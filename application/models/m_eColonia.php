@@ -5,19 +5,27 @@ class M_eColonia extends CI_Model{
     parent::__construct();
   }
 //Validar usuario
-  public function validarUsuario($user,$pass){
+  /*public function validarUsuario($user,$pass){
         $this->db->where('email',$user);    //    La consulta se efectúa mediante Active Record. Una manera alternativa, y en lenguaje más sencillo, de generar las consultas Sql.
         $this->db->where('password',$pass);
         $query=$this->db->get('colono');
         return $query->result_array();
-  }
+  }*/
+  public function validarUsuario($cuenta,$clave){
+    $this->db->where('email',$cuenta);
+    $this->db->where('password',$clave);
 
-  public function validarUsuarioAdmon($user,$pass){
+    $query=$this->db->get('colono');
+    return $query->result_array();
+   }
+  /*public function validarUsuarioAdmon($user,$pass){
         $this->db->where('email',$user);    //    La consulta se efectúa mediante Active Record. Una manera alternativa, y en lenguaje más sencillo, de generar las consultas Sql.
         $this->db->where('password',$pass);
         $query=$this->db->get('admon');
         return $query->result_array();
-  }
+  }*/
+
+
 //Alta de actividades de los tipos de eventos
   public function altaActEvento($nombre,$representante,
     $horario,$fecha,$lugar,$descripcion,$ecobonos,$galeria){

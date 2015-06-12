@@ -24,7 +24,7 @@
                           <?php foreach($eventos as $rowEventos){ ?>
                           <tr>
                               <td><?php echo $rowEventos['nombre']; ?></td>
-                              <td><?php echo $rowEventos['fecha_inicio']; ?></td>
+                              <td><?php echo $rowEventos['fecha_Inicio']; ?></td>
                               <td><?php echo $rowEventos['estado']; ?></td>
                               <td>
                                   <input name="eventos[]" value="<?php echo $rowEventos['idEvento']; ?>" type="checkbox">Finalizar
