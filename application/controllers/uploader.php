@@ -37,9 +37,15 @@ public function cierraSesion(){
 }
 //Alta de actividades de talleres, eventos o en ecotecnias
   public function altaActEvento(){
+
+    if(!$_POST['Nombre'])
+    {
+      redirect('welcome/ambAgregaEvento');
+    }
+    else
+    {
       $nombre=$this->input->POST('Nombre');
       $representante=$this->input->POST('encargado');
-
       $horario=$this->input->POST('hora');
       $fecha=$this->input->POST('fecha');
       $lugar=$this->input->POST('lugar');
@@ -53,7 +59,16 @@ public function cierraSesion(){
      redirect('welcome/ambActividades');
     }
 
+
+  }
+
   public function altaActTaller(){
+    if (!$_POST['Nombre'])
+    {
+      redirect('welcome/ambAgregaTaller');
+    }
+    else
+    {
       $nombre=$this->input->POST('Nombre');
       $encargado=$this->input->POST('encargado');
       $instructor=$this->input->POST('instructor');
@@ -76,7 +91,17 @@ public function cierraSesion(){
       redirect('welcome/ambActividades');
     }
 
+
+
+    }
+
   public function altaActEcotecnia(){
+    if (!$_POST['Nombre'])
+    {
+      redirect('welcome/ambAgregarActEcotecnia');
+    }
+    else
+    {
       $nombre=$this->input->POST('Nombre');
       $encargado=$this->input->POST('encargado');
       $hora=$this->input->POST('hora');
@@ -94,6 +119,8 @@ public function cierraSesion(){
       $this->m_eColonia->altaActEctoecnia($nombre,$encargado,$lugar,
       $ecobonos,$ecotecnias,$hora,$fecha_inicio,$fecha_fin,$cupo,$descripcion,$galeria,$estado);
       redirect('welcome/ambActividades');
+    }
+
   }
 //Alta de nueva ecotécnia
 
@@ -134,7 +161,7 @@ public function cierraSesion(){
       $this->m_eColonia->altaInstructor($nombre,$profesion);
       redirect('welcome/ambInstructor');
   }
-  //alta nuevo Residuo
+//alta nuevo Residuo
   public function altaNuevoResiduo(){
       $nombre=$this->input->POST('nombre');
       $descripcion=$this->input->POST('descripcion');

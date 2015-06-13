@@ -53,7 +53,7 @@
           </div>
           <div class="form-group col-lg-12">
             <label for="descripcion" class="control-label">Descripción</label>
-            <textarea name="descripcion" id="" cols="30" rows="10" class="form-control" placehoder="Descripción de la actividad"></textarea>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="form-control" placehoder="Descripción de la actividad"></textarea>
           </div>
           <div class="form-group col-lg-12">
             <div class="col-lg-10"></div>

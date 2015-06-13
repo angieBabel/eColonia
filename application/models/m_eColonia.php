@@ -100,7 +100,7 @@ class M_eColonia extends CI_Model{
              ->set('cantidad',$Vidrio)
              ->insert('residuos_has_catalogo-residuos');
 
-    $this->db->set('Residuos_idResiduos',$id+1)
+    $this->db->set('Residuos_idResiduos',$id)
              ->set('periodo',$fecha)
              ->set('Catalogo-residuos_idResiduo',3)
              ->set('cantidad',$PapelYCarton)
