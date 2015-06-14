@@ -34,8 +34,6 @@
             <td>Descripcion:</td><td><?php echo $evento['descripcion'] ?></td>
           </tr>
         </table>
-        <input type="hidden" name="id" value="<?php echo $taller['idTaller']?>" >
-
         <a href="index.php/welcome/ambActividades" style="color:black"><i class="fa fa-reply fa-lg"></i></a>
         <a href="index.php/welcome/ambiental" style="color:black"><i class="fa fa-home fa-lg"></i></a>
         <input type="hidden" name="id" value="<?php echo $evento['idEvento']?>" >
