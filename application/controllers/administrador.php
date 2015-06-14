@@ -54,9 +54,12 @@ class Administrador extends CI_Controller {
 	public function dependencias(){
 		if($this->session->userdata('tipo')==1){
 			$dependencias = $this->colono_model->get_dependencias();
-            $data['contenido'] = "administrador/dependencias";
+//            $data['contenido'] = "administrador/dependencias";
             $data['dependencias'] = $dependencias;
-			$this->load->view('administrador/template',$data);
+            $this->load->view('Sections/header');
+            $this->load->view('mUsuario.php');
+			$this->load->view('administrador/dependencias',$data);
+			$this->load->view('Sections/footer');
 		}else{
 			$this->session->sess_destroy();
 			redirect('ecolonia');
@@ -66,9 +69,12 @@ class Administrador extends CI_Controller {
 	public function categorias(){
 		if($this->session->userdata('tipo')==1){
 			$categorias = $this->colono_model->get_categorias();
-            $data['contenido'] = "administrador/categorias";
+//            $data['contenido'] = "administrador/categorias";
             $data['categorias'] = $categorias;
-			$this->load->view('administrador/template',$data);
+			$this->load->view('Sections/header');
+            $this->load->view('mUsuario.php');
+			$this->load->view('administrador/categorias',$data);
+			$this->load->view('Sections/footer');
 		}else{
 			$this->session->sess_destroy();
 			redirect('ecolonia');
@@ -77,12 +83,13 @@ class Administrador extends CI_Controller {
     
     public function tabla_peticion(){
 		if($this->session->userdata('tipo')==1){
-			$data['contenido'] = "administrador/tabla_peticion";
-			//$data['estado'] = $this->estados;
+//			$data['contenido'] = "administrador/tabla_peticion";
             $peticiones = $this->colono_model->get_peticionesadmin();
-//            $dataplus = array('peticiones' => $peticiones);
             $data['peticiones'] = $peticiones;
-			$this->load->view('administrador/template',$data);
+			$this->load->view('Sections/header');
+            $this->load->view('mUsuario.php');
+			$this->load->view('administrador/tabla_peticion',$data);
+			$this->load->view('Sections/footer');
 		} else{
 			$this->session->sess_destroy();
 			redirect('ecolonia');
@@ -91,11 +98,14 @@ class Administrador extends CI_Controller {
   
     public function tabla_oficio(){
 		if($this->session->userdata('tipo')==1){
-			$data['contenido'] = "administrador/tabla_oficio";
+//			$data['contenido'] = "administrador/tabla_oficio";
 			//$data['estado'] = $this->estados;
             $oficios = $this->colono_model->get_all_oficiosadmin();
             $data['oficios'] = $oficios;
-			$this->load->view('administrador/template',$data);
+			$this->load->view('Sections/header');
+            $this->load->view('mUsuario.php');
+			$this->load->view('administrador/tabla_oficio',$data);
+			$this->load->view('Sections/footer');
 		} else{
 			$this->session->sess_destroy();
 			redirect('ecolonia');
@@ -144,8 +154,12 @@ class Administrador extends CI_Controller {
   
     public function gestion(){
 		if($this->session->userdata('tipo')==1){
-			$data['contenido'] = "administrador/gestion";
-			$this->load->view('administrador/template',$data);
+//			$data['contenido'] = "administrador/gestion";
+//			$this->load->view('administrador/template',$data);
+            $this->load->view('Sections/header');
+            $this->load->view('mUsuario.php');
+            $this->load->view('administrador/gestion');
+            $this->load->view('Sections/footer');
 		} else{
 			$this->session->sess_destroy();
 			redirect('ecolonia');

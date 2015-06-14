@@ -1,3 +1,4 @@
+<!--
 		<nav>
 			<div class="container">
 				<ul class="navbar izquierda">
@@ -11,7 +12,8 @@
  				</ul>
 			</div>
 		</nav>
-		<section>
+-->
+		<section class="content" id="contenido">
 			<div class="container">
 <!--				<div class="row">-->
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -38,7 +40,7 @@
                       </div>
                       </fieldset>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
 						<fieldset>
 							<legend>Agregar</legend>
 							<form class="form-vertical" id="frmcat" name="frmcat" action="index.php/administrador/registrar_categoria" 

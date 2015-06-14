@@ -1,3 +1,4 @@
+<!--
 		<nav>
 			<div class="container">
 				<ul class="navbar izquierda">
@@ -11,16 +12,17 @@
  				</ul>
 			</div>
 		</nav>
-		<section>
+-->
+		<section class="content" id="contenido">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
 						<fieldset>
 							<legend>Peticiones recibidas</legend>
 							<div class="row">
 								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 									<div id="tabla">
-										<table id="example" class="table table-hover">
+										<table id="peti" class="table table-hover">
 									        <thead>
 									            <tr>
 													<th>Folio</th>
@@ -70,6 +72,6 @@
 		<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
 		<script>
 			$(document).ready(function() {
-			    $('#example').dataTable();
+			    $('#peti').dataTable();
 			} );
 		</script>

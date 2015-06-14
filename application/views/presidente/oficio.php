@@ -1,3 +1,4 @@
+<!--
 		<nav>
 			<div class="container">
 				<ul class="navbar izquierda">
@@ -11,7 +12,8 @@
  				</ul>
 			</div>
 		</nav>
-		<section>
+-->
+		<section class="content" id="contenido">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">

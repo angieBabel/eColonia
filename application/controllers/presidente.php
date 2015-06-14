@@ -46,9 +46,10 @@ class Presidente extends CI_Controller {
 			$id = $this->session->userdata('id');
             $peticiones = $this->colono_model->get_all_peticiones($id);
             $data = array('peticiones'=>$peticiones);
-			$this->load->view('presidente/header');
+			$this->load->view('Sections/header');
+            $this->load->view('mUsuario.php');
 			$this->load->view('presidente/gestion',$data);
-			$this->load->view('presidente/footer');
+			$this->load->view('Sections/footer');
 		} else{
 			$this->session->sess_destroy();
 			redirect('ecolonia');
@@ -198,9 +199,10 @@ class Presidente extends CI_Controller {
 	}
 
 	public function oficio(){
-			$this->load->view('presidente/header');
+			$this->load->view('Sections/header');
+            $this->load->view('mUsuario.php');
 			$this->load->view('presidente/oficio');
-			$this->load->view('presidente/footer');
+			$this->load->view('Sections/footer');
 	}
 
 	public function inserta_calles(){
@@ -227,9 +229,10 @@ class Presidente extends CI_Controller {
 			$id = $this->session->userdata('id');
 			$peticiones = $this->colono_model->get_all_peticiones($id);
             $data = array('peticiones'=>$peticiones);
-			$this->load->view('presidente/header');
+			$this->load->view('Sections/header');
+            $this->load->view('mUsuario.php');
 			$this->load->view('presidente/tabla_peticion',$data);
-			$this->load->view('presidente/footer');
+			$this->load->view('Sections/footer');
 		}else{
 			$this->session->sess_destroy();
 			redirect('ecolonia');
@@ -242,9 +245,10 @@ class Presidente extends CI_Controller {
 			$id = $this->session->userdata('id');
 			$oficios = $this->colono_model->get_all_oficios($id);
 			$data = array('oficios'=>$oficios);
-			$this->load->view('presidente/header');
+			$this->load->view('Sections/header');
+            $this->load->view('mUsuario.php');
 			$this->load->view('presidente/tabla_oficio',$data);
-			$this->load->view('presidente/footer');
+			$this->load->view('Sections/footer');
 		}else{
 			$this->session->sess_destroy();
 			redirect('ecolonia');
