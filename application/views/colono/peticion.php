@@ -1,3 +1,4 @@
+<!--
 		<nav>
 			<div class="container">
 				<ul class="navbar izquierda">
@@ -11,10 +12,11 @@
  				</ul>
 			</div>
 		</nav>
-		<section>
+-->
+		<section class="content" id="contenido">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
 						<div id="usuario_contrasena">
 							<div id="alert" class="alert alert-info fade in">
 								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -28,7 +30,8 @@
 					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
 						<fieldset class="panel">
 							<legend>Petición</legend>
-                            <form class="form-vertical" id="frmpet" name="frmpet" action="index.php/colono/registrar_peticion" method="POST" enctype="multipart/form-data">
+                            <form class="form-vertical" id="frmpet" name="frmpet"
+                            action="index.php/colono/registrar_peticion" method="POST" enctype="multipart/form-data">
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                   <div class="form-group">
@@ -90,6 +93,7 @@
 				</div>
 			</div>
 		</section>
+<!--
 		<div class="modal dialogo fade" id="alert">
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
@@ -103,6 +107,7 @@
 				</div>
 			</div>
 		</div>
+-->
 		<script type="text/javascript" src="js/datepicker.js"></script>
 		<script type="text/javascript" src="js/datepicker.es.js"></script>
 		<script type="text/javascript" src="js/formatter.js"></script>
