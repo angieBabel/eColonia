@@ -68,8 +68,6 @@
 -->
 			</div>
 		</section>
-		<script type="text/javascript" src="js/jquery.dataTables.js"></script>
-		<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
 		<script>
 			$(document).ready(function() {
 			    $('#peti').dataTable();

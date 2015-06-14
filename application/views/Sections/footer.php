@@ -30,9 +30,14 @@
     <script src="js/app.min.js" type="text/javascript"></script>
 
     <!-- AdminLTE for demo purposes -->
-
     <script type="text/javascript" src="js/lib.js"></script><!-- Archivos de javascript para los charts -->
-    <script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.7.1.min.js"%3E%3C/script%3E'))</script><!-- Archivos de javascript para los charts -->
+
+    <!-- Archivos de javascript para los charts -->
+    <script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.7.1.min.js"%3E%3C/script%3E'))</script>
+    
+    <!-- Archivos de javascript para el manejo de tablas -->
+    <script type="text/javascript" src="js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
 
 
   </body>
