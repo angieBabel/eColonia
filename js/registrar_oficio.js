@@ -9,7 +9,7 @@ $('#enviar_oficio').click(function(){
             $("#asunto").val("");
             $('#dependencia').val("");
             $('#descripcion').val("");
-            alert(data);
+//            alert(data);
 
             $('#usuario_contrasena').show();
             $('#titulo_alert').html("AVISO");

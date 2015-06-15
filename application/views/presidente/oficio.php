@@ -21,6 +21,7 @@
 							<legend>Oficio</legend>
 							<form class="form-vertical" id="frmofc" name="frmofc" action="index.php/presidente/registrar_oficio" method="POST" enctype="multipart/form-data">
 								<div class="row">
+<!--
 									<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 										<div class="form-group">
 											<label for="asunto">
@@ -29,15 +30,35 @@
 											<input type="text" id="asunto" name="asunto"/>
 										</div>
 									</div>
+-->
 									<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-										<div class="form-group">
-											<label for="dependencia">
-											<spam class="glyphicon glyphicon-asterisk requerido"></spam>Dependencia
-											</label>
-											<input type="text" id="dependencia" name="dependencia"/>
-										</div>
-									</div>
+                                      <div class="form-group">
+                                        <label for="dependencia">
+                                            <spam class="glyphicon glyphicon-asterisk requerido"></spam>Petición
+                                        </label>
+                                        <select id="dependencia" name="dependencia">
+                                            <option value="">Selecciona Dependencia</option>
+                                            <?php foreach($dependencias as $row){ ?>
+                                            <option value="<?php echo $row->Id; ?>"><?php echo $row->Nombre; ?></option>
+                                            <?php } ?>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <div class="form-group">
+                                        <label for="peticion">
+                                            <spam class="glyphicon glyphicon-asterisk requerido"></spam>Petición
+                                        </label>
+                                        <select id="peticion" name="peticion">
+                                            <option value="">Selecciona Petición</option>
+                                            <?php foreach($peticiones as $row){ ?>
+                                            <option value="<?php echo $row->Folio; ?>"><?php echo $row->Asunto; ?></option>
+                                            <?php } ?>
+                                        </select>
+                                      </div>
+                                    </div>
 								</div>
+<!--
 								<div class="row">
 									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 										<div class="form-group">
@@ -46,6 +67,7 @@
 										</div>
 									</div>
 								</div>
+-->
 								<div class="row">
 								<div class="col-xs-4 col-xs-offset-8 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8">
 									<label>

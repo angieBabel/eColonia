@@ -156,16 +156,18 @@ class Colono extends CI_Controller {
   
     public function registrar_peticion(){
         if($this->session->userdata('tipo')==5){
-			if($this->input->post()){
+			$this->form_validation->set_rules('asunto','Asunto','required');
+			$this->form_validation->set_rules('categoria','IdCategoria','required');
+			$this->form_validation->set_rules('descripcion','Texto','required');
+			$this->form_validation->set_rules('direccion','Ubicacion','required');
+            if($this->input->post() && $this->form_validation->run() == TRUE){
                 $asunto = $this->input->post('asunto');
                 $cat = $this->input->post('categoria');
                 $descr = $this->input->post('descripcion');
                 $dir = $this->input->post('direccion');
                 $fecha = date("Y-m-d");
                 $colono = $this->session->userdata('id');
-
                 $this->colono_model->inserta_peticion($asunto,$descr,$dir,$fecha,$colono,$cat);
-//                echo "HUEEEEE";
 			} else{
 				echo json_encode(false);
                 redirect('colono/gestion');

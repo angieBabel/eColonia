@@ -11,7 +11,7 @@ $('#enviar_datos').click(function(){
             $('#descripcion').val("");
             $('#direccion').val("");
             //$('#imagen').val("");
-            
+//            alert(data);
             $('#usuario_contrasena').show();
             $('#titulo_alert').html("AVISO");
             $('#texto_alert').html("LOS DATOS SE GUARDARON CON EXITO");

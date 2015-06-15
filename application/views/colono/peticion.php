@@ -49,7 +49,7 @@
 									<select id="categoria" name="categoria">
                                         <option value="">Selecciona Categoría</option>
                                         <?php foreach($categorias as $row){ ?>
-                                        <option value="<?php echo $row->ID; ?>"><?php echo $row->Nombre; ?></option>
+                                        <option value="<?php echo $row->Id; ?>"><?php echo $row->Nombre; ?></option>
                                         <?php } ?>
 									</select>
                                   </div>
@@ -110,5 +110,6 @@
 -->
 		<script type="text/javascript" src="js/datepicker.js"></script>
 		<script type="text/javascript" src="js/datepicker.es.js"></script>
+
 		<script type="text/javascript" src="js/formatter.js"></script>
 		<script type="text/javascript" src="js/registrar_peticion.js"></script>

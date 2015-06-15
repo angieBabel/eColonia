@@ -38,8 +38,11 @@
     <!-- Archivos de javascript para el manejo de tablas -->
     <script type="text/javascript" src="js/jquery.dataTables.js"></script>
     <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" src="js/registrar_peticion.js"></script>
+<!--    <script type="text/javascript" src="js/registrar_peticion.js"></script>-->
+<!--    <script type="text/javascript" src="js/datepicker.es.js"></script>-->
 
+    <script type="text/javascript" src="js/formatter.js"></script>
+<!--    <script type="text/javascript" src="js/registrar_peticion.js"></script>-->
 
   </body>
 </html>
