@@ -205,8 +205,8 @@ class Presidente extends CI_Controller {
 			$id = $this->session->userdata('id');
 			$peticiones = $this->colono_model->get_all_peticiones($id);
             $dependencias = $this->colono_model->get_dependencias();
-            $data = array('peticiones'=>$peticiones);
-            $data = array('dependencias'=>$dependencias);
+            $data = array('peticiones'=>$peticiones,
+                         'dependencias'=>$dependencias);
             $this->load->view('Sections/header');
             $this->load->view('mUsuario.php');
 			$this->load->view('presidente/oficio', $data);
