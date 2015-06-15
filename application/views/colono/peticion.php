@@ -49,7 +49,7 @@
 									<select id="categoria" name="categoria">
                                         <option value="">Selecciona Categoría</option>
                                         <?php foreach($categorias as $row){ ?>
-                                        <option value="<?php echo $row->Id; ?>"><?php echo $row->Nombre; ?></option>
+                                        <option value="<?php echo $row->ID; ?>"><?php echo $row->Nombre; ?></option>
                                         <?php } ?>
 									</select>
                                   </div>

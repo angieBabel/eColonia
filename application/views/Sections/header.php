@@ -58,7 +58,7 @@ webshims.polyfill('forms forms-ext');
               <li id="lista3"><a href="#">Gestión </a></li>
               <li id="lista4"><a href="index.php/welcome/ambiental">Ambiental </a></li>
               <li id="lista5"><a href="#">Salud </a></li>
-              <li id="lista6"><a href="#">Servicios </a></li>
+              <li id="lista6"><a href="#">Servicioss </a></li>
               <li id="lista7"><a href="#">Ayuda </a></li>
             </ul>
 
