@@ -140,7 +140,7 @@ class Colono_model extends CI_Model{
 
 
 public function get_id_comite($id_colono){
-		return $this->db->select ('comitedebarrio_has_colono.comitedebarrio_Id as comitedebarrio_Id')
+		return $this->db->select('comitedebarrio_has_colono.comitedebarrio_Id as comitedebarrio_Id')
 						->from('comitedebarrio_has_colono')
 						->where('comitedebarrio_has_colono.colono_Id',$id_colono)
 						->get()
