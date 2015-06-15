@@ -36,13 +36,28 @@
             </li>
             <!-- Gestion-->
             <li class="treeview">
-              <a href="#">
-                <i class="fa fa-bullhorn"></i><span>Gestion</span> <i class="fa fa-angle-left pull-right"></i>
+              <a href="index.php/colono/gestion">
+                <i class="fa fa-bullhorn"></i><span>Gestión</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="agenda_actividades.php"><i class="fa fa-circle-o"></i>¿Que hacemos?</a></li>
-                <li><a href="agenda_actividades.php"><i class="fa fa-circle-o"></i>Información</a></li>
-                <li><a href="agenda_actividades.php"><i class="fa fa-circle-o"></i>Denuncias Atendidas</a></li>
+                <!-- Opciones de colono-->
+                <?php if($this->session->userdata('tipo')==5) { ?>
+                <li><a href="index.php/colono/peticion"><i class="fa fa-circle-o"></i>Realizar Gestión</a></li>
+                <li><a href="index.php/colono/tabla_peticion"><i class="fa fa-circle-o"></i>Gestiones Realizadas</a></li>
+                <!-- Opciones de presidente-->
+                <?php }
+                if($this->session->userdata('tipo')==2) { ?>
+                <li><a href="index.php/presidente/oficio"><i class="fa fa-circle-o"></i>Realizar Oficio</a></li>
+                <li><a href="index.php/presidente/tabla_peticion"><i class="fa fa-circle-o"></i>Gestiones Recibidas</a></li>
+                <li><a href="index.php/presidente/tabla_oficio"><i class="fa fa-circle-o"></i>Oficios Realizados</a></li>
+                <!-- Opciones de administrador-->
+                <?php }
+                if($this->session->userdata('tipo')==1) { ?>
+                <li><a href="index.php/administrador/tabla_peticion"><i class="fa fa-circle-o"></i>Gestiones Realizados</a></li>
+                <li><a href="index.php/administrador/tabla_oficio"><i class="fa fa-circle-o"></i>Gestiones Realizados</a></li>
+                <li><a href="index.php/administrador/categorias"><i class="fa fa-circle-o"></i>Catálogo de Categorías</a></li>
+                <li><a href="index.php/administrador/dependencias"><i class="fa fa-circle-o"></i>Catálogo de Dependencias</a></li>
+                <?php } ?>
               </ul>
             </li>
             <!--Ambiental-->
