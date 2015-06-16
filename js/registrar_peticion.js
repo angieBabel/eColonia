@@ -24,3 +24,7 @@ $('#enviar_datos').click(function(){
         }
       });
 });
+
+$('#cancelar').click(function(){
+	window.location.href = "index.php/colono/gestion";
+});

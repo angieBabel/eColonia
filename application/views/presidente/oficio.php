@@ -68,7 +68,8 @@
 									</div>
 								</div>
 -->
-								<div class="row">
+                              <div class="row"><br></div>
+                                <div class="row">
 								<div class="col-xs-6 col-xs-offset-6 col-sm-6 col-sm-offset-6 col-md-6 col-md-offset-6 col-lg-6 col-lg-offset-6">
 									<label>
 										<button type="button" class="btn-lg btn-azul izquierda" id="enviar_oficio">Atender Petición</button>

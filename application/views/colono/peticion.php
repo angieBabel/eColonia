@@ -16,17 +16,6 @@
 		<section class="content" id="contenido">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
-						<div id="usuario_contrasena">
-							<div id="alert" class="alert alert-info fade in">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<h3 id="titulo_alert"></h3>
-                                <div id="text_alert"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
 					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
 						<fieldset class="panel">
 							<legend>Petición</legend>
@@ -81,12 +70,11 @@
                                   </div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-xs-4 col-xs-offset-8 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8">
+                            <div class="col-xs-6 col-xs-offset-6 col-sm-6 col-sm-offset-6 col-md-6 col-md-offset-6 col-lg-6 col-lg-offset-6">
 									<label>
-										<button type="button" class="btn-lg btn-azul derecha" id="enviar_datos">Registrar</button>
+										<button type="button" class="btn-lg btn-azul izquierda" id="enviar_datos">Registrar</button>
+										<button type="button" class="btn-lg btn-rojo derecha" id="cancelar">Cancelar</button>
 								</div>
-							</div>
                             </form>
 						</fieldset>
 					</div>
@@ -113,3 +101,16 @@
 
 		<script type="text/javascript" src="js/formatter.js"></script>
 		<script type="text/javascript" src="js/registrar_peticion.js"></script>
+        <div class="modal dialogo fade" id="alert">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="titulo_alert"></h4>
+					</div>
+					<div class="modal-body">
+						<p id="texto_alert"></p>
+						<input type="button" value="Aceptar" data-dismiss="modal">
+					</div>
+				</div>
+			</div>
+		</div>

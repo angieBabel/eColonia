@@ -57,6 +57,7 @@
 								</div>
 							</div>
 						</fieldset>
+                        <button type="button" class="btn-lg btn-rojo derecha" id="cancelar">Volver</button>
 					</div>
 				</div>
 <!--
@@ -68,7 +69,8 @@
 -->
 			</div>
 		</section>
-		<script>
+		<script type="text/javascript" src="js/registrar_dependencia.js"></script>
+        <script>
 			$(document).ready(function() {
 			    $('#peti').dataTable();
 			} );
