@@ -114,9 +114,9 @@ class Presidente extends CI_Controller {
 	public function registrar_oficio(){
         if($this->session->userdata('tipo')==2){
             $this->form_validation->set_rules('dependencia','IdDependencia','required');
-//			$this->form_validation->set_rules('categoria','IdCategoria','required');
+			$this->form_validation->set_rules('peticion','Peticion','required');
 			if($this->input->post() && $this->form_validation->run() == TRUE){				
-                $asunto = $this->input->post('asunto');
+                $peticion = $this->input->post('peticion');
                 $descr = $this->input->post('descripcion');
                 $estado = "0";
                 $fechaenv = date("Y-m-d");
@@ -127,8 +127,8 @@ class Presidente extends CI_Controller {
             	$comite = $comiteid[0]['comitedebarrio_Id'];
             	
                 $dep = $this->input->post('dependencia');
-                
-                $this->colono_model->inserta_oficio($asunto,$descr,$estado,$fechaenv,$fecharesp,$comite,$dep);
+                $this->colono_model->atender_peticion($peticion);
+//                $this->colono_model->inserta_oficio($asunto,$descr,$estado,$fechaenv,$fecharesp,$comite,$dep);
 
 			} else{
 				echo json_encode(false);

@@ -51,6 +51,12 @@ class Colono_model extends CI_Model{
 		$this->db->set('Nombre',$nombre)
 				 ->insert('categoria');
 	}
+  
+    public function atender_peticion($peticion){
+		$this->db->set('FechaAten',date("Y-m-d"))
+                  ->where('Folio',$peticion)
+				  ->update();
+	}
 
 	public function obtiene_id($Email,$Tel_celular) {
 		return $this->db->like('Email',$Email)
